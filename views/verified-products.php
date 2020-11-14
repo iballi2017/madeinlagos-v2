@@ -17,7 +17,7 @@
             <!-- <div class="d-flex align-items-center justify-content-between flex-wrap"> -->
             <div class="row">
                 <div class="col-12 col-md-6 d-flex flex-wrap">
-                    <div class="select_drop_wrapper mr-0 mr-sm-2">
+                    <!-- <div class="select_drop_wrapper mr-0 mr-sm-2">
                         <select class="custom-select" id="brandSelect">
                             <option selected style="color:gray" value="null">BRAND</option>
                             <option value="option1">Option One</option>
@@ -40,6 +40,174 @@
                             <option value="option2">Option Two</option>
                             <option value="option3">Option Three</option>
                         </select>
+                    </div> -->
+
+                    <div id="filter_nav" style="z-index: 4">
+                        <ul class="float-left list_style_0 d-flex" style="position: relative">
+                            <li class="filter_tab m-1">
+                                <div class="filterToggler dropNull border py-2 px-5">
+                                    BRAND
+                                </div>
+                                <div class="filter_dropdown">
+                                    <div class="container-fluid">
+                                        <form action="#">
+                                            <fieldset class="px-2 py-3">
+                                                <!-- <legend>BRAND</legend> -->
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <input type="checkbox" name="scanfrost" id="scanfrost"
+                                                            class="check">
+                                                        <label for="scanfrost">
+                                                            <span class="custom_check"></span>
+                                                            Scanfrost
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <input type="checkbox" name="whatever" id="whatever"
+                                                            class="check">
+                                                        <label for="whatever">
+                                                            <span class="custom_check"></span>
+                                                            Whatever
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <div class="row border-top">
+                                                <div class="col">
+                                                    <button class="btn my-2 form_clear_btn">CLEAR ALL</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="filter_tab m-1">
+                                <div class="filterToggler dropNull border py-2 px-5">
+                                    PRICE
+                                </div>
+                                <div class="filter_dropdown">
+                                    <div class="container-fluid">
+                                        <form action="#">
+                                            <fieldset class="px-2 py-3">
+                                                <!-- <legend>PRICE</legend> -->
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <label for="formGroupExampleInput">Min</label>
+                                                        <input type="number" class="form-control">
+                                                    </div>
+                                                    <div class="col">
+                                                        <label for="formGroupExampleInput">Max</label>
+                                                        <input type="number" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <div class="row border-top">
+                                                <div class="col">
+                                                    <button class="btn my-2 form_clear_btn">CLEAR ALL</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="filter_tab m-1">
+                                <!-- <form action="#"> -->
+                                <div class="filterToggler dropNull border py-2 px-5">
+                                    RATING
+                                </div>
+                                <div action="#" class="filter_dropdown">
+                                    <div class="container-fluid">
+                                        <form action="#">
+                                            <fieldset class="star_ratings px-2 py-3">
+                                                <!-- <legend>RATING</legend> -->
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <input type="checkbox" name="5Star" id="5Star" class="check">
+                                                        <label for="5Star">
+                                                            <span class="custom_check"></span>
+                                                            <span>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <input type="checkbox" name="4Star" id="4Star" class="check">
+                                                        <label for="4Star">
+                                                            <span class="custom_check"></span>
+                                                            <span>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="far fa-star"></i>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <input type="checkbox" name="3Star" id="3Star" class="check">
+                                                        <label for="3Star">
+                                                            <span class="custom_check"></span>
+                                                            <span>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="far fa-star"></i>
+                                                                <i class="far fa-star"></i>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <input type="checkbox" name="2Star" id="2Star" class="check">
+                                                        <label for="2Star">
+                                                            <span class="custom_check"></span>
+                                                            <span>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="far fa-star"></i>
+                                                                <i class="far fa-star"></i>
+                                                                <i class="far fa-star"></i>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <input type="checkbox" name="1Star" id="1Star" class="check">
+                                                        <label for="1Star">
+                                                            <span class="custom_check"></span>
+                                                            <span>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="far fa-star"></i>
+                                                                <i class="far fa-star"></i>
+                                                                <i class="far fa-star"></i>
+                                                                <i class="far fa-star"></i>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="row border-top">
+                                                    <div class="col">
+                                                        <button class="btn my-2 form_clear_btn">CLEAR ALL</button>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
@@ -50,9 +218,10 @@
                         <div class="select_drop_wrapper">
                             <select class="custom-select border-0 p-0" id="ratingSelectSmallScreen">
                                 <option selected style="color:gray" value="null">Recommended</option>
-                                <option value="option1">Option One</option>
-                                <option value="option2">Option Two</option>
-                                <option value="option3">Option Three</option>
+                                <option value="newArrival">New arrival</option>
+                                <option value="lowToHigh">Price: Low to High</option>
+                                <option value="highToLow">Price: High to Low</option>
+                                <option value="bestSelling">Best sellings</option>
                             </select>
                         </div>
                     </div>
@@ -89,119 +258,118 @@
                     <hr />
                     <div class="container mt-5">
                         <div class="container-fluid">
-                            <form action="#">
-                                <fieldset class="mb-4">
-                                    <legend>BRAND</legend>
-                                    <div class="row mb-3">
-                                        <div class="col">
-                                            <input type="checkbox" name="scanfrost" id="scanfrost" class="check">
-                                            <label for="scanfrost">
-                                                <span class="custom_check"></span>
-                                                Scanfrost
-                                            </label>
-                                        </div>
+                            <fieldset class="mb-4">
+                                <legend>BRAND</legend>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <input type="checkbox" name="scanfrost" id="scanfrost" class="check">
+                                        <label for="scanfrost">
+                                            <span class="custom_check"></span>
+                                            Scanfrost
+                                        </label>
                                     </div>
-                                    <div class="row mb-3">
-                                        <div class="col">
-                                            <input type="checkbox" name="whatever" id="whatever" class="check">
-                                            <label for="whatever">
-                                                <span class="custom_check"></span>
-                                                Whatever
-                                            </label>
-                                        </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <input type="checkbox" name="whatever" id="whatever" class="check">
+                                        <label for="whatever">
+                                            <span class="custom_check"></span>
+                                            Whatever
+                                        </label>
                                     </div>
-                                </fieldset>
-                                <fieldset class="mb-4">
-                                    <legend>PRICE</legend>
-                                    <div class="row">
-                                        <div class="col">
-                                            <label for="formGroupExampleInput">Min</label>
-                                            <input type="number" class="form-control">
-                                        </div>
-                                        <div class="col">
-                                            <label for="formGroupExampleInput">Max</label>
-                                            <input type="number" class="form-control">
-                                        </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="mb-4">
+                                <legend>PRICE</legend>
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="formGroupExampleInput">Min</label>
+                                        <input type="number" class="form-control">
                                     </div>
-                                </fieldset>
-                                <fieldset class="mb-4 star_ratings">
-                                    <legend>RATING</legend>
-                                    <div class="row mb-3">
-                                        <div class="col">
-                                            <input type="checkbox" name="5Star" id="5Star" class="check">
-                                            <label for="5Star">
-                                                <span class="custom_check"></span>
-                                                <span>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </span>
-                                            </label>
-                                        </div>
+                                    <div class="col">
+                                        <label for="formGroupExampleInput">Max</label>
+                                        <input type="number" class="form-control">
                                     </div>
-                                    <div class="row mb-3">
-                                        <div class="col">
-                                            <input type="checkbox" name="4Star" id="4Star" class="check">
-                                            <label for="4Star">
-                                                <span class="custom_check"></span>
-                                                <span>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </span>
-                                            </label>
-                                        </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="mb-4 star_ratings">
+                                <legend>RATING</legend>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <input type="checkbox" name="5Star" id="5Star" class="check">
+                                        <label for="5Star">
+                                            <span class="custom_check"></span>
+                                            <span>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </span>
+                                        </label>
                                     </div>
-                                    <div class="row mb-3">
-                                        <div class="col">
-                                            <input type="checkbox" name="3Star" id="3Star" class="check">
-                                            <label for="3Star">
-                                                <span class="custom_check"></span>
-                                                <span>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </span>
-                                            </label>
-                                        </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <input type="checkbox" name="4Star" id="4Star" class="check">
+                                        <label for="4Star">
+                                            <span class="custom_check"></span>
+                                            <span>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </span>
+                                        </label>
                                     </div>
-                                    <div class="row mb-3">
-                                        <div class="col">
-                                            <input type="checkbox" name="2Star" id="2Star" class="check">
-                                            <label for="2Star">
-                                                <span class="custom_check"></span>
-                                                <span>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </span>
-                                            </label>
-                                        </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <input type="checkbox" name="3Star" id="3Star" class="check">
+                                        <label for="3Star">
+                                            <span class="custom_check"></span>
+                                            <span>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </span>
+                                        </label>
                                     </div>
-                                    <div class="row mb-3">
-                                        <div class="col">
-                                            <input type="checkbox" name="1Star" id="1Star" class="check">
-                                            <label for="1Star">
-                                                <span class="custom_check"></span>
-                                                <span>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </span>
-                                            </label>
-                                        </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <input type="checkbox" name="2Star" id="2Star" class="check">
+                                        <label for="2Star">
+                                            <span class="custom_check"></span>
+                                            <span>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </span>
+                                        </label>
                                     </div>
-                                </fieldset>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <input type="checkbox" name="1Star" id="1Star" class="check">
+                                        <label for="1Star">
+                                            <span class="custom_check"></span>
+                                            <span>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
                         </div>
                     </div>
                     <hr />
@@ -389,4 +557,4 @@
 </div>
 
 <!-- Footer -->
-<?php include_once '../includes/footer.php'; ?> <img<img
+<?php include_once '../includes/footer.php'; ?>

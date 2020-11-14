@@ -134,8 +134,140 @@ $(document).ready(function() {
         hidePopup($("#mobile_sort_form_wrapper"))
     })
 
-})
+    /* LARGE SCREEN CATEGORY NAVIGATION TOGGLE */
+    let categories_tab_toggler_lg_hide = true;
+    $("#categories_tab_toggler_lg").click(function() {
+        if (!$("#main_category_container").hasClass("hide")) {
+            $("#main_category_container").addClass("hide");
+            categories_tab_toggler_lg_hide = true;
+        } else {
+            $("#main_category_container").removeClass("hide");
+            categories_tab_toggler_lg_hide = false;
+        }
+    })
 
+
+    /* MOBILE NAVIGATION SLIDINGS */
+    $("#categories_tab_toggler").click(function() {
+        if ($("#sidenav_main_container #overlay").hasClass("hide") && $("#sidenav_main_container #inner").hasClass("hide")) {
+            $("#sidenav_main_container #overlay").removeClass("hide");
+            $("#sidenav_main_container #inner").removeClass("hide");
+        }
+    })
+    $("#sidenav_main_container #overlay").click(function() {
+        if (!($("#sidenav_main_container #overlay") && $("#sidenav_main_container #inner")).hasClass("hide")) {
+            $("#sidenav_main_container #overlay").addClass("hide");
+            $("#sidenav_main_container #inner").addClass("hide");
+            backToCategories($("#category_electronics")); //reset the category search to the main categories menu list
+        }
+    })
+
+    /* back to category menu function */
+    function backToCategories(arg) {
+        $(arg)
+            .parent()
+            .parent()
+            // .parent()
+            .parent()
+            .css({ "margin-left": "0" });
+    }
+    /* electronics */
+    $("#category_electronics").click(function() {
+        $(this)
+            .parent()
+            .parent()
+            .parent()
+            .css({ "margin-left": "calc(-100% / 1)" });
+    })
+    $("#category_electronics_back_btn").click(function() {
+            backToCategories($("#category_electronics"));
+        })
+        /* groceries */
+
+    $("#category_groceries").click(function() {
+        $(this)
+            .parent()
+            .parent()
+            .parent()
+            .css({ "margin-left": "calc(-100% / 1 * 2)" });
+        $("#category_groceries_back_btn").click(function() {
+            backToCategories($("#category_electronics"));
+        })
+
+    })
+
+    /* Home, Kitchen and Office */
+    $("#category_homeKitchenOffice").click(function() {
+        $(this)
+            .parent()
+            .parent()
+            .parent()
+            .css({ "margin-left": "calc(-100% / 1 * 3)" });
+        $("#category_homeKitchenOffice_back_btn").click(function() {
+            backToCategories($("#category_electronics"));
+        })
+
+    })
+
+    /* books */
+    $("#category_books").click(function() {
+        $(this)
+            .parent()
+            .parent()
+            .parent()
+            .css({ "margin-left": "calc(-100% / 1 * 4)" });
+        $("#category_books_back_btn").click(function() {
+            backToCategories($("#category_electronics"));
+        })
+
+    })
+
+    /* beauty */
+    $("#category_beauty").click(function() {
+        $(this)
+            .parent()
+            .parent()
+            .parent()
+            .css({ "margin-left": "calc(-100% / 1 * 5)" });
+        $("#category_beauty_back_btn").click(function() {
+            backToCategories($("#category_electronics"));
+        })
+
+    })
+
+
+    /* product_details_image_slider */
+    $(".product_details_image_slider").owlCarousel({
+        loop: true,
+        margin: 10,
+        dots: false,
+        autoplay: false,
+        autoplayTimeout: 10000,
+        autoplaySpeed: 3000,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 1,
+            },
+            1000: {
+                items: 1
+            }
+        }
+    });
+    var imgSlider = $('.product_details_image_slider');
+    imgSlider.owlCarousel();
+    // Go to the main image item
+    $("#main_item_img_nav").click(function() {
+            imgSlider.trigger('prev.owl.carousel', [800]);
+        })
+        // Go to the alternative image item
+    $("#alt_main_item_img_nav").click(function() {
+        imgSlider.trigger('next.owl.carousel', [800]);
+    });
+
+})
 
 
 // VANILLA
