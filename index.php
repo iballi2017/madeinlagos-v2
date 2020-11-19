@@ -56,13 +56,13 @@
 
                 <div class="">
                     <div class="dropdown">
-                        <button class="btn text-white dropdown-toggle" type="button" id="dropdownMenuButton"
+                        <button class="btn btn-sm text-white dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Help
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">FAQ</a>
-                            <a class="dropdown-item" href="#">Contact Us</a>
+                            <a class="btn-sm dropdown-item" href="#">FAQ</a>
+                            <a class="btn-sm dropdown-item" href="#">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -79,14 +79,14 @@
                 </div>
                 <div class="">
                     <div class="dropdown">
-                        <button class="btn text-white dropdown-toggle" type="button" id="dropdownMenuButton"
+                        <button class="btn btn-sm text-white dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Login
                         </button>
                         <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">LOGIN</a>
+                            <a class="btn-sm dropdown-item" href="#">LOGIN</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">SIGNUP</a>
+                            <a class="btn-sm dropdown-item" href="#">SIGNUP</a>
                         </div>
                     </div>
                 </div>

@@ -267,6 +267,99 @@ $(document).ready(function() {
         imgSlider.trigger('next.owl.carousel', [800]);
     });
 
+
+
+
+    // Functions to toggle a "hide" css class
+    function removeHide(firstArg, secondArg) {
+        if (firstArg) {
+            if (secondArg.hasClass("hide")) {
+                secondArg.removeClass("hide")
+            }
+        } else {
+            secondArg.addClass("hide");
+        }
+    }
+
+    function addHide(firstArg, secondArg) {
+        if (firstArg) {
+            if (!secondArg.hasClass("hide")) {
+                secondArg.addClass("hide");
+            }
+        } else {
+            secondArg.removeClass("hide")
+        }
+    }
+
+    // Checkout page bank account toggle
+    var bankAccountRadioButton = $("#bank_transfer");
+    var thirdPartyRadioButton = $("#third_party");
+    var checkedThirdPartyRadioButton = $("#third_party:checked");
+    var checkedBankAccountRadioButton = $("#bank_transfer:checked");
+    var sellerBankDetails = $("#seller_account_details")
+    bankAccountRadioButton.on("click", function() {
+        removeHide(checkedBankAccountRadioButton, sellerBankDetails)
+    })
+    thirdPartyRadioButton.on("click", function() {
+        addHide(checkedThirdPartyRadioButton, sellerBankDetails)
+    })
+
+    // payment page toggle payment method
+    var payment_method = $("#payment_method");
+    var payment_method_true = $("#payment_method_true");
+    var checked_payment_method_true = $("#payment_method_true:checked");
+    var payment_method_false = $("#payment_method_false");
+    var checked_payment_method_false = $("#payment_method_false:checked");
+
+    payment_method_true.on('click', function() {
+        removeHide(checked_payment_method_true, payment_method)
+    })
+    payment_method_false.on('click', function() {
+        addHide(checked_payment_method_false, payment_method)
+    })
+
+
+    // Form control label effects
+    // $(".form_control").focus(function(){
+    //     $(".form_control").siblings("label").removeClass("submerge");
+    // })
+    // $(".form_control").focusout(function(){
+    //     $(".form_control").siblings("label").addClass("submerge");
+    // })
+
+
+    function textFocus() {
+        if (!$(".form_control").val()) {
+            if (!$(".form_control").siblings().hasClass("submerge")) {
+                $(".form_control").siblings().addClass("submerge")
+            }
+        }
+        if ($(".form_control").val()) {
+            if ($(".form_control").siblings().hasClass("submerge")) {
+                $(".form_control").siblings().removeClass("submerge")
+            }
+        }
+    }
+    (function() {
+        textFocus();
+    })(jQuery);
+
+
+    $(".form_control").focus(function() {
+        console.log($(this).siblings())
+        if ($(this).siblings().hasClass("submerge")) {
+            $(this).siblings().removeClass("submerge");
+        }
+    })
+    $(".form_control").focusout(function() {
+        console.log($(this).siblings())
+        if (!$(this).siblings().hasClass("submerge")) {
+            $(this).siblings().addClass("submerge");
+        }
+    })
+
+
+
 })
 
 
@@ -281,3 +374,26 @@ cardText.forEach(text => {
         text.setAttribute("title", x);
     }
 })
+
+// Accordion for product details
+function openFeature(arg) {
+    if (arg.parentElement.parentElement.nextElementSibling.classList.contains("show")) {
+        if (!arg.lastElementChild.classList.contains("fa-plus") && arg.lastElementChild.classList.contains("fa-minus")) {
+            arg.lastElementChild.classList.add("fa-plus");
+            arg.lastElementChild.classList.remove("fa-minus");
+        }
+    } else if (arg.lastElementChild.classList.contains("fa-plus") && !arg.lastElementChild.classList.contains("fa-minus")) {
+        arg.lastElementChild.classList.remove("fa-plus");
+        arg.lastElementChild.classList.add("fa-minus");
+    } else {
+        arg.lastElementChild.classList.remove("fa-plus");
+        return;
+    }
+}
+let accordionBtn = document.querySelectorAll('.accordion button');
+accordionBtn.forEach(element => {
+    element.addEventListener("click", () => {
+        openFeature(element);
+    })
+
+});

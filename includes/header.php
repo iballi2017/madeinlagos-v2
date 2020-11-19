@@ -22,6 +22,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/plugins/bootstrap-4.2.1/css/bootstrap.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../stylesheet/main.css">
     <title>Made in Lagos</title>
@@ -51,13 +52,13 @@
 
                 <div class="">
                     <div class="dropdown">
-                        <button class="btn text-white dropdown-toggle" type="button" id="dropdownMenuButton"
+                        <button class="btn btn-sm text-white dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Help
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">FAQ</a>
-                            <a class="dropdown-item" href="#">Contact Us</a>
+                            <a class="btn-sm dropdown-item" href="#">FAQ</a>
+                            <a class="btn-sm dropdown-item" href="#">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -74,14 +75,14 @@
                 </div>
                 <div class="">
                     <div class="dropdown">
-                        <button class="btn text-white dropdown-toggle" type="button" id="dropdownMenuButton"
+                        <button class="btn btn-sm text-white dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Login
                         </button>
                         <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">LOGIN</a>
+                            <a class="btn-sm dropdown-item" href="#">LOGIN</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">SIGNUP</a>
+                            <a class="btn-sm dropdown-item" href="#">SIGNUP</a>
                         </div>
                     </div>
                 </div>
