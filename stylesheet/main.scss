@@ -100,6 +100,7 @@ li {
 }
 
 input[type="text"],
+input[type="password"],
 input[type="number"],
 input[type="email"],
 input[type="date"],
@@ -108,10 +109,11 @@ input[type="file"],
 // .custom-file,
 .custom-file-input,
 .custom-file-label,
-textarea.form-control,
-select.custom-select {
+textarea,
+select {
     border-radius: 0;
     border: 1px solid $lightColor;
+    padding: 0.5em 0.6em;
     &:focus {
         outline: 0;
         box-shadow: none;
@@ -127,18 +129,6 @@ select.custom-select {
     &:-ms-input-placeholder {
         /* Internet Explorer 10-11 */
         font-family: $fontFamily;
-    }
-}
-
-input[type="text"],
-textarea,
-input[type="email"],
-input[type="password"],
-select {
-    border: 1px solid $black_color;
-    padding: 0.5em 0.6em;
-    &:focus {
-        outline: 0;
     }
 }
 
@@ -310,7 +300,8 @@ input[type="number"] {
 .link_primary {
     color: $primaryColor;
     transition: all 300ms ease-in-out;
-    &:hover {
+    &:hover,
+    &:focus {
         color: $secondaryColor;
         text-decoration: none;
     }
@@ -563,7 +554,8 @@ ul.breadcrumb li a:hover {
     background-color: $primaryColor;
     color: $white;
     transition: all 250ms ease-in-out;
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: $orangeColor;
         color: $white;
     }
@@ -579,7 +571,8 @@ ul.breadcrumb li a:hover {
 
 .btn_light_pink {
     background-color: #ffe8e7;
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: #ffbf43;
     }
 }
@@ -735,7 +728,8 @@ ul.breadcrumb li a:hover {
     }
 }
 
-.check_rej[type="checkbox"]:checked+label .custom_checkbox {
+.check_rej[type="checkbox"]:checked+label .custom_checkbox,
+.check_rej[type="checkbox"]:focus+label .custom_checkbox {
     background: $lemon_color;
     &::after {
         content: "\f00c";
@@ -767,12 +761,13 @@ ul.breadcrumb li a:hover {
     background-color: $grey_color;
     border-radius: 50%;
     transform: scale(1);
-    transition: transform 300ms ease-in-out;
+    transition: trsubmergeansform 300ms ease-in-out;
     display: grid;
     place-content: center;
 }
 
-.radio_rej[type="radio"]:checked+label .custom_radio {
+.radio_rej[type="radio"]:checked+label .custom_radio,
+.radio_rej[type="radio"]:focus+label .custom_radio {
     background: $lemon_color;
 }
 
@@ -781,18 +776,25 @@ form {
     display: block;
     .form_control_wrapper {
         position: relative;
-        // margin-bottom: 1.4em;
         >input {
             display: block;
             width: 100%;
         }
         >label {
+            display: block;
+            bottom: unset;
             transition: all 300ms ease-in-out;
+            -moz-transition: all 300ms ease-in-out;
+            -o-transition: all 300ms ease-in-out;
+            -webkit-transition: all 300ms ease-in-out;
             &.submerge {
                 position: absolute;
                 bottom: 0;
                 left: 0.4em;
                 transition: all 300ms ease-in-out;
+                -moz-transition: all 300ms ease-in-out;
+                -o-transition: all 300ms ease-in-out;
+                -webkit-transition: all 300ms ease-in-out;
             }
         }
     }
@@ -810,9 +812,6 @@ form {
         .select_drop_wrapper {
             width: 150px;
             display: inline-block;
-            // +.select_drop_wrapper {
-            //     margin-left: 15px;
-            // }
         }
     }
     .form_clear_btn {
@@ -957,22 +956,6 @@ form {
         &.save_item {
             color: $infoColor;
             border: 1px solid $infoColor;
-        }
-    }
-    @media(max-width: 500px) {
-        .cart_btn_wrapper {
-            display: flex;
-            button:nth-child(2) {
-                margin-left: .5em;
-            }
-            .cart_item_btn {
-                width: 100%;
-            }
-        }
-    }
-    @media(max-width: 350px) {
-        .item_cost {
-            float: right;
         }
     }
     .initial_cal {
@@ -1185,6 +1168,16 @@ form {
     }
 }
 
+// reset_password_page
+#reset_password_page {
+    font-size: 1rem;
+    .inner {
+        max-width: 500px;
+        margin: 4em auto;
+        height: 100vh;
+    }
+}
+
 // user_account_page
 #sidebar {
     position: fixed;
@@ -1343,6 +1336,9 @@ footer {
 }
 
 @media (min-width: 700px) {
+    #sidebar {
+        z-index: 100;
+    }
     footer {
         .copyright::after,
         .copyright::before {
@@ -1377,5 +1373,26 @@ footer {
     #user_review_page .review_star {
         font-size: 2rem;
         cursor: pointer;
+    }
+}
+
+@media(max-width: 500px) {
+    #HelpDropDown {
+        left: -100%;
+    }
+    .cart_btn_wrapper {
+        display: flex;
+        button:nth-child(2) {
+            margin-left: .5em;
+        }
+        .cart_item_btn {
+            width: 100%;
+        }
+    }
+}
+
+@media(max-width: 350px) {
+    .item_cost {
+        float: right;
     }
 }

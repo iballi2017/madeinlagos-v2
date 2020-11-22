@@ -1,5 +1,5 @@
 <?php 
-if($_GET["subj"]){
+if(isset($_GET["subj"])){
     $sub = $_GET["subj"];
 }
 

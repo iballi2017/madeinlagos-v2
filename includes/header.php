@@ -56,9 +56,9 @@
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Help
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="dropdown-menu" id="HelpDropDown" aria-labelledby="dropdownMenuButton">
                             <a class="btn-sm dropdown-item" href="#">FAQ</a>
-                            <a class="btn-sm dropdown-item" href="#">Contact Us</a>
+                            <a class="btn-sm dropdown-item" href="../views/contact-us.php">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -66,10 +66,10 @@
                     <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
 
                     <div class="input-group">
-                        <input type="text" class="form-control" aria-label="Recipient's username"
-                            aria-describedby="button-addon2">
+                        <input type="text" class="form-control" aria-label="Search items"
+                            aria-describedby="search-button">
                         <div class="input-group-append">
-                            <button class="btn text-white bg_orange" type="button" id="button-addon2">SEARCH</button>
+                            <button class="btn text-white bg_orange" type="button" id="search-button">SEARCH</button>
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Login
                         </button>
-                        <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
+                        <div class="dropdown-menu text-center" id="loginDropDown" aria-labelledby="dropdownMenuButton">
                             <a class="btn-sm dropdown-item" href="./login.php">LOGIN</a>
                             <div class="dropdown-divider"></div>
                             <a class="btn-sm dropdown-item" href="./register.php">SIGNUP</a>

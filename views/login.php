@@ -23,7 +23,7 @@
 									  Remember me
 								  </label>
                               </div>
-                              <div><a href="#" class="link_primary">Forgot Password?</a></div>
+                              <div><a href="./reset-password.php" class="link_primary">Forgot Password?</a></div>
                           </div>
 					  </div>
                       <div class="form_control_wrapper">

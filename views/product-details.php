@@ -161,7 +161,7 @@
                                 </dt>
                                 <dd>Free return within 15 days for Jumia
                                     Mall items and 7 days for other eligible
-                                    items <a href="#">See more</a></dd>
+                                    items <a href="#" class="link_primary">See more</a></dd>
                             </dl>
                         </li>
                         <li class="list-group-item">

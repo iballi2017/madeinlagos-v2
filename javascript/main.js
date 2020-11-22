@@ -319,59 +319,44 @@ $(document).ready(function() {
     })
 
 
-    // Form control label effects
-    function textFocus(arg) {
-        // if ($(".form_control").val() == "") {
-        //     if (!$(".form_control").siblings().hasClass("submerge")) {
-        //         $(".form_control").siblings().addClass("submerge");
-        //         console.log("Hi");
-        //     }
-        // }
-        // if ($(".form_control").val() != "") {
-        //     if ($(".form_control").siblings().hasClass("submerge")) {
-        //         $(".form_control").siblings().removeClass("submerge");
-        //         console.log("Hello");
-        //     }
-        // }
-        if (arg.val()) {
-            if (!arg.siblings().hasClass("submerge")) {
-                arg.siblings().addClass("submerge");
-                console.log("Hi");
+    /* Form control label effects */
+    function textFocus() {
+        if ($(".form_control").val()) {
+            if (!$(".form_control").siblings().hasClass("submerge")) {
+                $(".form_control").siblings().addClass("submerge");
             }
         }
-        if (arg.val()) {
-            if (arg.siblings().hasClass("submerge")) {
-                arg.siblings().removeClass("submerge");
-                console.log("Hello");
+        if ($(".form_control").val()) {
+            if ($(".form_control").siblings().hasClass("submerge")) {
+                $(".form_control").siblings().removeClass("submerge");
             }
         }
     }
+    // fires when page refreshes
     (function() {
         textFocus();
     })(jQuery);
-
-
     $(".form_control").focus(function() {
-        console.log("focus in")
-        console.log($(this));
-        // console.log($(this).siblings())
         if ($(this).siblings().hasClass("submerge")) {
             $(this).siblings().removeClass("submerge");
         }
-        textFocus($(this));
     })
     $(".form_control").focusout(function() {
-        console.log("focus out")
-        console.log($(this));
-        // console.log($(this).siblings())
-        if (!$(this).siblings().hasClass("submerge")) {
-            $(this).siblings().addClass("submerge");
+        if (!$(this).val()) {
+            if (!$(this).siblings().hasClass("submerge")) {
+                $(this).siblings().addClass("submerge");
+            }
+
         }
-        textFocus();
+    })
+    $(".form_control").siblings("label").mouseenter(function() {
+        if ($(this).hasClass("submerge")) {
+            $(this).removeClass("submerge");
+        }
     })
 
 
-    // User account menu togglers
+    /* User account menu togglers */
     $("#userAccountMenuBtn").click(function() {
         if ($("#sidebar").hasClass("hide")) {
             $("#sidebar").removeClass("hide");

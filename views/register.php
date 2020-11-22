@@ -84,7 +84,7 @@
                             <div class="col-6">
                                 <div class="form_grp mb-3">
                                     <label class="text_capital d-block" for="confirm_pwd">Confirm Password</label>
-                                    <input type="text" class="d-block w-100" name="confirm_pwd" id="confirm_pwd">
+                                    <input type="password" class="d-block w-100" name="confirm_pwd" id="confirm_pwd">
                                 </div>
                             </div>
                         </div>
