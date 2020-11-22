@@ -61,7 +61,7 @@
                             Help
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="btn-sm dropdown-item" href="#">FAQ</a>
+                            <a class="btn-sm dropdown-item" href="./views/faq.php">FAQ</a>
                             <a class="btn-sm dropdown-item" href="./views/contact-us.php">Contact Us</a>
                         </div>
                     </div>
