@@ -6,9 +6,10 @@ $deepGreen: #272502; //rgb(37, 76, 12);
 $orangeColor: #ffbf43; // rgb(255, 191, 67);
 $blackColor: #202020; //rgb(32, 32, 32);
 $white: #ffffff;
-$greyColor: #C4C4C4;
+$greyColor: #c4c4c4;
 $starRatingColor: #ffc107;
 $lightColor: #c4c4c4;
+$infoColor: #17a2b8;
 $fontFamily: "Roboto",
 sans-serif;
 $fullWidth: 100%;
@@ -16,8 +17,8 @@ $halfWidth: 50%;
 // Variables from old style
 $grey_color: #e5e5e5;
 $white_color: #ffffff;
-$lemon_color: #BCAE00;
-$lemon_color_hoverState: #98AC31;
+$lemon_color: #bcae00;
+$lemon_color_hoverState: #98ac31;
 $black_color: #2d2d2d;
 $deepGreen_color: #1f3200;
 $yellow_color: #ffbf43;
@@ -135,8 +136,7 @@ input[type="email"],
 input[type="password"],
 select {
     border: 1px solid $black_color;
-    padding: 0.5em 0.2em;
-    border-radius: 3px;
+    padding: 0.5em 0.6em;
     &:focus {
         outline: 0;
     }
@@ -160,6 +160,26 @@ select {
     }
 }
 
+
+/*Custom form select dropdown*/
+
+// select.custom-select {
+//     /* remove default style from browsers */
+//     background-image: unset; //removing bootstrap icon image
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//     -ms-appearance: none;
+//     -o-appearance: none;
+//     appearance: none;
+//     option {
+//         margin: 5em;
+//         line-height: 2;
+//         font: inherit;
+//     }
+//     &::after {
+//         content: "hhhhh";
+//     }
+// }
 .select_drop_wrapper {
     position: relative;
     &::after {
@@ -169,9 +189,52 @@ select {
         font-size: 20px;
         position: absolute;
         right: 0.5rem;
-        color: $lemon_color;
+        color: $primaryColor;
         pointer-events: none;
         bottom: 0.34em;
+    }
+}
+
+.check {
+    position: absolute;
+    opacity: 0;
+    top: -1000000px;
+    ~label {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        cursor: pointer;
+        margin: 0;
+        >.custom_check {
+            --size: 1.2em;
+            width: var(--size);
+            height: var(--size);
+            // cursor: pointer;
+            border: 0.6px solid $primaryColor;
+            border-radius: 3px;
+            transform: scale(1);
+            transition: transform 300ms ease-in-out;
+            display: grid;
+            place-content: center;
+            margin-right: 1em;
+        }
+    }
+    &[type="checkbox"]:checked+label .custom_check {
+        background: $primaryColor;
+        &::before {
+            content: "\f00c";
+            color: $white;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 0.6rem;
+        }
+    }
+}
+
+.btn {
+    transition: all 300ms ease-in-out;
+    &:focus {
+        box-shadow: none;
     }
 }
 
@@ -187,7 +250,7 @@ input::-webkit-inner-spin-button {
 
 /* Hide Arrows From Input Number Firefox */
 
-input[type=number] {
+input[type="number"] {
     -moz-appearance: textfield;
 }
 
@@ -240,11 +303,16 @@ input[type=number] {
     color: #31bc00;
 }
 
+.rotate_45 {
+    transform: rotate(45deg);
+}
+
 .link_primary {
     color: $primaryColor;
     transition: all 300ms ease-in-out;
     &:hover {
         color: $secondaryColor;
+        text-decoration: none;
     }
 }
 
@@ -331,7 +399,7 @@ ul.breadcrumb li a:hover {
     transition: all 300ms ease-in-out;
     position: absolute;
     width: 100%;
-    z-index: 1002;
+    z-index: 1021;
     transform: scaleY(1);
     transform-origin: top;
     &.hide {
@@ -341,12 +409,12 @@ ul.breadcrumb li a:hover {
     .side_nav_tab {
         position: relative;
         .category_list {
-            padding: .6em;
+            padding: 0.6em;
             cursor: pointer;
             &:hover {
                 z-index: 2;
                 margin: 0;
-                box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+                box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
             }
             .sidenav_subList {
                 position: absolute;
@@ -367,7 +435,7 @@ ul.breadcrumb li a:hover {
                 line-height: 25px;
             }
             .sidenav_subList li a {
-                font-size: .8rem;
+                font-size: 0.8rem;
                 text-decoration: none;
                 color: #202020;
                 transition: all 300ms ease-in-out;
@@ -418,9 +486,9 @@ ul.breadcrumb li a:hover {
             .category_scroll_y {
                 height: 400px;
                 overflow-y: auto;
-                padding: .2em .4em;
+                padding: 0.2em 0.4em;
                 li {
-                    padding-bottom: .3em;
+                    padding-bottom: 0.3em;
                     a {
                         text-decoration: none;
                         color: $blackColor;
@@ -457,85 +525,6 @@ ul.breadcrumb li a:hover {
     &.hide {
         left: -100%;
         transition: left 300ms ease-in-out;
-    }
-}
-
-
-/*Custom form select dropdown*/
-
-select.custom-select {
-    /* remove default style from browsers */
-    background-image: unset; //removing bootstrap icon image
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-    option {
-        margin: 5em;
-        line-height: 2;
-        font: inherit;
-    }
-    &::after {
-        content: "hhhhh";
-    }
-}
-
-.select_drop_wrapper {
-    position: relative;
-    &::after {
-        font-family: "Font Awesome 5 Free";
-        content: "\f0dd";
-        font-weight: 900;
-        font-size: 20px;
-        position: absolute;
-        right: 0.5rem;
-        color: $primaryColor;
-        pointer-events: none;
-        bottom: 0.34em;
-    }
-}
-
-.check {
-    position: absolute;
-    opacity: 0;
-    top: -1000000px;
-    ~label {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        cursor: pointer;
-        margin: 0;
-        >.custom_check {
-            --size: 1.2em;
-            width: var(--size);
-            height: var(--size);
-            // cursor: pointer;
-            border: 0.6px solid $primaryColor;
-            border-radius: 3px;
-            transform: scale(1);
-            transition: transform 300ms ease-in-out;
-            display: grid;
-            place-content: center;
-            margin-right: 1em;
-        }
-    }
-    &[type="checkbox"]:checked+label .custom_check {
-        background: $primaryColor;
-        &::before {
-            content: "\f00c";
-            color: $white;
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            font-size: 0.6rem;
-        }
-    }
-}
-
-.btn {
-    transition: all 300ms ease-in-out;
-    &:focus {
-        box-shadow: none;
     }
 }
 
@@ -721,6 +710,42 @@ select.custom-select {
     font-size: 1.3rem;
 }
 
+// custom checkbox
+.check_rej {
+    position: absolute;
+    opacity: 0;
+    ~label {
+        display: flex;
+        cursor: pointer;
+        .custom_checkbox {
+            --size: 1.5em;
+            width: var(--size);
+            height: var(--size);
+            margin-right: var(--size);
+            cursor: pointer;
+            border: 0.6px solid $grey_color;
+            box-shadow: inset 0 0 0 3px $white_color;
+            background-color: $grey_color;
+            border-radius: 3px;
+            transform: scale(1);
+            transition: transform 300ms ease-in-out;
+            display: grid;
+            place-content: center;
+        }
+    }
+}
+
+.check_rej[type="checkbox"]:checked+label .custom_checkbox {
+    background: $lemon_color;
+    &::after {
+        content: "\f00c";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 0.8rem;
+        color: $white;
+    }
+}
+
 // custom radio
 .radio_rej {
     position: absolute;
@@ -749,6 +774,28 @@ select.custom-select {
 
 .radio_rej[type="radio"]:checked+label .custom_radio {
     background: $lemon_color;
+}
+
+// form
+form {
+    display: block;
+    .form_control_wrapper {
+        position: relative;
+        // margin-bottom: 1.4em;
+        >input {
+            display: block;
+            width: 100%;
+        }
+        >label {
+            transition: all 300ms ease-in-out;
+            &.submerge {
+                position: absolute;
+                bottom: 0;
+                left: 0.4em;
+                transition: all 300ms ease-in-out;
+            }
+        }
+    }
 }
 
 
@@ -781,7 +828,7 @@ select.custom-select {
             cursor: pointer;
             &:hover>.filterToggler.dropNull::after {
                 content: "\f0de";
-                bottom: .4em;
+                bottom: 0.4em;
                 transition: all 300ms ease-in-out;
             }
         }
@@ -789,7 +836,7 @@ select.custom-select {
             transform: scaleY(1);
             transform-origin: top;
             background-color: $white;
-            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
             border: none;
             // padding: .8em .5em;
         }
@@ -808,8 +855,8 @@ select.custom-select {
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
             position: absolute;
-            bottom: .7em;
-            right: .7em;
+            bottom: 0.7em;
+            right: 0.7em;
             color: $primaryColor;
         }
         .filterToggler.dropNull::after {
@@ -898,14 +945,35 @@ select.custom-select {
     .cart_item_btn {
         display: inline-block;
         width: 100px;
-        // margin: 0.4em;
         background-color: unset;
-        color: $danger_color;
-        border: 1px solid $danger_color;
         border-radius: 3px;
         padding-top: 0.4em;
         padding-bottom: 0.4em;
         margin-top: 0.5em;
+        &.remove {
+            color: $danger_color;
+            border: 1px solid $danger_color;
+        }
+        &.save_item {
+            color: $infoColor;
+            border: 1px solid $infoColor;
+        }
+    }
+    @media(max-width: 500px) {
+        .cart_btn_wrapper {
+            display: flex;
+            button:nth-child(2) {
+                margin-left: .5em;
+            }
+            .cart_item_btn {
+                width: 100%;
+            }
+        }
+    }
+    @media(max-width: 350px) {
+        .item_cost {
+            float: right;
+        }
     }
     .initial_cal {
         color: $grey_color;
@@ -927,7 +995,6 @@ select.custom-select {
             border-radius: 3px;
             display: block;
             width: 100%;
-            margin-bottom: 1em;
             &.process_checkout_btn {
                 border: 1px solid $primaryColor;
             }
@@ -1105,6 +1172,127 @@ select.custom-select {
     }
 }
 
+// login_page & register_page
+#login_page,
+#register_page {
+    .inner {
+        max-width: 500px;
+        margin: 0 auto;
+        margin-top: 5em;
+        margin-bottom: 3em;
+        display: flex;
+        align-items: center;
+    }
+}
+
+// user_account_page
+#sidebar {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 300ms ease-in-out;
+    bottom: 0;
+    z-index: 1020;
+    padding: 48px 0 0;
+    padding: 3em;
+    &.hide {
+        left: -100%;
+    }
+    .nav-tab {
+        li {
+            line-height: 30px;
+            a {
+                color: #202020;
+                transition: all 300ms ease-in-out;
+                &:hover,
+                &.active {
+                    text-decoration: none;
+                    color: $primaryColor;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+.main_area {
+    flex-basis: 100%;
+}
+
+.item_row {
+    .btn_action {
+        width: 100%;
+    }
+}
+
+@media (min-width: 800px) {
+    .user_account {
+        #sidebar {
+            position: relative;
+            // height: 100vh;
+            background-color: #ffffff;
+            width: 100%;
+            // min-width: 300px;
+            left: 0;
+            padding: 0;
+        }
+        .main_area {
+            flex-basis: calc(100% - 300px);
+            display: block;
+        }
+    }
+    .item_row {
+        .btn_action {
+            width: auto;
+        }
+    }
+}
+
+@media (max-width: 799px) {
+    .user_account {
+        #sidebar {
+            .nav-tab {
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    &::after {
+                        content: "\f054";
+                        // content: "\f061";
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// user_order_page
+#user_order_page {
+    table {
+        .order_number {
+            min-width: 100px;
+        }
+        .date {
+            min-width: 50px;
+        }
+        .ship_to {
+            min-width: 150px;
+        }
+        .total_amount {
+            min-width: 70px;
+        }
+        .status {
+            min-width: 100px;
+        }
+        .details {
+            min-width: 50px;
+        }
+    }
+}
+
 
 /* FOOTER */
 
@@ -1170,16 +1358,24 @@ footer {
         }
         .cart_item_btn {
             display: flex;
-            border: none;
             padding: 0;
+            &.remove,
+            &.save_item {
+                border: none;
+            }
         }
         .process_btn_wrapper {
+            display: flex;
+            align-items: center;
             .process_btn {
                 width: auto;
-                margin-bottom: 1em;
                 float: right;
                 margin-left: 0.3em;
             }
         }
+    }
+    #user_review_page .review_star {
+        font-size: 2rem;
+        cursor: pointer;
     }
 }

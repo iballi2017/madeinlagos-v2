@@ -84,16 +84,16 @@
                             Login
                         </button>
                         <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
-                            <a class="btn-sm dropdown-item" href="#">LOGIN</a>
+                            <a class="btn-sm dropdown-item" href="./views/login.php">LOGIN</a>
                             <div class="dropdown-divider"></div>
-                            <a class="btn-sm dropdown-item" href="#">SIGNUP</a>
+                            <a class="btn-sm dropdown-item" href="./views/register.php">SIGNUP</a>
                         </div>
                     </div>
                 </div>
                 <ul class="navbar-nav">
                     <li class="nav-item text-nowrap">
                         <!-- <a class="nav-link text-white" href="#"><i class="fas fa-shopping-cart mr-2"></i>Cart</a> -->
-                        <a class="nav-link text-white" href="#"><span data-feather="shopping-cart"></span><span
+                        <a class="nav-link text-white" href="./views/user-cart.php"><span data-feather="shopping-cart"></span><span
                                 class="badge badge-light">4</span></a>
 
                     </li>

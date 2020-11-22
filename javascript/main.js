@@ -320,23 +320,29 @@ $(document).ready(function() {
 
 
     // Form control label effects
-    // $(".form_control").focus(function(){
-    //     $(".form_control").siblings("label").removeClass("submerge");
-    // })
-    // $(".form_control").focusout(function(){
-    //     $(".form_control").siblings("label").addClass("submerge");
-    // })
-
-
-    function textFocus() {
-        if (!$(".form_control").val()) {
-            if (!$(".form_control").siblings().hasClass("submerge")) {
-                $(".form_control").siblings().addClass("submerge")
+    function textFocus(arg) {
+        // if ($(".form_control").val() == "") {
+        //     if (!$(".form_control").siblings().hasClass("submerge")) {
+        //         $(".form_control").siblings().addClass("submerge");
+        //         console.log("Hi");
+        //     }
+        // }
+        // if ($(".form_control").val() != "") {
+        //     if ($(".form_control").siblings().hasClass("submerge")) {
+        //         $(".form_control").siblings().removeClass("submerge");
+        //         console.log("Hello");
+        //     }
+        // }
+        if (arg.val()) {
+            if (!arg.siblings().hasClass("submerge")) {
+                arg.siblings().addClass("submerge");
+                console.log("Hi");
             }
         }
-        if ($(".form_control").val()) {
-            if ($(".form_control").siblings().hasClass("submerge")) {
-                $(".form_control").siblings().removeClass("submerge")
+        if (arg.val()) {
+            if (arg.siblings().hasClass("submerge")) {
+                arg.siblings().removeClass("submerge");
+                console.log("Hello");
             }
         }
     }
@@ -346,24 +352,49 @@ $(document).ready(function() {
 
 
     $(".form_control").focus(function() {
-        console.log($(this).siblings())
+        console.log("focus in")
+        console.log($(this));
+        // console.log($(this).siblings())
         if ($(this).siblings().hasClass("submerge")) {
             $(this).siblings().removeClass("submerge");
         }
+        textFocus($(this));
     })
     $(".form_control").focusout(function() {
-        console.log($(this).siblings())
+        console.log("focus out")
+        console.log($(this));
+        // console.log($(this).siblings())
         if (!$(this).siblings().hasClass("submerge")) {
             $(this).siblings().addClass("submerge");
         }
+        textFocus();
     })
 
+
+    // User account menu togglers
+    $("#userAccountMenuBtn").click(function() {
+        if ($("#sidebar").hasClass("hide")) {
+            $("#sidebar").removeClass("hide");
+        }
+    })
+    $("#userAccountCloseMenuBtn").click(function() {
+        if (!$("#sidebar").hasClass("hide")) {
+            $("#sidebar").addClass("hide");
+        }
+    })
 
 
 })
 
 
-// VANILLA
+/* VANILLA */
+
+// Back history
+function goBack() {
+    window.history.back();
+}
+
+// Slicing Item card info
 let cardText = document.querySelectorAll(".product_card .card-text");
 cardText.forEach(text => {
     let x = text.innerHTML;
@@ -397,3 +428,44 @@ accordionBtn.forEach(element => {
     })
 
 });
+
+
+// star ratings
+const stars = document.querySelectorAll(".review_star")
+var ratingValue = document.querySelector("#rating_value")
+var index;
+for (let i = 0; i < stars.length; i++) {
+    stars[i].addEventListener("mouseover", function() {
+
+        for (let j = 0; j < stars.length; j++) {
+            stars[j].classList.remove("fas")
+            stars[j].classList.add("far")
+        }
+        for (let j = 0; j <= i; j++) {
+            stars[j].classList.remove("far")
+            stars[j].classList.add("fas")
+
+        }
+    })
+
+    stars[i].addEventListener("click", function() {
+        ratingValue.value = i + 1
+        index = i;
+
+        // the value of rating stars
+        // console.log(`rating is ${ratingValue.value}`)
+    })
+    stars[i].addEventListener("mouseout", function() {
+
+        for (let j = 0; j < stars.length; j++) {
+            stars[j].classList.remove("fas")
+            stars[j].classList.add("far")
+        }
+        for (let j = 0; j <= index; j++) {
+            stars[j].classList.remove("far")
+            stars[j].classList.add("fas")
+
+
+        }
+    })
+}
