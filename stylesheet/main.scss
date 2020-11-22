@@ -1168,6 +1168,17 @@ form {
     }
 }
 
+// contact_us_page
+#contact_us_page {
+    .contact_option {
+        border-right: 1px solid $greyColor;
+    }
+    #form_area {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+
 // reset_password_page
 #reset_password_page {
     font-size: 1rem;
@@ -1387,6 +1398,12 @@ footer {
         }
         .cart_item_btn {
             width: 100%;
+        }
+    }
+    // contact_us_page
+    #contact_us_page {
+        .contact_option:nth-child(even) {
+            border-right: none;
         }
     }
 }

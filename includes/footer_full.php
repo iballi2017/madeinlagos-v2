@@ -6,19 +6,19 @@
                     <ul class="list_style_0 px-0">
                         <li class="title">COMPANY</li>
                         <li>
-                            <a href="#">Privacy policy</a>
+                            <a href="../views/privacy-policy.php">Privacy policy</a>
                         </li>
                         <li>
-                            <a href="#">FAQs</a>
+                            <a href="../views/faq.php">FAQs</a>
                         </li>
                         <li>
-                            <a href="#">About us</a>
+                            <a href="../views/about-us.php">About us</a>
                         </li>
                         <li>
-                            <a href="#">Terma and conditions</a>
+                            <a href="../views/terms-and-conditions.php">Terma and conditions</a>
                         </li>
                         <li>
-                            <a href="#">Return and refund policy</a>
+                            <a href="../views/return-and-refund-policy.php">Return and refund policy</a>
                         </li>
                     </ul>
                 </div>

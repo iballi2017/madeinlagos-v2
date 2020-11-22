@@ -1071,6 +1071,14 @@ form .form_control_wrapper > label.submerge {
   align-items: center;
 }
 
+#contact_us_page .contact_option {
+  border-right: 1px solid #c4c4c4;
+}
+#contact_us_page #form_area {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
 #reset_password_page {
   font-size: 1rem;
 }
@@ -1256,6 +1264,10 @@ footer .copyright::before {
   }
   .cart_btn_wrapper .cart_item_btn {
     width: 100%;
+  }
+
+  #contact_us_page .contact_option:nth-child(even) {
+    border-right: none;
   }
 }
 @media (max-width: 350px) {

@@ -349,7 +349,7 @@ $(document).ready(function() {
 
         }
     })
-    $(".form_control").siblings("label").mouseenter(function() {
+    $(".form_control").siblings("label").click(function() {
         if ($(this).hasClass("submerge")) {
             $(this).removeClass("submerge");
         }
