@@ -6,8 +6,8 @@
           <li>Contact Us</li>
       </ul>
   </div>
-  <div class="container" id="contact_us_page">
-      <div class="inner">
+  <div class="border-bottom" id="contact_us_page">
+      <div class="container">
           <h3>CONTACT US</h3>
       </div>
   </div>
