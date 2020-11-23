@@ -95,7 +95,6 @@
                         <!-- <a class="nav-link text-white" href="#"><i class="fas fa-shopping-cart mr-2"></i>Cart</a> -->
                         <a class="nav-link text-white" href="./views/user-cart.php"><span data-feather="shopping-cart"></span><span
                                 class="badge badge-light">4</span></a>
-
                     </li>
                 </ul>
                 <!-- </div> -->

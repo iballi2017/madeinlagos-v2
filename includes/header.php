@@ -108,7 +108,7 @@
         <!-- large screen categories slide nav begins here -->
         <section id="main_category_container" class="hide d-none d-md-block">
             <div class="container">
-                <ul class="side_nav_tab list_style_0 bg-white shadow">
+                <ul class="side_nav_tab list_style_0 shadow">
                     <li class="category_list">Electronics
                         <div class="sidenav_subList border-0">
                             <div class="container">

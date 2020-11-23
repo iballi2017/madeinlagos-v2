@@ -20,7 +20,7 @@
                           <input type="password" name="confirmPassword" class="form_control">
                       </div>
                       <div class="form_control_wrapper">
-					  <button type="submit" class="btn btn-block btn_primary">Reset Password</button>
+					  <button type="submit" class="btn btn-block py-2 btn_primary">Reset Password</button>
                       </div>
 					 </form>
           </div>

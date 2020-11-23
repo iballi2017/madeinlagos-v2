@@ -89,7 +89,7 @@
                             </div>
                         </div>
                         <div class="form_grp mb-3">
-                            <button type="submit" class="btn btn-block py-2 btn_primary rounded">REGISTER</button>
+                            <button type="submit" class="btn btn-block py-2 btn_primary">REGISTER</button>
                         </div>
 					  <div>Already have an account? <a href="./login.php" class="link_primary">LOGIN</a></div>
                     </form>

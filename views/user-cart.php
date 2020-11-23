@@ -83,8 +83,8 @@
         <div class="row">
             <div class="col">
                 <div class="text-center process_btn_wrapper float-md-right">
-                    <a href="#" class="btn btn_white border px-md-5 process_btn">CONTINUE SHOP</a>
-                    <button type="submit" class="btn btn_primary my-1 px-md-5 process_btn">PROCEED TO
+                    <a href="#" class="btn btn_white border py-2 px-md-5 process_btn">CONTINUE SHOP</a>
+                    <button type="submit" class="btn btn_primary my-1 py-2 px-md-5 process_btn">PROCEED TO
                         CHECKOUT</button>
                 </div>
             </div>

@@ -81,7 +81,7 @@ if(isset($_GET["subj"]) && isset($_GET["id"])){
                                     </div>
                                 </div>
                                 <div class="form_grp">
-                                    <button type="submit" class="btn btn_primary px-5 rounded-0">SUBMIT</button>
+                                    <button type="submit" class="btn btn_primary py-2 px-5 rounded-0">SUBMIT</button>
                                 </div>
                             </form>
                         </div>

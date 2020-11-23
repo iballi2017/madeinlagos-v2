@@ -7,42 +7,16 @@
             <li>Products verified by made in lagos</li>
         </ul>
 
-        <h1 class="page_title my-3 mb-4">Products verified by made in lagos</h1>
+        <h1 class="page_title my-3 mb-4 text-center text-md-left">Products verified by made in lagos</h1>
 
 
 
 
         <!-- DESKTOP VIEW CONTENTS FILTER -->
         <form action="#" class="container-fluid filter_form d-none d-md-block">
-            <!-- <div class="d-flex align-items-center justify-content-between flex-wrap"> -->
-            <div class="row">
+            <div class="row" id="filter_nav">
                 <div class="col-12 col-md-6 d-flex flex-wrap">
-                    <!-- <div class="select_drop_wrapper mr-0 mr-sm-2">
-                        <select class="custom-select" id="brandSelect">
-                            <option selected style="color:gray" value="null">BRAND</option>
-                            <option value="option1">Option One</option>
-                            <option value="option2">Option Two</option>
-                            <option value="option3">Option Three</option>
-                        </select>
-                    </div>
-                    <div class="select_drop_wrapper mr-0 mr-sm-2">
-                        <select class="custom-select" id="priceSelect">
-                            <option selected style="color:gray" value="null">PRICE</option>
-                            <option value="option1">Option One</option>
-                            <option value="option2">Option Two</option>
-                            <option value="option3">Option Three</option>
-                        </select>
-                    </div>
-                    <div class="select_drop_wrapper">
-                        <select class="custom-select" id="ratingSelectLargeScreen">
-                            <option selected style="color:gray" value="null">RATING</option>
-                            <option value="option1">Option One</option>
-                            <option value="option2">Option Two</option>
-                            <option value="option3">Option Three</option>
-                        </select>
-                    </div> -->
-
-                    <div id="filter_nav" style="z-index: 4">
+                    <div>
                         <ul class="float-left list_style_0 d-flex" style="position: relative">
                             <li class="filter_tab m-1">
                                 <div class="filterToggler dropNull border py-2 px-5">
@@ -213,16 +187,41 @@
 
 
                 <div class="col-12 col-md-6">
-                    <div class="d-flex align-items-center flex-wrap float-right">
-                        <span>Sort by: &nbsp;</span>
-                        <div class="select_drop_wrapper">
-                            <select class="custom-select border-0 p-0" id="ratingSelectSmallScreen">
-                                <option selected style="color:gray" value="null">Recommended</option>
-                                <option value="newArrival">New arrival</option>
-                                <option value="lowToHigh">Price: Low to High</option>
-                                <option value="highToLow">Price: High to Low</option>
-                                <option value="bestSelling">Best sellings</option>
-                            </select>
+                    <div class="d-flex align-items-start flex-wrap float-right">
+                        <!-- Sort by recommended -->
+                        <span class="py-2">Sort by: &nbsp;</span>
+                        <div class="filter_tab">
+                            <div class="filterToggler recommend dropNull py-2 px-2">
+                                Recommended
+                            </div>
+                            <style>
+                            </style>
+                            <div class="filter_dropdown">
+                                <div class="container-fluid p-2">
+                                    <form action="#">
+                                        <div class="checkbox_form_grp">
+                                            <input type="checkbox" name="recommend" class="recommend_checkbox"
+                                                id="newArrival">
+                                            <label for="newArrival">New Arrival</label>
+                                        </div>
+                                        <div class="checkbox_form_grp">
+                                            <input type="checkbox" name="recommend" class="recommend_checkbox"
+                                                id="lowToHigh">
+                                            <label for="lowToHigh">Price: Low to High</label>
+                                        </div>
+                                        <div class="checkbox_form_grp">
+                                            <input type="checkbox" name="recommend" class="recommend_checkbox"
+                                                id="highToLow">
+                                            <label for="highToLow">Price: High to Low</label>
+                                        </div>
+                                        <div class="checkbox_form_grp">
+                                            <input type="checkbox" name="recommend" class="recommend_checkbox"
+                                                id="bestSelling">
+                                            <label for="bestSelling">Best Sellings</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -262,8 +261,8 @@
                                 <legend>BRAND</legend>
                                 <div class="row mb-3">
                                     <div class="col">
-                                        <input type="checkbox" name="scanfrost" id="scanfrost" class="check">
-                                        <label for="scanfrost">
+                                        <input type="checkbox" name="item" id="scanfrost_mobile" class="check">
+                                        <label for="scanfrost_mobile">
                                             <span class="custom_check"></span>
                                             Scanfrost
                                         </label>
@@ -271,8 +270,8 @@
                                 </div>
                                 <div class="row mb-3">
                                     <div class="col">
-                                        <input type="checkbox" name="whatever" id="whatever" class="check">
-                                        <label for="whatever">
+                                        <input type="checkbox" name="item" id="whatever_mobile" class="check">
+                                        <label for="whatever_mobile">
                                             <span class="custom_check"></span>
                                             Whatever
                                         </label>
@@ -296,8 +295,8 @@
                                 <legend>RATING</legend>
                                 <div class="row mb-3">
                                     <div class="col">
-                                        <input type="checkbox" name="5Star" id="5Star" class="check">
-                                        <label for="5Star">
+                                        <input type="checkbox" name="starRating_mobile" id="5Star_mobile" class="check">
+                                        <label for="5Star_mobile">
                                             <span class="custom_check"></span>
                                             <span>
                                                 <i class="fas fa-star"></i>
@@ -311,8 +310,8 @@
                                 </div>
                                 <div class="row mb-3">
                                     <div class="col">
-                                        <input type="checkbox" name="4Star" id="4Star" class="check">
-                                        <label for="4Star">
+                                        <input type="checkbox" name="starRating_mobile" id="4Star_mobile" class="check">
+                                        <label for="4Star_mobile">
                                             <span class="custom_check"></span>
                                             <span>
                                                 <i class="fas fa-star"></i>
@@ -326,8 +325,8 @@
                                 </div>
                                 <div class="row mb-3">
                                     <div class="col">
-                                        <input type="checkbox" name="3Star" id="3Star" class="check">
-                                        <label for="3Star">
+                                        <input type="checkbox" name="starRating_mobile" id="3Star_mobile" class="check">
+                                        <label for="3Star_mobile">
                                             <span class="custom_check"></span>
                                             <span>
                                                 <i class="fas fa-star"></i>
@@ -341,8 +340,8 @@
                                 </div>
                                 <div class="row mb-3">
                                     <div class="col">
-                                        <input type="checkbox" name="2Star" id="2Star" class="check">
-                                        <label for="2Star">
+                                        <input type="checkbox" name="starRating_mobile" id="2Star_mobile" class="check">
+                                        <label for="2Star_mobile">
                                             <span class="custom_check"></span>
                                             <span>
                                                 <i class="fas fa-star"></i>
@@ -356,8 +355,8 @@
                                 </div>
                                 <div class="row mb-3">
                                     <div class="col">
-                                        <input type="checkbox" name="1Star" id="1Star" class="check">
-                                        <label for="1Star">
+                                        <input type="checkbox" name="starRating_mobile" id="1Star_mobile" class="check">
+                                        <label for="1Star_mobile">
                                             <span class="custom_check"></span>
                                             <span>
                                                 <i class="fas fa-star"></i>
@@ -450,7 +449,7 @@
         <div class="container-fluid my-5">
             <div class="row no-gutters">
                 <!-- product item column -->
-                <div class="col-12 col-sm-6 col-md-3">
+                <div class="col-6 col-sm-4 col-md-3">
                     <div class="item product_card m-1">
                         <a href="#">
                             <div class="card rounded-0">
@@ -463,7 +462,7 @@
                     </div>
                 </div>
                 <!-- product item column -->
-                <div class="col-12 col-sm-6 col-md-3">
+                <div class="col-6 col-sm-4 col-md-3">
                     <div class="item product_card m-1">
                         <a href="#">
                             <div class="card rounded-0">
@@ -476,7 +475,7 @@
                     </div>
                 </div>
                 <!-- product item column -->
-                <div class="col-12 col-sm-6 col-md-3">
+                <div class="col-6 col-sm-4 col-md-3">
                     <div class="item product_card m-1">
                         <a href="#">
                             <div class="card rounded-0">
@@ -489,7 +488,7 @@
                     </div>
                 </div>
                 <!-- product item column -->
-                <div class="col-12 col-sm-6 col-md-3">
+                <div class="col-6 col-sm-4 col-md-3">
                     <div class="item product_card m-1">
                         <a href="#">
                             <div class="card rounded-0">
@@ -502,7 +501,7 @@
                     </div>
                 </div>
                 <!-- product item column -->
-                <div class="col-12 col-sm-6 col-md-3">
+                <div class="col-6 col-sm-4 col-md-3">
                     <div class="item product_card m-1">
                         <a href="#">
                             <div class="card rounded-0">
@@ -515,7 +514,7 @@
                     </div>
                 </div>
                 <!-- product item column -->
-                <div class="col-12 col-sm-6 col-md-3">
+                <div class="col-6 col-sm-4 col-md-3">
                     <div class="item product_card m-1">
                         <a href="#">
                             <div class="card rounded-0">
@@ -535,13 +534,14 @@
                         <nav aria-label="Page navigation example">
                             <ul class="pagination justify-content-center">
                                 <li class="page-item disabled">
-                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                    <a class="page-link rounded-0" href="#" tabindex="-1"
+                                        aria-disabled="true">Previous</a>
                                 </li>
                                 <li class="page-item"><a class="page-link" href="#">1</a></li>
                                 <li class="page-item"><a class="page-link" href="#">2</a></li>
                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                                 <li class="page-item">
-                                    <a class="page-link more" href="#">Next</a>
+                                    <a class="page-link rounded-0 more" href="#">Next</a>
                                 </li>
                             </ul>
                         </nav>

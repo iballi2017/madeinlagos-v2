@@ -26,8 +26,8 @@
                               <div><a href="./reset-password.php" class="link_primary">Forgot Password?</a></div>
                           </div>
 					  </div>
-                      <div class="form_control_wrapper">
-					  <button type="submit" class="btn btn-block btn_primary">Login</button>
+                      <div class="form_control_wrapper mb-3">
+					  <button type="submit" class="btn btn-block py-2 btn_primary">Login</button>
                       </div>
 					  <div>Don't have an account? <a href="./register.php" class="link_primary">SIGNUP</a></div>
                   </form>

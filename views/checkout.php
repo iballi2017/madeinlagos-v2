@@ -257,8 +257,8 @@
                     <div class="row">
                       <div class="col">
                        <div class="text-center process_btn_wrapper">
-                        <a href="#" class="btn btn_white shadow my-3 px-5">MODIFY CART</a>
-                        <button type="submit" class="btn btn_primary shadow my-1 my-md-2 px-5">CONFIRM ORDER</button>
+                        <a href="#" class="btn btn_white shadow my-3 py-2 px-5">MODIFY CART</a>
+                        <button type="submit" class="btn btn_primary shadow my-1 my-md-2 py-2 px-5">CONFIRM ORDER</button>
                     </div>
                 </div>
             </div>

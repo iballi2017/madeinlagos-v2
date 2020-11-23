@@ -239,7 +239,7 @@ input[type=number] {
 }
 
 .bg_secondaryDark {
-  background-color: #272502;
+  background-color: #999882;
 }
 
 .text_primary {
@@ -255,7 +255,7 @@ input[type=number] {
 }
 
 .text_secondaryDark {
-  color: #272502;
+  color: #999882;
 }
 
 .text_light {
@@ -319,7 +319,7 @@ ul.breadcrumb li + li:before {
 }
 
 ul.breadcrumb li a {
-  color: #272502;
+  color: #999882;
   text-decoration: none;
   font-weight: bold;
   transition: all 300ms ease-in-out;
@@ -373,6 +373,11 @@ ul.breadcrumb li a:hover {
 }
 #main_category_container .side_nav_tab {
   position: relative;
+  background-color: #ffffff;
+  background-image: url("../assets//images//sample-prod.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 #main_category_container .side_nav_tab .category_list {
   padding: 0.6em;
@@ -749,7 +754,7 @@ form .form_control_wrapper > label.submerge {
 
 /* PAGES */
 #verified_products_page .page_title {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
 }
 #verified_products_page .filter_form .select_drop_wrapper {
@@ -786,6 +791,7 @@ form .form_control_wrapper > label.submerge {
   transform: scaleY(0);
   transform-origin: top;
   transition: all 300ms ease-in-out;
+  z-index: 4;
 }
 #verified_products_page #filter_nav .filterToggler {
   position: relative;
@@ -798,9 +804,27 @@ form .form_control_wrapper > label.submerge {
   right: 0.7em;
   color: #bcae00;
 }
+#verified_products_page #filter_nav .filterToggler.recommend::after {
+  bottom: 0.7em;
+  right: -1em;
+}
 #verified_products_page #filter_nav .filterToggler.dropNull::after {
   content: "";
   transition: all 300ms ease-in-out;
+}
+#verified_products_page #filter_nav .checkbox_form_grp > label {
+  cursor: pointer;
+  color: #202020;
+  transition: all 300ms ease-in-out;
+}
+#verified_products_page #filter_nav .checkbox_form_grp > .recommend_checkbox {
+  position: absolute;
+  margin-top: -1000000px;
+  opacity: 0;
+}
+#verified_products_page #filter_nav .checkbox_form_grp > .recommend_checkbox:checked + label {
+  color: #bcae00;
+  font-weight: 600;
 }
 #verified_products_page #mobile_filter_form_wrapper {
   background-color: #ffffff;
@@ -846,6 +870,14 @@ form .form_control_wrapper > label.submerge {
   top: 0;
   left: 1em;
   right: 1em;
+}
+@media (max-width: 352px) {
+  #verified_products_page #mobileFilterFormTriggerToShow,
+#verified_products_page #mobileSortFormTriggerToShow {
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+  }
 }
 
 #product_details .add_to_cart_btn,

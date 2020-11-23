@@ -64,9 +64,9 @@
                                 <label>Quantity:</label> &nbsp; &nbsp;
                                 <span>
                                     <div class="d-flex align-items-center border">
-                                        <button class="btn bg-white border-right">-</button>
+                                        <button class="btn btn_primary rounded-0 border-right">-</button>
                                         <div class="btn text-center">1</div>
-                                        <button class="btn bg-white border-left">+</button>
+                                        <button class="btn btn_primary rounded-0 border-left">+</button>
                                     </div>
                                 </span>
                             </div>
@@ -107,9 +107,9 @@
                                     <label>Quantity:</label> &nbsp; &nbsp;
                                     <span>
                                         <div class="d-flex align-items-center border">
-                                            <button class="btn bg-white border-right">-</button>
+                                            <button class="btn rounded-0 btn_primary border-right">-</button>
                                             <div class="btn text-center">1</div>
-                                            <button class="btn bg-white border-left">+</button>
+                                            <button class="btn rounded-0 btn_primary border-left">+</button>
                                         </div>
                                     </span>
                                 </div>

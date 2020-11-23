@@ -69,7 +69,7 @@
                               </div>
                           </div>
                           <div class="my-3">
-                              <button type="submit" class="btn btn_primary rounded-0">UPDATE PROFILE</button>
+                              <button type="submit" class="btn btn_primary py-2 rounded-0">UPDATE PROFILE</button>
                           </div>
                       </form>
                   </div>
