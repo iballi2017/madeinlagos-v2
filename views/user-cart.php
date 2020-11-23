@@ -93,8 +93,6 @@
 
 
         <!-- Message for an empty cart -->
-
-
         <div class="d-block d-md-none my-3">
             <button class="btn back_history border-0" onclick="goBack()">
                 <i class="fas fa-long-arrow-alt-left fa-2x"></i></button>

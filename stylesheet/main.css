@@ -375,7 +375,7 @@ ul.breadcrumb li a:hover {
   position: relative;
   background-color: #ffffff;
   background-image: url("../assets//images//sample-prod.png");
-  background-position: right;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
 }
