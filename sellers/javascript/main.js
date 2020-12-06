@@ -39,6 +39,31 @@ $(document).ready(function() {
             $(this).parent().addClass("sit");
         }
     })
+
+    // testing email fields
+    $(".email_field").focusout(function() {
+            if ($("#email").val() != $("#email_test").val()) {
+                if ($(".email_error").hasClass("hide")) {
+                    $(".email_error").removeClass("hide");
+                }
+                return;
+            }
+            if (!$(".email_error").hasClass("hide")) {
+                $(".email_error").addClass("hide");
+            }
+        })
+        // testing password fields
+    $(".pwd_field").focusout(function() {
+        if ($("#password").val() != $("#cPassword").val()) {
+            if ($(".pwd_error").hasClass("hide")) {
+                $(".pwd_error").removeClass("hide");
+            }
+            return;
+        }
+        if (!$(".pwd_error").hasClass("hide")) {
+            $(".pwd_error").addClass("hide");
+        }
+    })
 })
 
 
@@ -56,6 +81,14 @@ const progressText = document.querySelectorAll(".step p");
 const bullet = document.querySelectorAll(".step .bullet");
 let current = 1;
 /* */
+
+
+
+
+
+
+
+
 if (nextBtn) {
 
     nextBtn.addEventListener("click", () => {
@@ -67,6 +100,23 @@ if (nextBtn) {
                 return;
             }
         }
+
+        // testing email address
+        let email = document.querySelector("#email");
+        let email_test = document.querySelector("#email_test");
+        let email_error = document.querySelector(".email_error");
+        if (email.value != email_test.value) {
+            if (email_error.classList.contains("hide")) {
+                email_error.classList.remove("hide");
+            }
+            return;
+        } else {
+            if (!email_error.classList.contains("hide")) {
+                email_error.classList.add("hide");
+            }
+        }
+
+        // testing passwords
         let password = document.querySelector("#password");
         let cpassword = document.querySelector("#cPassword");
         let pwd_error = document.querySelector(".pwd_error");
@@ -81,6 +131,7 @@ if (nextBtn) {
             progressText[current].classList.add("active");
             current += 1;
         }
+
         if (!accountFormErrorMsg.classList.contains("hide")) {
             accountFormErrorMsg.classList.add("hide");
         }

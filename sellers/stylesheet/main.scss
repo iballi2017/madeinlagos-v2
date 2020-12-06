@@ -175,6 +175,12 @@ select {
                 display: inline-block;
                 border-radius: 50%;
                 transition: .2s;
+                span {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
                 &.active {
                     border-color: $danger_color;
                     background-color: $danger_color;
@@ -270,6 +276,9 @@ select {
             }
         }
         .pwd_error.hide {
+            display: none;
+        }
+        .email_error.hide {
             display: none;
         }
     }

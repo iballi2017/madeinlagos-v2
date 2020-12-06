@@ -179,6 +179,12 @@ select:-ms-input-placeholder {
   border-radius: 50%;
   transition: 0.2s;
 }
+#registration_form_wrapper .progress_bar .step .bullet span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 #registration_form_wrapper .progress_bar .step .bullet.active {
   border-color: #dc3545;
   background-color: #dc3545;
@@ -257,6 +263,9 @@ select:-ms-input-placeholder {
   display: none;
 }
 #registration_form_wrapper .inner .pwd_error.hide {
+  display: none;
+}
+#registration_form_wrapper .inner .email_error.hide {
   display: none;
 }
 

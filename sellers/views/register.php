@@ -56,31 +56,33 @@
                     <div class="form-group">
                         <div class="form_wrapper sit">
                             <label for="email">Email Address</label>
-                            <input type="text" value="" class="form-control first_page_control" id="email"
+                            <input type="email" value="" class="form-control first_page_control email_field" id="email"
                                 aria-describedby="emailHelp">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form_wrapper sit">
                             <label for="email_test">Re-type Email Address</label>
-                            <input type="text" value="" class="form-control first_page_control" id="email_test"
+                            <input type="email" value="" class="form-control first_page_control email_field" id="email_test"
                                 aria-describedby="email_testHelp">
                         </div>
+                        <small id="errorMsg" class="form-text text-danger email_error hide">Your email addresses do not
+                            match</small>
                     </div>
                     <div class="form-group">
                         <div class="form_wrapper sit">
                             <label for="password">Password</label>
-                            <input type="password" value="" class="form-control first_page_control" id="password"
+                            <input type="password" value="" class="form-control first_page_control pwd_field" id="password"
                                 aria-describedby="passwordHelp">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form_wrapper sit">
                             <label for="cPassword">Re-type Password</label>
-                            <input type="password" value="" class="form-control first_page_control" id="cPassword"
+                            <input type="password" value="" class="form-control first_page_control pwd_field" id="cPassword"
                                 aria-describedby="cPasswordHelp">
                         </div>
-                        <small id="errorMsg" class="form-text text-danger pwd_error hide">Your passwords does not
+                        <small id="errorMsg" class="form-text text-danger pwd_error hide">Your passwords do not
                             match</small>
                     </div>
                     <button type="button" class="btn btn_primary float-right px-3 nextBtn">Complete</button>
