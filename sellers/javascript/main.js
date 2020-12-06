@@ -6,24 +6,26 @@ $(document).ready(function() {
     function textFocus() {
         $(".form-control").each(function() {
             if ($(this).val()) {
-                // if ($(this).parent().hasClass("sit")) {
-                $(this).parent().removeClass("sit");
-                // }
+                if ($(this).parent().hasClass("sit")) {
+                    $(this).parent().removeClass("sit");
+                }
             }
             if (!$(this).val()) {
-                // if (!$(this).parent().hasClass("sit")) {
                 return;
-                // }
             }
         })
     }
     // fires when page refreshes
-    // windows.onload(function() {
-    //         textFocus();
-    //     })
     (function() {
         textFocus();
     })(jQuery);
+    window.addEventListener('load', () => {
+        if ($(".form-control").val()) {
+            $(".form-control").parent().removeClass("sit");
+        } else {
+            $(".form-control").parent().addClass("sit");
+        }
+    });
     $(".form-control").focus(function() {
         if ($(this).parent().hasClass("sit")) {
             $(this).parent().removeClass("sit");
@@ -37,14 +39,6 @@ $(document).ready(function() {
             $(this).parent().addClass("sit");
         }
     })
-
-
-    // $(".second_page_control").each(function() {
-    //     console.log("hhhh")
-    //     $(this).keyup(function() {
-    //         console.log($(this))
-    //     })
-    // })
 })
 
 
@@ -52,39 +46,52 @@ $(document).ready(function() {
 const firstPageFormControls = document.querySelectorAll(".first_page_control");
 const secondPageFormControls = document.querySelectorAll(".second_page_control");
 const accountFormErrorMsg = document.getElementById("accountInfo_form_errorMsg");
-// const businessFormErrorMsg = document.querySelector(".businessInfo_form_errorMsg");
-// const accountFormErrorMsg = document.getElementsByClassName("accountInfo_form_errorMsg");
 const businessFormErrorMsg = document.getElementById("businessInfo_form_errorMsg");
 const registerSubmitBtn = document.querySelector(".register_submit_btn");
 const slidePage = document.querySelector(".slidePage");
 const nextBtn = document.querySelector(".nextBtn");
-nextBtn.addEventListener("click", () => {
-    for (let i = 0; i < firstPageFormControls.length; i++) {
-        if (!firstPageFormControls[i].value) {
-            if (accountFormErrorMsg.classList.contains("hide")) {
-                accountFormErrorMsg.classList.remove("hide");
+
+// 
+const progressText = document.querySelectorAll(".step p");
+const bullet = document.querySelectorAll(".step .bullet");
+let current = 1;
+/* */
+if (nextBtn) {
+
+    nextBtn.addEventListener("click", () => {
+        for (let i = 0; i < firstPageFormControls.length; i++) {
+            if (!firstPageFormControls[i].value) {
+                if (accountFormErrorMsg.classList.contains("hide")) {
+                    accountFormErrorMsg.classList.remove("hide");
+                }
+                return;
+            }
+        }
+        let password = document.querySelector("#password");
+        let cpassword = document.querySelector("#cPassword");
+        let pwd_error = document.querySelector(".pwd_error");
+        if (password.value != cpassword.value) {
+            if (pwd_error.classList.contains("hide")) {
+                pwd_error.classList.remove("hide");
             }
             return;
+        } else {
+            slidePage.style.marginLeft = "-100%";
+            bullet[current].classList.add("active");
+            progressText[current].classList.add("active");
+            current += 1;
         }
-    }
-    let password = document.querySelector("#password");
-    let cpassword = document.querySelector("#cPassword");
-    let pwd_error = document.querySelector(".pwd_error");
-    if (password.value != cpassword.value) {
-        if (pwd_error.classList.contains("hide")) {
-            pwd_error.classList.remove("hide");
+        if (!accountFormErrorMsg.classList.contains("hide")) {
+            accountFormErrorMsg.classList.add("hide");
         }
-        return;
-    } else {
-        slidePage.style.marginLeft = "-100%";
-    }
-    if (!accountFormErrorMsg.classList.contains("hide")) {
-        accountFormErrorMsg.classList.add("hide");
-    }
-});
+    });
+}
 
 function prevBtn() {
     slidePage.style.marginLeft = "0";
+    bullet[current - 1].classList.remove("active");
+    progressText[current - 1].classList.remove("active");
+    current -= 1;
 }
 // 
 // registerSubmitBtn.addEventListener("click", () => {

@@ -157,6 +157,73 @@ select {
 #registration_form_wrapper {
     max-width: 500px;
     margin: 0 auto;
+    .progress_bar {
+        --width: 500px;
+        max-width: var(--width);
+        .step {
+            width: 100%;
+            &:last-child .bullet::before,
+            &:last-child .bullet::after {
+                display: none;
+            }
+            .bullet {
+                position: relative;
+                height: 25px;
+                width: 25px;
+                background-color: $lightColor;
+                color: $white;
+                display: inline-block;
+                border-radius: 50%;
+                transition: .2s;
+                &.active {
+                    border-color: $danger_color;
+                    background-color: $danger_color;
+                    color: $white;
+                    &::after {
+                        background-color: $danger_color;
+                        transform: scaleX(0);
+                        transform-origin: left;
+                        animation: animate 0.3s linear forwards;
+                    }
+                }
+                &::before,
+                &::after {
+                    position: absolute;
+                    content: "";
+                    bottom: 11px;
+                    right: calc(var(--width)-224px);
+                    height: 2px;
+                    width: calc(var(--width) - 280px);
+                    background-color: $lightColor;
+                }
+            }
+        }
+    }
+    @media(max-width:490px) {
+        .progress_bar {
+            --width: 450px;
+            max-width: var(--width);
+            .step {
+                .bullet {
+                    &::before,
+                    &::after {
+                        right: calc(var(--width)-195px);
+                        width: calc(var(--width) - 264px);
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width:450px) {
+        .step {
+            .bullet {
+                &::before,
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
     .inner {
         width: 100%;
         overflow-x: hidden;
@@ -256,6 +323,18 @@ select {
     #businessInfo_form_errorMsg {
         &.hide {
             display: none;
+        }
+    }
+}
+
+#register_success_page {
+    .inner {
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 150px;
         }
     }
 }
