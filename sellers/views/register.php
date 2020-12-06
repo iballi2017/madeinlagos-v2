@@ -4,7 +4,7 @@
 
     <!-- main -->
     <div class="container">
-    <h4 class="text-center text_primary mb-5">Register and start selling today, CREATE A SELLERS VILLA ACCOUNT</h4>
+    <h4 class="text-center text_primary mb-5 mt-3">Register and start selling today, CREATE A SELLERS VILLA ACCOUNT</h4>
     </div>
     <div id="registration_form_wrapper">
         <div class="progress_bar d-flex my-5">            
