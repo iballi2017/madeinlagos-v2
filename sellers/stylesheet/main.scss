@@ -115,7 +115,7 @@ input[type="file"],
 .custom-file-input,
 .custom-file-label,
 textarea,
-select {
+select.custom-select {
     border-radius: 0;
     border: 1px solid $lightColor;
     padding: 0.5em 0.6em;
@@ -151,6 +151,42 @@ select {
     &:hover {
         color: $secondaryColor;
         text-decoration: none;
+    }
+}
+
+
+/*Custom form select dropdown*/
+
+select.custom-select {
+    /* remove default style from browsers */
+    background-image: unset; //removing bootstrap icon image
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    option {
+        margin: 5em;
+        line-height: 2;
+        font: inherit;
+    }
+    &::after {
+        content: "hhhhh";
+    }
+}
+
+.select_drop_wrapper {
+    position: relative;
+    &::after {
+        font-family: "Font Awesome 5 Free";
+        content: "\f0dd";
+        font-weight: 900;
+        font-size: 20px;
+        position: absolute;
+        right: 0.5rem;
+        color: $primaryColor;
+        pointer-events: none;
+        bottom: 0.34em;
     }
 }
 
@@ -275,11 +311,43 @@ select {
                 display: none;
             }
         }
-        .pwd_error.hide {
-            display: none;
+        .email_error,
+        .pwd_error,
+        .file_upload_error,
+        .businessField_error,
+        .incorrect_email_error {
+            &.hide {
+                display: none;
+            }
         }
-        .email_error.hide {
-            display: none;
+        .file_upload_wrapper {
+            --size: 130px;
+            .file_btn_wrap {
+                border: 1px solid #ccc;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            #docFile {
+                position: absolute;
+                opacity: 0;
+            }
+            .file_btn,
+            #pseudo_file {
+                padding: 0.3em;
+            }
+            .file_btn {
+                width: var(--size);
+                background-color: #f3f3f3;
+                margin: 0;
+                text-align: center;
+                color: $primaryColor;
+            }
+            #pseudo_file {
+                margin: 0;
+                height: 100%;
+                width: calc(100% - var(--size));
+            }
         }
     }
 }

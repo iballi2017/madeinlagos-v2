@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300&display=swap");
 *,
 *:after,
@@ -76,7 +77,7 @@ input[type=file],
 .custom-file-input,
 .custom-file-label,
 textarea,
-select {
+select.custom-select {
   border-radius: 0;
   border: 1px solid #c4c4c4;
   padding: 0.5em 0.6em;
@@ -91,7 +92,7 @@ input[type=file]:focus,
 .custom-file-input:focus,
 .custom-file-label:focus,
 textarea:focus,
-select:focus {
+select.custom-select:focus {
   outline: 0;
   box-shadow: none;
   border: 1px solid #bcae00;
@@ -106,7 +107,7 @@ input[type=file]::placeholder,
 .custom-file-input::placeholder,
 .custom-file-label::placeholder,
 textarea::placeholder,
-select::placeholder {
+select.custom-select::placeholder {
   font-family: "Roboto", sans-serif;
 }
 input[type=text]::-webkit-input-placeholder,
@@ -119,7 +120,7 @@ input[type=file]::-webkit-input-placeholder,
 .custom-file-input::-webkit-input-placeholder,
 .custom-file-label::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder,
-select::-webkit-input-placeholder {
+select.custom-select::-webkit-input-placeholder {
   /* Edge */
   font-family: "Roboto", sans-serif;
 }
@@ -133,7 +134,7 @@ input[type=file]:-ms-input-placeholder,
 .custom-file-input:-ms-input-placeholder,
 .custom-file-label:-ms-input-placeholder,
 textarea:-ms-input-placeholder,
-select:-ms-input-placeholder {
+select.custom-select:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   font-family: "Roboto", sans-serif;
 }
@@ -153,6 +154,40 @@ select:-ms-input-placeholder {
 .text_link:hover {
   color: #254c0c;
   text-decoration: none;
+}
+
+/*Custom form select dropdown*/
+select.custom-select {
+  /* remove default style from browsers */
+  background-image: unset;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+select.custom-select option {
+  margin: 5em;
+  line-height: 2;
+  font: inherit;
+}
+select.custom-select::after {
+  content: "hhhhh";
+}
+
+.select_drop_wrapper {
+  position: relative;
+}
+.select_drop_wrapper::after {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  font-weight: 900;
+  font-size: 20px;
+  position: absolute;
+  right: 0.5rem;
+  color: #bcae00;
+  pointer-events: none;
+  bottom: 0.34em;
 }
 
 #registration_form_wrapper {
@@ -262,11 +297,41 @@ select:-ms-input-placeholder {
 #registration_form_wrapper .inner #businessInfo_form_errorMsg.hide {
   display: none;
 }
-#registration_form_wrapper .inner .pwd_error.hide {
+#registration_form_wrapper .inner .email_error.hide,
+#registration_form_wrapper .inner .pwd_error.hide,
+#registration_form_wrapper .inner .file_upload_error.hide,
+#registration_form_wrapper .inner .businessField_error.hide,
+#registration_form_wrapper .inner .incorrect_email_error.hide {
   display: none;
 }
-#registration_form_wrapper .inner .email_error.hide {
-  display: none;
+#registration_form_wrapper .inner .file_upload_wrapper {
+  --size: 130px;
+}
+#registration_form_wrapper .inner .file_upload_wrapper .file_btn_wrap {
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#registration_form_wrapper .inner .file_upload_wrapper #docFile {
+  position: absolute;
+  opacity: 0;
+}
+#registration_form_wrapper .inner .file_upload_wrapper .file_btn,
+#registration_form_wrapper .inner .file_upload_wrapper #pseudo_file {
+  padding: 0.3em;
+}
+#registration_form_wrapper .inner .file_upload_wrapper .file_btn {
+  width: var(--size);
+  background-color: #f3f3f3;
+  margin: 0;
+  text-align: center;
+  color: #bcae00;
+}
+#registration_form_wrapper .inner .file_upload_wrapper #pseudo_file {
+  margin: 0;
+  height: 100%;
+  width: calc(100% - var(--size));
 }
 
 #login_page > .row {

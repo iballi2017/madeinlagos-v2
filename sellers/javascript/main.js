@@ -50,6 +50,18 @@ $(document).ready(function() {
             }
             if (!$(".email_error").hasClass("hide")) {
                 $(".email_error").addClass("hide");
+                let emailValue = $("#email").val();
+                let pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i
+                pattern.test(emailValue);
+                if (pattern.test(emailValue) == false) {
+                    if ($(".incorrect_email_error").hasClass("hide")) {
+                        $(".incorrect_email_error").removeClass("hide")
+                    }
+                    return;
+                }
+                if (!$(".incorrect_email_error").hasClass("hide")) {
+                    $(".incorrect_email_error").addClass("hide")
+                }
             }
         })
         // testing password fields
@@ -64,6 +76,37 @@ $(document).ready(function() {
             $(".pwd_error").addClass("hide");
         }
     })
+
+    $(".second_page_control").focusout(function() {
+        let errorMsg = $(this).parent().siblings();
+        if ($(this).val() === "") {
+
+            if (errorMsg.hasClass("hide")) {
+                errorMsg.removeClass("hide");
+                return;
+            }
+        } else {
+            if (!errorMsg.hasClass("hide")) {
+                errorMsg.addClass("hide")
+                return;
+            }
+        }
+    })
+    $(".second_page_control").change(function() {
+        let errorMsg = $(this).parent().siblings();
+        if ($(this).val() === "") {
+
+            if (errorMsg.hasClass("hide")) {
+                errorMsg.removeClass("hide");
+                return;
+            }
+        } else {
+            if (!errorMsg.hasClass("hide")) {
+                errorMsg.addClass("hide")
+                return;
+            }
+        }
+    })
 })
 
 
@@ -75,7 +118,6 @@ const businessFormErrorMsg = document.getElementById("businessInfo_form_errorMsg
 const registerSubmitBtn = document.querySelector(".register_submit_btn");
 const slidePage = document.querySelector(".slidePage");
 const nextBtn = document.querySelector(".nextBtn");
-
 // 
 const progressText = document.querySelectorAll(".step p");
 const bullet = document.querySelectorAll(".step .bullet");
@@ -84,13 +126,7 @@ let current = 1;
 
 
 
-
-
-
-
-
 if (nextBtn) {
-
     nextBtn.addEventListener("click", () => {
         for (let i = 0; i < firstPageFormControls.length; i++) {
             if (!firstPageFormControls[i].value) {
@@ -113,6 +149,39 @@ if (nextBtn) {
         } else {
             if (!email_error.classList.contains("hide")) {
                 email_error.classList.add("hide");
+
+                // 
+                console.log("hi")
+                    // let emailValue = document.querySelector("#email.value");
+                    // var pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i
+                    // pattern.test(emailValue);
+                    // console.log(pattern.test(emailValue))
+
+
+                // 
+                // var userinput = $(this).val();
+                // var pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i
+
+                // if (!pattern.test(userinput)) {
+                //     alert('not a valid e-mail address');
+                // }​
+                // 
+
+
+
+
+                // function ValidateEmail(inputText) {
+                //     var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                //     if (inputText.value.match(mailformat)) {
+                //         alert("Valid email address!");
+                //         document.form1.text1.focus();
+                //         return true;
+                //     } else {
+                //         alert("You have entered an invalid email address!");
+                //         document.form1.text1.focus();
+                //         return false;
+                //     }
+                // }
             }
         }
 
@@ -127,6 +196,7 @@ if (nextBtn) {
             return;
         } else {
             slidePage.style.marginLeft = "-100%";
+            slidePage.style.transition = "all 300ms ease-in-out";
             bullet[current].classList.add("active");
             progressText[current].classList.add("active");
             current += 1;
