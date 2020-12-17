@@ -1,16 +1,12 @@
-// SCSS VARIABLES
-$primaryColor: #bcae00;
-$secondaryColor: #272502;
-$white: #ffffff;
-//
 // IMPORT FONTS
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300&display=swap"); // scss Varaibles
-$primaryColor: #bcae00; //rgb(188, 174, 0);
-$secondaryColor: #254c0c; //rgb(37, 76, 12);
-$deepGreen: #272502; //rgb(37, 76, 12);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300&display=swap");// SCSS VARIABLES
+$primaryColor: #bcae00;
+$secondaryColor: #272502; //rgb(37, 76, 12);
+$white: #ffffff;
+$successColor: #28a745;
+$successCheckColor:#C3DF34;
 $orangeColor: #ffbf43; // rgb(255, 191, 67);
 $blackColor: #202020; //rgb(32, 32, 32);
-$white: #ffffff;
 $greyColor: #c4c4c4;
 $starRatingColor: #ffc107;
 $lightColor: #c4c4c4;
@@ -19,9 +15,9 @@ $fontFamily: "Roboto",
 sans-serif;
 $fullWidth: 100%;
 $halfWidth: 50%;
+$shadow: 0 .125rem .25rem rgba(0,0,0,.075);
 // Variables from old style
 $grey_color: #e5e5e5;
-$white_color: #ffffff;
 $lemon_color: #bcae00;
 $lemon_color_hoverState: #98ac31;
 $black_color: #2d2d2d;
@@ -39,10 +35,13 @@ $light_pink_color: rgb(255,
     padding: 0;
 }
 
-html {}
+html {
+    /*overflow-x: hidden;*/
+}
 
 body {
     font-size: 0.875rem;
+    /*overflow-x: hidden;*/
 }
 
 // TYPOGRAPHY
@@ -89,7 +88,7 @@ li {
     background-color: $secondaryColor;
 }
 
-.text_primary {
+.text_primary, .approved {
     color: $primaryColor;
 }
 
@@ -102,6 +101,83 @@ li {
         background-color: $orangeColor;
     }
 }
+
+.btn_white{
+    background-color: $white;
+    color: $secondaryColor;
+    border: 1px solid $greyColor;
+    &:hover,
+    &:focus {
+        color: $white;
+        background-color: $orangeColor;
+        border: $orangeColor;
+    }
+}
+
+.nav-pills{
+    .nav-item {
+        .nav_tab_btn{
+            margin-right: .5em;
+            }
+    }
+}
+.nav_tab_btn{
+    background-color: $white;
+    color: $secondaryColor;
+    border: 1px solid $greyColor;
+    border-radius: 0 !important;
+    &.active{
+        background-color: $primaryColor !important;
+        border: 1px solid $white;
+    }
+}
+
+    .file_upload_wrapper {
+        --size: 130px;
+        .file_btn_wrap {
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #docFile {
+            position: absolute;
+            opacity: 0;
+        }
+        .file_btn,
+        #pseudo_file {
+            padding: 0.5em;
+        }
+        .file_btn {
+            width: var(--size);
+            background-color: $primaryColor;
+            border: 1px solid $primaryColor;
+            margin: 0;
+            text-align: center;
+            color: $white;
+        }
+        #pseudo_file {
+            margin: 0;
+            height: 100%;
+            width: calc(100% - var(--size));
+        }
+    }
+
+.pending{
+    color: $greyColor;
+}
+.cancelled{
+    color: $danger_color;
+}
+.approved, .cancelled, .pending, .delivered, .returned{
+    text-transform: uppercase;
+}
+ .delivered{
+    color: $successColor;
+ }
+ .returned{
+    color: $primaryColor;
+ }
 
 // GLOBAL
 input[type="text"],
@@ -137,11 +213,47 @@ select.custom-select {
     }
 }
 
+
+.list_style_0 {
+    li {
+        list-style: none;
+    }
+}
+
+.radio_select_option{
+         + .dropdown-menu input.form-check-input {
+        position: absolute;
+        opacity: 0;
+        + label{
+            text-transform: uppercase;
+        }
+        &:checked + label{
+            color: $primaryColor;
+            font-weight: 600;
+        }
+    }
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: $primaryColor;
+}
+
+#main-nav{
+    /*z-index: 10000;*/
+}
 .btn {
     border-radius: 3px;
     transition: all 300ms ease-in-out;
     &:focus {
         box-shadow: none;
+    }
+}
+
+.text_decoration_underline_none {
+    &:hover {
+        text-decoration: none;
     }
 }
 
@@ -153,6 +265,106 @@ select.custom-select {
         text-decoration: none;
     }
 }
+
+.notification_item{
+    transition: all 300ms ease-in-out;
+    >div{
+        border: 1px solid $grey_color;
+        transition: all 300ms ease-in-out;
+    }
+    &:hover{
+        >div{
+            box-shadow: $shadow;
+            border: none;
+            transition: all 300ms ease-in-out;
+        }
+    }
+}
+
+
+
+// table filtering dropdowns
+.table-filter {
+    .filter-tab {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        position: relative;
+        z-index: 100;
+    }
+    .filter-tab li+li {
+        margin-left: 2em;
+    }
+    .filter-tab .filt_option.angle-down:after {
+        content: "\f107";
+        font-size: 1.3rem;
+        margin-left: 5px;
+    }
+    .filter-tab .filt_option.angle-up:after {
+        content: "\f106";
+        font-size: 1.3rem;
+        margin-left: 5px;
+    }
+    .filter-tab li .filt_dropdown {
+        position: absolute;
+        background-color: #ffffff;
+        width: 100%;
+        right: 0;
+        left: 0;
+    }
+    .filt_dropdown {
+        transform: scaleY(0);
+        opacity: 0;
+        transition: all 300ms ease-in-out;
+    }
+    .filter-tab li:hover .filt_dropdown {
+        transform: scaleY(1);
+        opacity: 1;
+        margin-top: 0.7em;
+    }
+    .filt_option {
+        border: 1px solid #ccc;
+        padding: 0.5em 0.7em;
+    }
+    /* .filt_option .default_link {
+                    margin: 1em;
+                } */
+}
+
+.check {
+    position: absolute;
+    opacity: 0;
+    top: -1000000px;
+    ~label {
+        display: flex;
+        flex-wrap: wrap;
+        cursor: pointer;
+        margin: 0;
+        >.custom_check {
+            --size: 1.2em;
+            width: var(--size);
+            height: var(--size);
+            // cursor: pointer;
+            border: 0.6px solid $primaryColor;
+            border-radius: 3px;
+            transform: scale(1);
+            transition: transform 300ms ease-in-out;
+            display: grid;
+            place-content: center;
+        }
+    }
+    &[type="checkbox"]:checked+label .custom_check {
+        background: $primaryColor;
+        &::before {
+            content: "\f00c";
+            color: $white;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 0.6rem;
+        }
+    }
+}
+
 
 
 /*Custom form select dropdown*/
@@ -174,6 +386,29 @@ select.custom-select {
         content: "hhhhh";
     }
 }
+select.custom-select.bankForm_first_page_control{
+    option {
+        margin: 0;
+    }
+}
+
+/* Remove arrows from number controls */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+/* Firefox */
+  -moz-appearance: textfield;
+/* Microsoft edge */
+  -o-appearance: textfield;
+}
+
+.header{
+    z-index: 10003;
+}
 
 .select_drop_wrapper {
     position: relative;
@@ -189,7 +424,159 @@ select.custom-select {
         bottom: 0.34em;
     }
 }
+.chart-container {
+  position: relative;
+  margin: auto;
+  height: auto;
+  width: auto;
+}
 
+
+:root{
+    --custSidenavWidth: 200px;
+};
+.sidebar {
+    background-color: $white;
+    position: fixed;
+    width: var(--custSidenavWidth);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 90px 0 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+    .sidebar-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        position: relative;
+        top: 0;
+        height: calc(100vh - 48px);
+        padding-top: 0.5rem;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .nav-link {
+        font-weight: 500;
+        color: #333;
+        &.active,
+        &.active .icon,
+        &:hover,
+        &:hover {
+           border-left: 2px solid $primaryColor;
+           box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+            .icon {
+                border: none;
+           color: $primaryColor; box-shadow: none;
+            }
+        }
+    }
+}
+
+.hide-list-label .icon+span,
+.hide-list-label .logout+span {
+    transition: all 300ms ease-in-out;
+    transform: translateX(-100%);
+    transition: all 300ms ease-in-out;
+    position: absolute;
+    opacity: 0;
+     display: none;
+}
+
+.sidebar .nav-link .feather {
+    margin-right: 4px;
+    color: #999;
+}
+
+.overlay{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 40000;
+    &.hide{
+        display: none;
+    }
+}
+.modal_form{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 40001;
+        transform: scaleX(1);
+        transform-origin: right;
+        transition: all 300ms ease-out;
+    .inner{
+        max-width: 500px;
+        margin: 0 auto;
+        margin-top: 10em;
+        .card{
+            margin-left: .5em;
+            margin-right: .5em;
+            .card-header{
+                position: relative;
+                .cancel_modal_close_btn{
+                    position: absolute;
+                    right: 2em;
+                    bottom: 40%;
+                }
+            }
+        }
+    }
+    &.hide{
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: all 300ms ease-out;
+    }
+}
+
+#earnings_modal{
+    .modal_header{
+        position: relative;
+        .cancel_modal_close_btn{
+            position: absolute;
+            right: 0;
+            bottom: 40%;
+        }
+    }
+
+    #firstPage_error_msg{
+        transition: all 300ms ease-in-out;
+        &.hide{
+            transform: translateX(0);
+            position: absolute;
+            opacity: 0;
+            transition: all 300ms ease-in-out;
+        }
+    }
+}
+
+.feather {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+}
+
+.feather-icon.md {
+    width: 25px;
+    height: 25px;
+}
+
+.feather-icon.lg {
+    width: 30px;
+    height: 30px;
+}
+
+main[role="main"]{
+    margin-left: var(--custSidenavWidth);
+}
 #registration_form_wrapper {
     max-width: 500px;
     margin: 0 auto;
@@ -276,41 +663,6 @@ select.custom-select {
                 transition: all 0.3s ease-in-out;
             }
         }
-        .form_wrapper {
-            position: relative;
-            border: 1px solid $greyColor;
-            .form-control {
-                border: 0;
-                padding-top: 1em;
-                transition: all .3s ease-in-out;
-            }
-            label {
-                position: absolute;
-                bottom: auto;
-                top: 0;
-                left: 0.6em;
-                font-size: .6rem;
-                color: $primaryColor;
-                transition: all .3s ease-in-out;
-            }
-            &.sit {
-                label {
-                    top: unset;
-                    bottom: 0;
-                    font-size: .89rem;
-                    color: $blackColor;
-                }
-                .form-control {
-                    padding-top: 0;
-                }
-            }
-        }
-        #accountInfo_form_errorMsg,
-        #businessInfo_form_errorMsg {
-            &.hide {
-                display: none;
-            }
-        }
         .email_error,
         .pwd_error,
         .file_upload_error,
@@ -352,21 +704,7 @@ select.custom-select {
     }
 }
 
-#login_page {
-    >.row {
-        height: 90vh;
-        overflow-y: auto;
-    }
-    .right_child {
-        background-image: url('../assets/images/square-cart-banner.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-    #login_form_wrapper {
-        max-width: 500px;
-        margin: 0 auto;
-    }
+.anim_form{
     .form_wrapper {
         position: relative;
         border: 1px solid $greyColor;
@@ -401,6 +739,22 @@ select.custom-select {
         &.hide {
             display: none;
         }
+    }}
+
+#login_page {
+    >.row {
+        height: 90vh;
+        overflow-y: auto;
+    }
+    .right_child {
+        background-image: url('../assets/images/square-cart-banner.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #login_form_wrapper {
+        max-width: 500px;
+        margin: 0 auto;
     }
 }
 
@@ -412,6 +766,83 @@ select.custom-select {
         justify-content: center;
         img {
             width: 150px;
+        }
+    }
+}
+
+#uploaded_products{
+    #product_sorter{
+        input[type="radio"]{
+            position: absolute;
+            top: -100000px; //sent to heaven
+            opacity: 0;
+            +label{
+                margin-right: 1em;
+                border: 1px solid $greyColor;
+                padding: .7em 1.2em;
+                cursor: pointer;
+                transition: all 300ms ease-in-out;
+                border-radius: 3px;
+                &:hover{
+                    background-color: $primaryColor;
+                    color: $white;
+                    border: 1px solid $white;
+                }
+            }
+            &:checked + label{
+                    background-color: $primaryColor;
+                    color: $white;
+                    border: 1px solid $white;
+            }
+        }
+    }
+}
+
+    table{
+        #prod_name{
+            min-width: 150px;
+        }
+        #prod_qty{
+            min-width: 50px;
+        }
+        #prod_price{
+            min-width: 80px;
+        }
+        #prod_status{
+            min-width: 80px;
+        }
+        #status{
+            min-width: 60px;
+        }
+        #prod_name_img{
+            min-width: 200px;
+        }
+    }
+
+#orders_page{
+        #order_number, #order_deliver_status{
+            min-width: 200px;
+        }
+        #order_date, #order_price{
+            min-width: 90px;
+        }
+        
+}
+
+#earnings{
+    #earnings_modal{
+        .inner_wrapper{
+            width: 100%;
+            >div{
+            overflow-x: hidden;
+            width: 100%;
+                form{
+                    width: 200%;
+                    .form_section{
+                        width: 50%;
+                    }
+                }
+            }
         }
     }
 }

@@ -751,6 +751,33 @@ form .form_control_wrapper > label.submerge {
   -o-transition: all 300ms ease-in-out;
   -webkit-transition: all 300ms ease-in-out;
 }
+form .form_wrapper {
+  position: relative;
+  border: 1px solid #c4c4c4;
+}
+form .form_wrapper .form-control {
+  border: 0;
+  padding-top: 1em;
+  transition: all 0.3s ease-in-out;
+}
+form .form_wrapper label {
+  position: absolute;
+  bottom: auto;
+  top: 0;
+  left: 0.6em;
+  font-size: 0.6rem;
+  color: #bcae00;
+  transition: all 0.3s ease-in-out;
+}
+form .form_wrapper.sit label {
+  top: unset;
+  bottom: 0;
+  font-size: 0.89rem;
+  color: #202020;
+}
+form .form_wrapper.sit .form-control {
+  padding-top: 0;
+}
 
 /* PAGES */
 #verified_products_page .page_title {

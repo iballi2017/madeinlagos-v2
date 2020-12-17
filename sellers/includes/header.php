@@ -19,14 +19,18 @@
 
 <body>
     <!-- header -->
-    <div
-        class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg_secondary shadow-sm">
+    <header
+        class="d-flex flex-md-row align-items-center p-3 px-md-4 bg_secondary shadow-sm sticky-top" id="main-nav">
         <h5 class="my-0 mr-md-auto font-weight-normal text-white uppercase">Sellers Villa</h5>
-        <nav class="my-2 my-md-0 mr-md-3">
+        <nav class="my-2 my-md-0 ml-auto sticky-top">
             <a class="p-2 text-white" href="./login.php">Login</a>
+            <a class="p-2 text-white text_decoration_underline_none display_1" href="../views/seller-profile.php">
+                <!-- <span class="icon" data-feather="user"></span> -->
+                <i class="fas fa-user-circle"></i>
+            </a>
         </nav>
         <a class="btn btn_primary" href="./register.php">Sign up</a>
-    </div> <!-- //header -->
+    </header> <!-- //header -->
 
 
     

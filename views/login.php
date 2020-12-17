@@ -5,15 +5,21 @@
           <div class="card w-100 border-0 shadow">
               <div class="card-body">
                   <h5 class="card-title text-center text_primary">LOGIN</h5>
-                  <form action="" method="post">
-                      <div class="form_control_wrapper mb-3">
-                          <label for="email" class="label submerge">Email Address</label>
-                          <input type="email" name="email" class="form_control">
-                      </div>
-                      <div class="form_control_wrapper mb-3">
-                          <label for="password" class="label submerge">Password</label>
-                          <input type="password" name="password" class="form_control">
-                      </div>
+                  <form action="" method="post">                  
+                        <div class="form-group">
+                            <div class="form_wrapper sit">
+                                <label for="email">Email Address</label>
+                                <input type="text" value="John Doe" class="form-control first_page_control" id="email"
+                                    aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form_wrapper sit">
+                                <label for="password">Password</label>
+                                <input type="password" value="12345" class="form-control first_page_control"
+                                    id="password" aria-describedby="passwordHelp">
+                            </div>
+                        </div>
                       <div class="form_control_wrapper">
                           <div class="d-flex align-items-center justify-content-between">
                               <div class="checkbox">

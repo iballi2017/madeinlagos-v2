@@ -321,40 +321,41 @@ $(document).ready(function() {
 
     /* Form control label effects */
     function textFocus() {
-        if ($(".form_control").val()) {
-            if (!$(".form_control").siblings().hasClass("submerge")) {
-                $(".form_control").siblings().addClass("submerge");
+        $(".form-control").each(function () {
+            if ($(this).val()) {
+                if ($(this).parent().hasClass("sit")) {
+                    $(this).parent().removeClass("sit");
+                }
             }
-        }
-        if ($(".form_control").val()) {
-            if ($(".form_control").siblings().hasClass("submerge")) {
-                $(".form_control").siblings().removeClass("submerge");
+            if (!$(this).val()) {
+                return;
             }
-        }
+        })
     }
     // fires when page refreshes
-    (function() {
+    (function () {
         textFocus();
     })(jQuery);
-    $(".form_control").focus(function() {
-        if ($(this).siblings().hasClass("submerge")) {
-            $(this).siblings().removeClass("submerge");
+    window.addEventListener('load', () => {
+        if ($(".form-control").val()) {
+            $(".form-control").parent().removeClass("sit");
+        } else {
+            $(".form-control").parent().addClass("sit");
+        }
+    });
+    $(".form-control").focus(function () {
+        if ($(this).parent().hasClass("sit")) {
+            $(this).parent().removeClass("sit");
         }
     })
-    $(".form_control").focusout(function() {
-        if (!$(this).val()) {
-            if (!$(this).siblings().hasClass("submerge")) {
-                $(this).siblings().addClass("submerge");
+    $(".form-control").focusout(function () {
+        if (!$(this).parent().hasClass("sit")) {
+            if ($(this).val()) {
+                return;
             }
-
+            $(this).parent().addClass("sit");
         }
     })
-    $(".form_control").siblings("label").click(function() {
-        if ($(this).hasClass("submerge")) {
-            $(this).removeClass("submerge");
-        }
-    })
-
 
     /* User account menu togglers */
     $("#userAccountMenuBtn").click(function() {

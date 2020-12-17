@@ -803,6 +803,36 @@ form {
             }
         }
     }
+    // 
+    .form_wrapper {
+        position: relative;
+        border: 1px solid $greyColor;
+        .form-control {
+            border: 0;
+            padding-top: 1em;
+            transition: all .3s ease-in-out;
+        }
+        label {
+            position: absolute;
+            bottom: auto;
+            top: 0;
+            left: 0.6em;
+            font-size: .6rem;
+            color: $primaryColor;
+            transition: all .3s ease-in-out;
+        }
+        &.sit {
+            label {
+                top: unset;
+                bottom: 0;
+                font-size: .89rem;
+                color: $blackColor;
+            }
+            .form-control {
+                padding-top: 0;
+            }
+        }
+    }
 }
 
 

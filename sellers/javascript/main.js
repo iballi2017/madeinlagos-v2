@@ -106,10 +106,126 @@ $(document).ready(function() {
                 return;
             }
         }
+    });
+
+
+/* Seller sidenav toggling */
+    $("#sidenav_toggler").click(function(){
+        if(!$(".sidebar").hasClass("hide-list-label")){
+            $(".sidebar").addClass("hide-list-label")
+            $(".sidebar").css({"width": "60px"})
+            $("main[role='main']").css({"marginLeft": "60px"})
+            $("main[role='main']").css({"transition": "all 300ms ease-in-out"})
+            $("sidebar").css({"transition": "all 300ms ease-in-out"})
+            return;
+        }
+        if($(".sidebar").hasClass("hide-list-label")){
+            $(".sidebar").removeClass("hide-list-label")
+            $(".sidebar").css({"width": "200px"})
+            $("main[role='main']").css({"marginLeft": "200px"})
+            $("sidebar").css({"transition": "all 300ms ease-in-out"})
+
+        }
+    });
+
+
+    /* Custom radio selections */
+
+        function radioSelect(arg1, arg2){
+            if(arg1.is(':checked')){
+              // $( arg2 ).html( arg1.siblings("label").html() );
+              arg2.html( arg1.siblings("label").html() );
+                // arg2.html( $( this ).siblings("label").html() );
+            }else{
+                return;
+            }
+            arg1.on( "click", function() {
+                arg2.html( $( this ).siblings("label").html() );
+            });
+        }
+
+        // Revenue
+        var revenueDuration_select_option = $("#revenueStatus_select_option");
+        var selectedRevenueDuration= $("input[type='radio'][name='revenue_duration']");
+        var selectedRevenueDuration_checked= $("input[type='radio'][name='revenue_duration']:checked");
+        radioSelect(selectedRevenueDuration, revenueDuration_select_option)
+        revenueDuration_select_option.html(selectedRevenueDuration_checked.siblings("label").html());
+        
+
+        // Order status
+        var status_select_option = $("#orderStatus_select_option");
+        var selectedOrderStatus = $("input[type='radio'][name='order_status']");
+        var selectedOrderStatus_checked = $("input[type='radio'][name='order_status']:checked");
+        radioSelect(selectedOrderStatus, status_select_option)
+        status_select_option.html(selectedOrderStatus_checked.siblings("label").html());
+
+        // Order year
+        var date_select_option = $("#orderDate_select_option");
+        var selectedOrderDate = $("input[type='radio'][name='order_date']");
+        var selectedOrderDate_checked = $("input[type='radio'][name='order_date']:checked");
+        radioSelect(selectedOrderDate, date_select_option)
+        date_select_option.html(selectedOrderDate_checked.siblings("label").html());
+
+        // Order month
+        var orderMonth_select_option = $("#orderMonth_select_option");
+        var selectedOrderMonth = $("input[type='radio'][name='order_month']");
+        var selectedOrderMonth_checked = $("input[type='radio'][name='order_month']:checked");
+        radioSelect(selectedOrderMonth, orderMonth_select_option)
+        orderMonth_select_option.html(selectedOrderMonth_checked.siblings("label").html());
+
+/* Cancel Order */
+    $(".trigger_page_modal").on('click', function () {
+        // $("#cancel_Order_btn").on('click', function () {
+        if ($(".overlay").hasClass("hide")){
+            $(".overlay").removeClass("hide");
+        }
+        if ($(".modal_form").hasClass("hide")){
+            $(".modal_form").removeClass("hide");
+        }
     })
+    $(".cancel_modal_close_btn").on('click', function () {
+        if (!$(".overlay").hasClass("hide")){
+            $(".overlay").addClass("hide");
+        }
+        if (!$(".modal_form").hasClass("hide")){
+            $(".modal_form").addClass("hide");
+        }
+    })
+
+/* Earnings slide modal form */
+    $("#earningsFormNextBtn").on('click', function () {
+        var allFieldEmpty = false;
+        $(".bankForm_first_page_control").each(function () {;
+            if (this.value == "") {
+                allFieldEmpty = true;
+                if ($("#firstPage_error_msg").hasClass("hide")) {
+                    $("#firstPage_error_msg").removeClass("hide");
+                }
+                return;
+            }
+
+        })
+        if (!allFieldEmpty) {
+            if (!$("#firstPage_error_msg").hasClass("hide")) {
+                $("#firstPage_error_msg").addClass("hide");
+            }
+            $("#bankFormSlidePage").css({ 'marginLeft': '-100%' })
+            $("#bankFormSlidePage").css({ 'transition': 'all 300ms ease-in-out' });
+            $("#amount_preview").html($("#amount").val());
+            $("#bank_preview").html($("#select").val());
+            $("#accountNumber_preview").html($("#acct_number").val());
+        }
+    })
+
 })
 
 
+/* VANILLA */
+
+// Back history
+function goBack() {
+    window.history.back();
+}
 
 const firstPageFormControls = document.querySelectorAll(".first_page_control");
 const secondPageFormControls = document.querySelectorAll(".second_page_control");
@@ -242,3 +358,8 @@ for (let i = 0; i < secondPageFormControls.length; i++) {
         }
     })
 }
+
+
+
+
+
