@@ -163,10 +163,11 @@
         </div>
         <div class="card border-0">
             <div class="card-body text-center">
-              <div class="w-50 m-auto">
-              <img src="../assets/images/iconmonstr-check-mark.png" alt="iconmonstr-check-mark" class="img img-fluid">
-            </div>
-              <p>Your Order has been cancelled</p>
+                <div class="w-50 m-auto">
+                    <img src="../assets/images/iconmonstr-check-mark.png" alt="iconmonstr-check-mark"
+                        class="img img-fluid">
+                </div>
+                <p>Your Order has been cancelled</p>
             </div>
         </div>
     </div>

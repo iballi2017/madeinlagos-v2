@@ -231,6 +231,11 @@ $(document).ready(function() {
         }
     })
 
+    /* Check all table checkboxes (customer-order-details.php) */
+    $("#all_row_check").click(function () {
+        $('.check').not(this).prop('checked', this.checked);
+    });
+
 })
 
 
