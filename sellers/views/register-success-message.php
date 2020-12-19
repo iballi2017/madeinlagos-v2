@@ -1,5 +1,5 @@
 <!-- head -->
-<?php include '../includes/head.php'; ?>
+<?php include '../includes/header.php'; ?>
 <!-- main -->
 
 <main class="" id="register_success_page">

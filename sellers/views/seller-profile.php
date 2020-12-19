@@ -7,10 +7,10 @@
         <div class="">
             <?php include_once '../includes/side-navigation.php' ;?>
         </div>
-        <main role="main" class="container" style="overflow-x: auto">
+        <main role="main" class="container-fluid" style="overflow-x: auto">
             <div class="py-2">
                 <button class="btn btn-lg px-0" id="sidenav_toggler">
-                    <span class="icon feather-icon md" data-feather="arrow-left-circle"></span>
+                    <i class="fas fa-arrow-alt-circle-left"></i>
                 </button>
             </div>
 
@@ -254,7 +254,8 @@
                                             <div class="file_upload_wrapper">
                                                 <div class="file_btn_wrap">
                                                     <!-- file input for user interface -->
-                                                    <input type="text" id="pseudo_sellerId" class="border-0 border-right"
+                                                    <input type="text" id="pseudo_sellerId"
+                                                        class="border-0 border-right"
                                                         placeholder="Upload your personal ID">
                                                     <!-- file input for processing -->
                                                     <input class="docFile" type="file" id="sellerId" name="sellerId"

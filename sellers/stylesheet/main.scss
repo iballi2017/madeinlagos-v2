@@ -196,14 +196,14 @@ input[type="file"],
 // .custom-file,
 .custom-file-input,
 .custom-file-label,
-textarea,
+textarea[class="form-control"],
 select.custom-select {
     border-radius: 0;
     border: 1px solid $lightColor;
     padding: 0.5em 0.6em;
     &:focus {
         outline: 0;
-        box-shadow: none;
+        box-shadow: unset;
         border: 1px solid $primaryColor;
     }
     &::placeholder {
@@ -340,7 +340,7 @@ select.custom-select {
 .check {
     position: absolute;
     opacity: 0;
-    top: -1000000px;
+    left: -1000000px;
     ~label {
         display: flex;
         flex-wrap: wrap;
@@ -553,12 +553,16 @@ input[type=number] {
     }
 }
 
-#warantyField.hide{
+#warantyField{
+    transform-origin: top;
+    transition: all 300ms ease-in-out;
+    &.hide{
     position: absolute;
     transform: scaleY(0);
     opacity: 0;
-    transform-origin: bottom;
+    transform-origin: top;
     transition: all 300ms ease-in-out;
+}
 }
 
 
@@ -799,7 +803,7 @@ main[role="main"]{
     #product_sorter{
         input[type="radio"]{
             position: absolute;
-            top: -100000px; //sent to heaven
+            left: -100000px;
             opacity: 0;
             +label{
                 margin-right: 1em;
