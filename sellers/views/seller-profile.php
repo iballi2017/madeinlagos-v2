@@ -15,17 +15,17 @@
             </div>
 
             <section class="border mb-5">
-                <div class="p-3 border-bottom">
+                <div class="p-3 border-bottom display_2">
                     ACCOUNT DETAILS
                 </div>
-                <div class="row">
-                    <div class="col-12 col-md-4">
+                <div class="row no-gutters">
+                    <div class="col-12 col-md-12 col-lg-4">
                         <div class="p-3 d-flex align-items-center">
                             <i class="fas fa-user-circle display_3 mr-3"></i>
                             <h5 class="seller_name_tag">AKON STORE</h5>
                         </div>
                     </div>
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-6 col-lg-4">
                         <div class="p-3">
                             <h5 class="uppercase">Seller Details</h5>
                             <ul class="list_style_0">
@@ -34,7 +34,7 @@
                                     <span>OLUWATOBI ADEOYE</span>
                                 </li>
                                 <li>
-                                    <span> <i class="fas fa-envelope mr-2"></i></span>
+                                    <span><i class="fas fa-envelope mr-2"></i></span>
                                     <span>Adeoyeoluwatobi.123@gmail.com</span>
                                 </li>
                                 <li>
@@ -44,7 +44,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-6 col-lg-4">
                         <div class="p-3">
                             <h5 class="uppercase">Address</h5>
                             <p>19, 3tee Street, Ajegunle/iroko Town, Ado Odo/otta, Ogun, Nigeria</p>
@@ -54,7 +54,7 @@
             </section>
 
 
-            <section>
+            <section class="mb-3">
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link btn nav_tab_btn active" id="pills-account-settings-tab" data-toggle="pill"
