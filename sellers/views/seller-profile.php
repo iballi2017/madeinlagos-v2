@@ -235,10 +235,15 @@
                                     </div>
                                     <div class="col-12 col-md-6">
                                         <div class="form-group">
-                                            <div class="form_wrapper sit">
-                                                <label for="country">Country</label>
+                                            <!-- <label for="country">Country</label>
                                                 <input type="text" value="" class="form-control second_page_control"
-                                                    id="country" aria-describedby="countryHelp" required>
+                                                    id="country" aria-describedby="countryHelp" required> -->
+                                            <div class="select_drop_wrapper form_wrapper">
+                                                <select class="custom-select border-0 second_page_control" name="title">
+                                                    <option value="" selected>Country</option>
+                                                    <option value="country1">Country 1</option>
+                                                    <option value="country2">Country 2</option>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
@@ -249,14 +254,13 @@
                                             <div class="file_upload_wrapper">
                                                 <div class="file_btn_wrap">
                                                     <!-- file input for user interface -->
-                                                    <input type="text" id="pseudo_file"
-                                                        class="border-0 border-right"
+                                                    <input type="text" id="pseudo_sellerId" class="border-0 border-right"
                                                         placeholder="Upload your personal ID">
                                                     <!-- file input for processing -->
-                                                    <input class="" type="file" id="docFile" name="docFile"
-                                                        accept="image/png, image/jpeg" onchange="pickfile()">
+                                                    <input class="docFile" type="file" id="sellerId" name="sellerId"
+                                                        accept="image/png, image/jpeg" onchange="pickPersonalId()">
                                                     <!-- file input label -->
-                                                    <label class="file_btn border" for="docFile">Upload</label>
+                                                    <label class="file_btn border" for="sellerId">Upload</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -274,8 +278,8 @@
                     </div>
                     <div class="tab-pane fade" id="pills-payment-settings" role="tabpanel"
                         aria-labelledby="pills-payment-settings-tab">
-                        
-                    <!-- BANK ACCOUNT -->
+
+                        <!-- BANK ACCOUNT -->
                         <form action="#" id="" class="anim_form">
                             <fieldset class="mb-5">
                                 <legend class="display_1 mb-0">BANK ACCOUNT</legend>

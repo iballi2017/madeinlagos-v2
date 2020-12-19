@@ -16,6 +16,7 @@
     <!-- feather icon -->
     <script src="https://unpkg.com/feather-icons@4.10.0/dist/feather.min.js"></script>
     <script src="../assets/plugins/feather.min.js"></script>
+    <script src="../assets//plugins/dropzone-5.7.0/dist/dropzone.js"></script>
     <script>
         $(document).ready(function() {
             feather.replace();

@@ -117,6 +117,7 @@ li {
 .nav-pills{
     .nav-item {
         .nav_tab_btn{
+            margin-bottom: .3em;
             margin-right: .5em;
             }
     }
@@ -132,37 +133,42 @@ li {
     }
 }
 
-    .file_upload_wrapper {
-        --size: 130px;
-        .file_btn_wrap {
-            border: 1px solid #ccc;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        #docFile {
-            position: absolute;
-            opacity: 0;
-        }
-        .file_btn,
-        #pseudo_file {
-            padding: 0.5em;
-        }
-        .file_btn {
-            width: var(--size);
-            background-color: $primaryColor;
-            border: 1px solid $primaryColor;
-            margin: 0;
-            text-align: center;
-            color: $white;
-        }
-        #pseudo_file {
-            margin: 0;
-            height: 100%;
-            width: calc(100% - var(--size));
-        }
+.file_upload_wrapper {
+    --size: 130px;
+    .file_btn_wrap {
+        border: 1px solid #ccc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-
+    #docFile, .docFile {
+        position: absolute;
+        opacity: 0;
+    }
+    .file_btn,
+    #pseudo_file, .pseudo_file {
+        padding: 0.5em;
+    }
+    .file_btn {
+        width: var(--size);
+        background-color: $primaryColor;
+        border: 1px solid $primaryColor;
+        margin: 0;
+        text-align: center;
+        color: $white;
+    }
+    #pseudo_file, .pseudo_file {
+        margin: 0;
+        height: 100%;
+        width: calc(100% - var(--size));
+    }
+}
+.dropzone {
+    min-height: 150px;
+    border: 1px solid #ccc;
+    background: white;
+    padding: 20px 20px;
+}
 .pending{
     color: $greyColor;
 }
@@ -363,6 +369,16 @@ select.custom-select {
             font-size: 0.6rem;
         }
     }
+    &[type="radio"]:checked+label .custom_check {
+        background: $primaryColor;
+        &::before {
+            content: "\f00c";
+            color: $white;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 0.6rem;
+        }
+    }
 }
 
 
@@ -536,6 +552,15 @@ input[type=number] {
         transition: all 300ms ease-out;
     }
 }
+
+#warantyField.hide{
+    position: absolute;
+    transform: scaleY(0);
+    opacity: 0;
+    transform-origin: bottom;
+    transition: all 300ms ease-in-out;
+}
+
 
 #earnings_modal{
     .modal_header{

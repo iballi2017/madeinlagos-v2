@@ -84,6 +84,7 @@ li {
 }
 
 .nav-pills .nav-item .nav_tab_btn {
+  margin-bottom: 0.3em;
   margin-right: 0.5em;
 }
 
@@ -107,12 +108,12 @@ li {
   justify-content: space-between;
   align-items: center;
 }
-.file_upload_wrapper #docFile {
+.file_upload_wrapper #docFile, .file_upload_wrapper .docFile {
   position: absolute;
   opacity: 0;
 }
 .file_upload_wrapper .file_btn,
-.file_upload_wrapper #pseudo_file {
+.file_upload_wrapper #pseudo_file, .file_upload_wrapper .pseudo_file {
   padding: 0.5em;
 }
 .file_upload_wrapper .file_btn {
@@ -123,10 +124,17 @@ li {
   text-align: center;
   color: #ffffff;
 }
-.file_upload_wrapper #pseudo_file {
+.file_upload_wrapper #pseudo_file, .file_upload_wrapper .pseudo_file {
   margin: 0;
   height: 100%;
   width: calc(100% - var(--size));
+}
+
+.dropzone {
+  min-height: 150px;
+  border: 1px solid #ccc;
+  background: white;
+  padding: 20px 20px;
 }
 
 .pending {
@@ -360,6 +368,16 @@ select.custom-select:-ms-input-placeholder {
   font-weight: 900;
   font-size: 0.6rem;
 }
+.check[type=radio]:checked + label .custom_check {
+  background: #bcae00;
+}
+.check[type=radio]:checked + label .custom_check::before {
+  content: "";
+  color: #ffffff;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 0.6rem;
+}
 
 /*Custom form select dropdown*/
 select.custom-select {
@@ -527,6 +545,14 @@ input[type=number] {
   transform: scaleX(0);
   transform-origin: left;
   transition: all 300ms ease-out;
+}
+
+#warantyField.hide {
+  position: absolute;
+  transform: scaleY(0);
+  opacity: 0;
+  transform-origin: bottom;
+  transition: all 300ms ease-in-out;
 }
 
 #earnings_modal .modal_header {

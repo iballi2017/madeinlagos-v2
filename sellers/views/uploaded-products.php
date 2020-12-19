@@ -17,7 +17,7 @@
             <section>
                 <div class="container d-flex flex-wrap justify-content-between align-items-center py-4">
                     <h4>PRODUCT UPLOAD</h4>
-                    <a href="#" class="btn btn_primary">SELL PRODUCT</a>
+                    <a href="./add-new-product.php" class="btn btn_primary">SELL PRODUCT</a>
                 </div>
                 <div class="row">     
                     <div class="col-12 col-md-6">             
