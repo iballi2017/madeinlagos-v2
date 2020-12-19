@@ -286,7 +286,8 @@
                         </fieldset>
                         <!--  -->
                     </div>
-                    <div class="row mb-5">
+                    <div class="row mb-5git status
+                    f">
                         <div class="col">
                             <button type="submit" class="btn rounded-0 px-5 btn_primary uppercase" id="">Submit</button>
                         </div>

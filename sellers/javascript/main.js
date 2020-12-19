@@ -218,6 +218,7 @@ $(document).ready(function() {
     });
 
 
+    /* Toggling Warranty radio check */
     $("#warantyToggler").click(function () {
         if ($("#warantyYes").is(":checked")) {
             if ($("#warantyField").hasClass("hide")) {
@@ -374,14 +375,6 @@ for (let i = 0; i < secondPageFormControls.length; i++) {
 
 
 /* Upload Files */
-// var docFile = document.getElementById("docFile");
-// var pseudoFile = document.getElementById("pseudo_file");
-
-// function pickfile() {
-//     pseudoFile.value = docFile.value;
-//     pseudoFile.value = docFile.value.slice(12);
-// }
-
 var arg1;
 var arg2;
 let uploadedImages = [];
@@ -398,8 +391,6 @@ function pickfile(arg1, arg2) {
         arg2.value = arg1.value.slice(12);
     }
 }
-
-
 // Uploading Seller personal ID
 var sellerId = document.getElementById("sellerId");
 var pseudo_sellerId = document.getElementById("pseudo_sellerId");
@@ -418,47 +409,39 @@ function pick() {
 function pick2() {
     pickfile(productImage2, pseudo_productImage2);
 }
+
+
+
+
 // // Dropzone class:
 // var myDropzone = new Dropzone("div#myId", { url: "./" });
 // // Disable auto discover for all elements:
 // Dropzone.autoDiscover = false;
 
 
-// "myAwesomeDropzone" is the camelized version of the HTML element's ID
-Dropzone.options.myAwesomeDropzone = {
-  paramName: "file", // The name that will be used to transfer the file
-  maxFilesize: 2, // MB
-  accept: function(file, done) {
-    if (file.name == "justinbieber.jpg") {
-      done("Naha, you don't.");
-    }
-    else { done(); }
-  }
-};
 
 
-/* RAW */
-
+/* RAW CODES for my custom drop and drag upload */
 var myProductImages = document.getElementById("productImages");
 function pickImage() {
     if (uploadedImages.length < 2 ) {
         uploadedImages.push({
-            "name": myProductImages.value
+            "name": myProductImages.files[0].name
         })
     } else {
         alert("Sorry, you are allowed to upload only 2 images!")
     }
-        // imageBox.innerHTML = uploadedImages;
+        imageBox.innerHTML = uploadedImages;
         // console.log(uploadedImages)    
         // console.log(getImages())
-    imageBox.innerHTML = getImages()
+    imageBox.innerHTML = getImages();
 }
 
 function getImages() {
     var template = '';
     uploadedImages.forEach(image => {
         template += `
-        <p><img src='${image.name}'/></p>`
+        <p><img src="${image.name}"/></p>`
         console.log(image.name);
     })
 

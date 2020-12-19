@@ -136,7 +136,8 @@
 
                     <div class="border p-3 mb-3">
                         <fieldset>
-
+                            <legend class="display_1 mb-0 uppercase">Product Images</legend>
+                            <hr class="mb-4" />
                             <div class="p-3" id="imageBox"></div>
                             <div class="text-center">
                                 <input type="file" name="images" id="productImages" class="m-auto"
