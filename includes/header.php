@@ -107,7 +107,7 @@
     </header>
 
     <!-- mobile header -->
-    <header class="bg-dark d-block d-md-none">
+    <header class="bg_secondaryDark d-block d-md-none">
         <nav class="d-flex align-items-center justify-content-between py-2">
             <div class="d-flex align-items-center">
                 <button class="btn text_primary d-block d-md-none" id="categories_tab_toggler">
@@ -130,7 +130,7 @@
                         </svg>
                     </a>
                 <!-- logout handler -->
-                <a class="nav-link text-white" href="./user-cart.php">
+                <a class="nav-link text-white" href="../user-cart.php">
                     <span data-feather="shopping-cart"></span><span class="badge badge-light">4</span>
                 </a>
                     <!-- User profile link -->

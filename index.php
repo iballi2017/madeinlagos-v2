@@ -116,7 +116,7 @@
         </div>
     </header>
     <!-- mobile header -->
-    <header class="bg-dark d-block d-md-none sticky-top">
+    <header class="bg_secondaryDark d-block d-md-none sticky-top">
         <nav class="d-flex align-items-center justify-content-between py-2">
             <div class="d-flex align-items-center">
                 <button class="btn text_primary d-block d-md-none" id="categories_tab_toggler">
