@@ -100,7 +100,7 @@
                 <!-- </div> -->
                 <div class="nav-item text-nowrap">
                     <!-- User profile link -->
-                    <a href="#" class="link_primary text-white">
+                    <a href="./views/user-account.php" class="link_primary text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             class="bi bi-person-circle" viewBox="0 0 16 16">
                             <path
