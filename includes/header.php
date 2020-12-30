@@ -92,11 +92,25 @@
                 <ul class="navbar-nav">
                     <li class="nav-item text-nowrap">
                         <!-- <a class="nav-link text-white" href="#"><i class="fas fa-shopping-cart mr-2"></i>Cart</a> -->
-                        <a class="nav-link text-white" href="./user-cart.php"><span data-feather="shopping-cart"></span><span class="badge badge-light">4</span></a>
+                        <a class="nav-link text-white" href="./user-cart.php"><span
+                                data-feather="shopping-cart"></span><span class="badge badge-light">4</span></a>
 
                     </li>
                 </ul>
                 <!-- </div> -->
+                <div class="nav-item text-nowrap">
+                    <!-- User profile link -->
+                    <a href="#" class="link_primary text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path
+                                d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+                            <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                            <path fill-rule="evenodd"
+                                d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+                        </svg>
+                    </a>
+                </div>
             </nav>
         </div>
     </header>
@@ -350,11 +364,11 @@
                                         <button class="btn p-0 mb-4" id="category_groceries_back_btn">
                                             <span data-feather="arrow-left"></span>Groceries
                                         </button>
-                                <div class="text-center">
-                                    <h3>Coming soon</h3>
-                                    <h6>Make a list of Groceries you want</h6>
-                                    <p><a href="#" class="text_primary">CLICK HERE</a></p>
-                                </div>
+                                        <div class="text-center">
+                                            <h3>Coming soon</h3>
+                                            <h6>Make a list of Groceries you want</h6>
+                                            <p><a href="#" class="text_primary">CLICK HERE</a></p>
+                                        </div>
                                         <!-- <ul class="list_style_0 category_scroll_y">
                                             <li><a href="#">Groceries Item 1</a></li>
                                             <li><a href="#">Groceries Item 2</a></li>
@@ -369,12 +383,12 @@
                                         <button class="btn p-0 mb-4" id="category_homeKitchenOffice_back_btn">
                                             <span data-feather="arrow-left"></span>Home, Kitchen and Office
                                         </button>
-                                        
-                                <div class="text-center">
-                                    <h3>Coming soon</h3>
-                                    <h6>Make a list of Home, Kitchen and Office you want</h6>
-                                    <p><a href="#" class="text_primary">CLICK HERE</a></p>
-                                </div>
+
+                                        <div class="text-center">
+                                            <h3>Coming soon</h3>
+                                            <h6>Make a list of Home, Kitchen and Office you want</h6>
+                                            <p><a href="#" class="text_primary">CLICK HERE</a></p>
+                                        </div>
                                         <!-- <ul class="list_style_0 category_scroll_y">
                                             <li><a href="#">Home, Kitchen and Office Item 1</a></li>
                                             <li><a href="#">Home, Kitchen and Office Item 2</a></li>
@@ -389,12 +403,12 @@
                                         <button class="btn p-0 mb-4" id="category_books_back_btn">
                                             <span data-feather="arrow-left"></span>Books
                                         </button>
-                                        
-                                <div class="text-center">
-                                    <h3>Coming soon</h3>
-                                    <h6>Make a list of Books you want</h6>
-                                    <p><a href="#" class="text_primary">CLICK HERE</a></p>
-                                </div>
+
+                                        <div class="text-center">
+                                            <h3>Coming soon</h3>
+                                            <h6>Make a list of Books you want</h6>
+                                            <p><a href="#" class="text_primary">CLICK HERE</a></p>
+                                        </div>
                                         <!-- <ul class="list_style_0 category_scroll_y">
                                             <li><a href="#">Books Item 1</a></li>
                                             <li><a href="#">Books Item 2</a></li>
@@ -409,12 +423,12 @@
                                         <button class="btn p-0 mb-4" id="category_beauty_back_btn">
                                             <span data-feather="arrow-left"></span>Beauty
                                         </button>
-                                        
-                                <div class="text-center">
-                                    <h3>Coming soon</h3>
-                                    <h6>Make a list of Beauty you want</h6>
-                                    <p><a href="#" class="text_primary">CLICK HERE</a></p>
-                                </div>
+
+                                        <div class="text-center">
+                                            <h3>Coming soon</h3>
+                                            <h6>Make a list of Beauty you want</h6>
+                                            <p><a href="#" class="text_primary">CLICK HERE</a></p>
+                                        </div>
                                         <!-- <ul class="list_style_0 category_scroll_y">
                                             <li><a href="#">Beauty Item 1</a></li>
                                             <li><a href="#">Beauty Item 2</a></li>
