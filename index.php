@@ -34,73 +34,59 @@
 
 <body>
     <!-- HEADER -->
-    <header class="bg_secondaryDark">
-        <div class="container">
+    <header class="bg_secondaryDark d-none d-md-block">
+        <div class="container-fluid">
             <nav class="navbar navbar-dark sticky-top flex-md-nowrap py-2">
                 <!-- <div class="container"> -->
-                <a class="navbar-brand col-sm-3 col-md-1 p-0 mr-4" href="#">
-                    <img src="assets/images/madeinlagos_brand_logo.png" class="img-fluid" alt="">
+                <a class="navbar-brand col-sm-3 col-md-1 p-0 mr-4" href="./">
+                    <img src="./assets/images/madeinlagos_brand_logo.png" class="img-fluid" alt="">
                 </a>
-                <!-- <span>AAAA</span>
-                <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
-                <span>BBBB</span> -->
-
-                <div class="">
-                    <button class="btn text_primary d-block d-md-none" id="categories_tab_toggler">
+                <div>
+                    <!-- <button class="btn text_primary d-block d-md-none" id="categories_tab_toggler">
                         <span data-feather="menu"></span>
-                    </button>
+                    </button> -->
                     <button class="btn text_primary d-none d-md-block" id="categories_tab_toggler_lg">
                         <span data-feather="menu"></span>
                     </button>
                 </div>
 
-                <div class="">
+                <div>
                     <div class="dropdown">
                         <button class="btn btn-sm text-white dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Help
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="dropdown-menu" id="HelpDropDown" aria-labelledby="dropdownMenuButton">
                             <a class="btn-sm dropdown-item" href="./views/faq.php">FAQ</a>
                             <a class="btn-sm dropdown-item" href="./views/contact-us.php">Contact Us</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-7 col-sm-7 px-0">
+                <div class="col-12 col-md-6 col-lg-7 px-0">
                     <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
 
                     <div class="input-group">
-                        <input type="text" class="form-control" aria-label="Recipient's username"
-                            aria-describedby="button-addon2">
+                        <input type="text" class="form-control" aria-label="Search items"
+                            aria-describedby="search-button">
                         <div class="input-group-append">
-                            <button class="btn text-white bg_orange" type="button" id="button-addon2">SEARCH</button>
+                            <button class="btn text-white bg_orange" type="button" id="search-button">SEARCH</button>
                         </div>
                     </div>
                 </div>
-                <div class="">
-                    <div class="dropdown">
+                <div class="nav-item text-nowrap d-flex align-items-center">
+                    <!-- <div class="dropdown">
                         <button class="btn btn-sm text-white dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Login
                         </button>
-                        <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
-                            <a class="btn-sm dropdown-item" href="./views/login.php">LOGIN</a>
+                        <div class="dropdown-menu text-center" id="loginDropDown" aria-labelledby="dropdownMenuButton">
+                            <a class="btn-sm dropdown-item" href="./login.php">LOGIN</a>
                             <div class="dropdown-divider"></div>
-                            <a class="btn-sm dropdown-item" href="./views/register.php">SIGNUP</a>
+                            <a class="btn-sm dropdown-item" href="./register.php">SIGNUP</a>
                         </div>
-                    </div>
-                </div>
-                <ul class="navbar-nav">
-                    <li class="nav-item text-nowrap">
-                        <!-- <a class="nav-link text-white" href="#"><i class="fas fa-shopping-cart mr-2"></i>Cart</a> -->
-                        <a class="nav-link text-white" href="./views/user-cart.php"><span data-feather="shopping-cart"></span><span
-                                class="badge badge-light">4</span></a>
-                    </li>
-                </ul>
-                <!-- </div> -->
-                <div class="nav-item text-nowrap">
+                    </div> -->
                     <!-- User profile link -->
-                    <a href="./views/user-account.php" class="link_primary text-white">
+                    <a href="./views/user-account.php" class="nav-link link_primary text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             class="bi bi-person-circle" viewBox="0 0 16 16">
                             <path
@@ -110,9 +96,58 @@
                                 d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
                         </svg>
                     </a>
+                    <!-- cart link -->
+                    <a class="nav-link text-white" href="./user-cart.php">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-cart3" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                        </svg>
+                        <span class="badge badge-light">4</span>
+                    </a>
+                </div>
+                <div class="nav-item text-nowrap">
+                    <!-- User profile link -->
+                    <a href="#" class="nav-link link_primary text-white">
+                        Logout
+                    </a>
                 </div>
             </nav>
         </div>
+    </header>
+    <!-- mobile header -->
+    <header class="bg-dark d-block d-md-none sticky-top">
+        <nav class="d-flex align-items-center justify-content-between py-2">
+            <div class="d-flex align-items-center">
+                <button class="btn text_primary d-block d-md-none" id="categories_tab_toggler">
+                    <span data-feather="menu"></span>
+                </button>
+                <a class="navbar-brand p-0" href="./">
+                    <img src="./assets/images/madeinlagos_brand_logo.png" class="img-fluid" alt="">
+                </a>
+            </div>
+            <div class="d-flex align-items-center">
+                    <!-- User profile link -->
+                    <a href="./views/user-account.php" class="nav-link link_primary text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path
+                                d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+                            <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                            <path fill-rule="evenodd"
+                                d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+                        </svg>
+                    </a>
+                <!-- logout handler -->
+                <a class="nav-link text-white" href="./views/user-cart.php">
+                    <span data-feather="shopping-cart"></span><span class="badge badge-light">4</span>
+                </a>
+                    <!-- User profile link -->
+                    <a href="#" class="btn btn-sm nav-link link_primary text-white">
+                        Logout
+                    </a>
+            </div>
+        </nav>
     </header>
 
     <!-- hero -->
