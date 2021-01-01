@@ -34,7 +34,7 @@
 
 <body>
     <!-- HEADER -->
-    <header class="bg_secondaryDark d-none d-md-block">
+    <header class="bg_secondaryDark d-none d-md-block sticky-top">
         <div class="container-fluid">
             <nav class="navbar navbar-dark sticky-top flex-md-nowrap py-2">
                 <!-- <div class="container"> -->
@@ -62,7 +62,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-7 px-0">
+                <div class="col-lg-8 px-0">
                     <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
 
                     <div class="input-group">
@@ -74,28 +74,21 @@
                     </div>
                 </div>
                 <div class="nav-item text-nowrap d-flex align-items-center">
-                    <!-- <div class="dropdown">
+                    <div class="dropdown">
                         <button class="btn btn-sm text-white dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Login
+                            My Account
                         </button>
                         <div class="dropdown-menu text-center" id="loginDropDown" aria-labelledby="dropdownMenuButton">
+                            <a class="btn-sm dropdown-item" href="./user-account.php">My Profile</a>
+                            <div class="dropdown-divider"></div>
                             <a class="btn-sm dropdown-item" href="./login.php">LOGIN</a>
                             <div class="dropdown-divider"></div>
                             <a class="btn-sm dropdown-item" href="./register.php">SIGNUP</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="btn-sm dropdown-item text-danger" href="#">LOG OUT</a>
                         </div>
-                    </div> -->
-                    <!-- User profile link -->
-                    <a href="./views/user-account.php" class="nav-link link_primary text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                            class="bi bi-person-circle" viewBox="0 0 16 16">
-                            <path
-                                d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
-                            <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                            <path fill-rule="evenodd"
-                                d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
-                        </svg>
-                    </a>
+                    </div>
                     <!-- cart link -->
                     <a class="nav-link text-white" href="./user-cart.php">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
@@ -106,48 +99,46 @@
                         <span class="badge badge-light">4</span>
                     </a>
                 </div>
-                <div class="nav-item text-nowrap">
-                    <!-- User profile link -->
-                    <a href="#" class="nav-link link_primary text-white">
-                        Logout
-                    </a>
-                </div>
             </nav>
         </div>
     </header>
     <!-- mobile header -->
-    <header class="bg_secondaryDark d-block d-md-none sticky-top">
-        <nav class="d-flex align-items-center justify-content-between py-2">
+    <header class="d-block d-md-none sticky-top">
+        <nav class="bg_secondaryDark d-flex align-items-center justify-content-between py-2">
             <div class="d-flex align-items-center">
                 <button class="btn text_primary d-block d-md-none" id="categories_tab_toggler">
                     <span data-feather="menu"></span>
                 </button>
-                <a class="navbar-brand p-0" href="./">
+                <a class="navbar-brand p-0" href="../">
                     <img src="./assets/images/madeinlagos_brand_logo.png" class="img-fluid" alt="">
                 </a>
             </div>
             <div class="d-flex align-items-center">
-                    <!-- User profile link -->
-                    <a href="./views/user-account.php" class="nav-link link_primary text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                            class="bi bi-person-circle" viewBox="0 0 16 16">
-                            <path
-                                d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
-                            <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                            <path fill-rule="evenodd"
-                                d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
-                        </svg>
-                    </a>
-                <!-- logout handler -->
-                <a class="nav-link text-white" href="./views/user-cart.php">
+                <!-- Cart link -->
+                <a class="nav-link text-white" href="./user-cart.php">
                     <span data-feather="shopping-cart"></span><span class="badge badge-light">4</span>
                 </a>
-                    <!-- User profile link -->
-                    <a href="#" class="btn btn-sm nav-link link_primary text-white">
-                        Logout
-                    </a>
             </div>
         </nav>
+        <div class="pg_search_input_wrapper bg-white">
+            <div class="inner">
+                <form action="#" class='container'>
+                    <div class="input-group border rounded">
+                        <input type="text" class="form-control border-0" aria-label="Search items"
+                            aria-describedby="search-button" placeholder="SEARCH">
+                        <div class="input-group-append">
+                            <button class="btn bg-white border-0" type="button" id="search-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </header>
 
     <!-- hero -->
@@ -332,7 +323,10 @@
             <div id="overlay" class="hide"></div>
             <div id="inner" class="hide">
                 <nav>
-                    <div class="card border-0">
+                    <div class="card border-0 mt-5">
+                        <div class="card-header">
+                            <a href="./views/user-account.php" class="link_primary">AKINOLA OLUWATOBI</a>
+                        </div>
                         <div class="card-body">
                             <h3>All Categories</h3>
                             <style>
