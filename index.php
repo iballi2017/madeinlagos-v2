@@ -80,11 +80,11 @@
                             My Account
                         </button>
                         <div class="dropdown-menu text-center" id="loginDropDown" aria-labelledby="dropdownMenuButton">
-                            <a class="btn-sm dropdown-item" href="./user-account.php">My Profile</a>
+                            <a class="btn-sm dropdown-item" href="./views/user-account.php">My Profile</a>
                             <div class="dropdown-divider"></div>
-                            <a class="btn-sm dropdown-item" href="./login.php">LOGIN</a>
+                            <a class="btn-sm dropdown-item" href="./views/login.php">LOGIN</a>
                             <div class="dropdown-divider"></div>
-                            <a class="btn-sm dropdown-item" href="./register.php">SIGNUP</a>
+                            <a class="btn-sm dropdown-item" href="./views/register.php">SIGNUP</a>
                             <div class="dropdown-divider"></div>
                             <a class="btn-sm dropdown-item text-danger" href="#">LOG OUT</a>
                         </div>

@@ -15,9 +15,9 @@
         <!-- DESKTOP VIEW CONTENTS FILTER -->
         <form action="#" class="container-fluid filter_form d-none d-md-block">
             <div class="row" id="filter_nav">
-                <div class="col-12 col-md-6 d-flex flex-wrap">
+                <div class="col-12 col-md-9 d-flex flex-wrap">
                     <div>
-                        <ul class="float-left list_style_0 d-flex" style="position: relative">
+                        <ul class="float-left list_style_0 d-flex flex-wrap" style="position: relative">
                             <li class="filter_tab m-1">
                                 <div class="filterToggler dropNull border py-2 px-5">
                                     BRAND
@@ -59,6 +59,96 @@
                             </li>
                             <li class="filter_tab m-1">
                                 <div class="filterToggler dropNull border py-2 px-5">
+                                    SCREEN SIZE
+                                </div>
+                                <div class="filter_dropdown">
+                                    <div class="container-fluid">
+                                        <form action="#">
+                                            <fieldset class="px-2 py-3">
+                                                <!-- <legend>SCREEN SIZE</legend> -->
+                                                <div class="row mb-3">
+                                                    <div class="col-6">
+                                                        <input type="checkbox" name="inch_32" id="inch_32"
+                                                            class="check">
+                                                        <label for="inch_32">
+                                                            <span class="custom_check"></span>
+                                                            32"
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <input type="checkbox" name="inch_43" id="inch_43"
+                                                            class="check">
+                                                        <label for="inch_43">
+                                                            <span class="custom_check"></span>
+                                                            43"
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <div class="row border-top">
+                                                <div class="col">
+                                                    <button class="btn my-2 form_clear_btn">CLEAR ALL</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="filter_tab m-1">
+                                <div class="filterToggler dropNull border py-2 px-5">
+                                    OPERATING SYSTEM
+                                </div>
+                                <div class="filter_dropdown">
+                                    <div class="container-fluid">
+                                        <form action="#">
+                                            <fieldset class="px-2 py-3">
+                                                <!-- <legend>SCREEN SIZE</legend> -->
+                                                <div class="row mb-3">
+                                                    <div class="col-6">
+                                                        <input type="checkbox" name="android" id="android"
+                                                            class="check">
+                                                        <label for="android">
+                                                            <span class="custom_check"></span>
+                                                            Android
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <input type="checkbox" name="linux" id="linux"
+                                                            class="check">
+                                                        <label for="linux">
+                                                            <span class="custom_check"></span>
+                                                            Linux
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <input type="checkbox" name="other" id="other"
+                                                            class="check">
+                                                        <label for="other">
+                                                            <span class="custom_check"></span>
+                                                            Other
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <input type="checkbox" name="none" id="none"
+                                                            class="check">
+                                                        <label for="none">
+                                                            <span class="custom_check"></span>
+                                                            None
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <div class="row border-top">
+                                                <div class="col">
+                                                    <button class="btn my-2 form_clear_btn">CLEAR ALL</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="filter_tab m-1">
+                                <div class="filterToggler dropNull border py-2 px-5">
                                     PRICE
                                 </div>
                                 <div class="filter_dropdown">
@@ -78,8 +168,11 @@
                                                 </div>
                                             </fieldset>
                                             <div class="row border-top">
-                                                <div class="col">
-                                                    <button class="btn my-2 form_clear_btn">CLEAR ALL</button>
+                                                <div class="col-6">
+                                                    <button class="btn btn-sm my-2 form_clear_btn">CLEAR ALL</button>
+                                                </div>
+                                                <div class="col-6">
+                                                    <button class="btn btn-sm my-2 btn_primary float-right">APPLY</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -186,7 +279,7 @@
                 </div>
 
 
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-3">
                     <div class="d-flex align-items-start flex-wrap float-right">
                         <!-- Sort by recommended -->
                         <span class="py-2">Sort by: &nbsp;</span>
@@ -196,7 +289,7 @@
                             </div>
                             <style>
                             </style>
-                            <div class="filter_dropdown">
+                            <div class="filter_dropdown w-100">
                                 <div class="container-fluid p-2">
                                     <form action="#">
                                         <div class="checkbox_form_grp">
@@ -457,18 +550,13 @@
                                 <div class="card-body">
                                     <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!-- product item column -->
-                <div class="col-6 col-sm-4 col-md-3">
-                    <div class="item product_card m-1">
-                        <a href="#">
-                            <div class="card rounded-0">
-                                <img src="../assets/images/sample-prod.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
+                                <div class="card-footer d-flex bg-white align-items-center justify-content-between">
+                                    <div class="price">
+                                        #<span>19,800</span>
+                                    </div>
+                                    <div class="star_rating text-success">
+                                        <i class="fas fa-star"></i>&nbsp;<span>2.5</span>&nbsp;ratings
+                                    </div>
                                 </div>
                             </div>
                         </a>
@@ -483,18 +571,13 @@
                                 <div class="card-body">
                                     <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!-- product item column -->
-                <div class="col-6 col-sm-4 col-md-3">
-                    <div class="item product_card m-1">
-                        <a href="#">
-                            <div class="card rounded-0">
-                                <img src="../assets/images/sample-prod.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
+                                <div class="card-footer d-flex bg-white align-items-center justify-content-between">
+                                    <div class="price">
+                                        #<span>19,800</span>
+                                    </div>
+                                    <div class="star_rating text-success">
+                                        <i class="fas fa-star"></i>&nbsp;<span>2.5</span>&nbsp;ratings
+                                    </div>
                                 </div>
                             </div>
                         </a>
@@ -509,6 +592,14 @@
                                 <div class="card-body">
                                     <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
                                 </div>
+                                <div class="card-footer d-flex bg-white align-items-center justify-content-between">
+                                    <div class="price">
+                                        #<span>19,800</span>
+                                    </div>
+                                    <div class="star_rating text-success">
+                                        <i class="fas fa-star"></i>&nbsp;<span>2.5</span>&nbsp;ratings
+                                    </div>
+                                </div>
                             </div>
                         </a>
                     </div>
@@ -521,6 +612,56 @@
                                 <img src="../assets/images/sample-prod.png" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
+                                </div>
+                                <div class="card-footer d-flex bg-white align-items-center justify-content-between">
+                                    <div class="price">
+                                        #<span>19,800</span>
+                                    </div>
+                                    <div class="star_rating text-success">
+                                        <i class="fas fa-star"></i>&nbsp;<span>2.5</span>&nbsp;ratings
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- product item column -->
+                <div class="col-6 col-sm-4 col-md-3">
+                    <div class="item product_card m-1">
+                        <a href="#">
+                            <div class="card rounded-0">
+                                <img src="../assets/images/sample-prod.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
+                                </div>
+                                <div class="card-footer d-flex bg-white align-items-center justify-content-between">
+                                    <div class="price">
+                                        #<span>19,800</span>
+                                    </div>
+                                    <div class="star_rating text-success">
+                                        <i class="fas fa-star"></i>&nbsp;<span>2.5</span>&nbsp;ratings
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- product item column -->
+                <div class="col-6 col-sm-4 col-md-3">
+                    <div class="item product_card m-1">
+                        <a href="#">
+                            <div class="card rounded-0">
+                                <img src="../assets/images/sample-prod.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
+                                </div>
+                                <div class="card-footer d-flex bg-white align-items-center justify-content-between">
+                                    <div class="price">
+                                        #<span>19,800</span>
+                                    </div>
+                                    <div class="star_rating text-success">
+                                        <i class="fas fa-star"></i>&nbsp;<span>2.5</span>&nbsp;ratings
+                                    </div>
                                 </div>
                             </div>
                         </a>

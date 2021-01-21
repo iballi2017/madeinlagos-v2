@@ -814,7 +814,6 @@ form .form_wrapper.sit .form-control {
 #verified_products_page #filter_nav .filter_dropdown {
   border: 1px solid #ccc;
   position: absolute;
-  width: 100%;
   transform: scaleY(0);
   transform-origin: top;
   transition: all 300ms ease-in-out;
@@ -846,7 +845,7 @@ form .form_wrapper.sit .form-control {
 }
 #verified_products_page #filter_nav .checkbox_form_grp > .recommend_checkbox {
   position: absolute;
-  margin-top: -1000000px;
+  margin-left: -1000000px;
   opacity: 0;
 }
 #verified_products_page #filter_nav .checkbox_form_grp > .recommend_checkbox:checked + label {
