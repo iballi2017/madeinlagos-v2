@@ -6,9 +6,14 @@
             <li><a href="#">Home</a></li>
             <li>Products verified by made in lagos</li>
         </ul>
-
-        <h1 class="page_title my-3 mb-4 text-center text-md-left">Products verified by made in lagos</h1>
-
+        <div class="d-flex justify-content-between align-items-center flex-wrap border-bottom mb-3">
+        <h1 class="page_title my-3 text-center text-md-left">Television</h1>
+                    <div>
+                        <span>
+                            <span>9</span>&nbsp;out of&nbsp;<span>10</span>
+                        </span>
+                    </div>
+                </div>
 
 
 
@@ -539,7 +544,7 @@
 
 
 
-        <div class="container-fluid my-5">
+        <div class="container-fluid mb-5">
             <div class="row no-gutters">
                 <!-- product item column -->
                 <div class="col-6 col-sm-4 col-md-3">
@@ -550,7 +555,7 @@
                                 <div class="card-body">
                                     <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
                                 </div>
-                                <div class="card-footer d-flex bg-white align-items-center justify-content-between">
+                                <div class="card-footer d-flex bg-white align-items-center justify-content-between flex-wrap">
                                     <div class="price">
                                         #<span>19,800</span>
                                     </div>
@@ -571,7 +576,7 @@
                                 <div class="card-body">
                                     <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
                                 </div>
-                                <div class="card-footer d-flex bg-white align-items-center justify-content-between">
+                                <div class="card-footer d-flex bg-white align-items-center justify-content-between flex-wrap">
                                     <div class="price">
                                         #<span>19,800</span>
                                     </div>
@@ -592,7 +597,7 @@
                                 <div class="card-body">
                                     <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
                                 </div>
-                                <div class="card-footer d-flex bg-white align-items-center justify-content-between">
+                                <div class="card-footer d-flex bg-white align-items-center justify-content-between flex-wrap">
                                     <div class="price">
                                         #<span>19,800</span>
                                     </div>
@@ -613,7 +618,7 @@
                                 <div class="card-body">
                                     <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
                                 </div>
-                                <div class="card-footer d-flex bg-white align-items-center justify-content-between">
+                                <div class="card-footer d-flex bg-white align-items-center justify-content-between flex-wrap">
                                     <div class="price">
                                         #<span>19,800</span>
                                     </div>
@@ -634,7 +639,7 @@
                                 <div class="card-body">
                                     <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
                                 </div>
-                                <div class="card-footer d-flex bg-white align-items-center justify-content-between">
+                                <div class="card-footer d-flex bg-white align-items-center justify-content-between flex-wrap">
                                     <div class="price">
                                         #<span>19,800</span>
                                     </div>
@@ -655,7 +660,7 @@
                                 <div class="card-body">
                                     <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
                                 </div>
-                                <div class="card-footer d-flex bg-white align-items-center justify-content-between">
+                                <div class="card-footer d-flex bg-white align-items-center justify-content-between flex-wrap">
                                     <div class="price">
                                         #<span>19,800</span>
                                     </div>
