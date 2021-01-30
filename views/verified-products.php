@@ -7,13 +7,13 @@
             <li>Products verified by made in lagos</li>
         </ul>
         <div class="d-flex justify-content-between align-items-center flex-wrap border-bottom mb-3">
-        <h1 class="page_title my-3 text-center text-md-left">Television</h1>
-                    <div>
-                        <span>
-                            <span>9</span>&nbsp;out of&nbsp;<span>10</span>
-                        </span>
-                    </div>
-                </div>
+            <h1 class="page_title my-3 text-center text-md-left">Television</h1>
+            <div>
+                <span>
+                    <span>9</span>&nbsp;out of&nbsp;<span>10</span>
+                </span>
+            </div>
+        </div>
 
 
 
@@ -34,8 +34,7 @@
                                                 <!-- <legend>BRAND</legend> -->
                                                 <div class="row mb-3">
                                                     <div class="col">
-                                                        <input type="checkbox" name="scanfrost" id="scanfrost"
-                                                            class="check">
+                                                        <input type="checkbox" name="scanfrost" id="scanfrost" class="check">
                                                         <label for="scanfrost">
                                                             <span class="custom_check"></span>
                                                             Scanfrost
@@ -44,8 +43,7 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col">
-                                                        <input type="checkbox" name="whatever" id="whatever"
-                                                            class="check">
+                                                        <input type="checkbox" name="whatever" id="whatever" class="check">
                                                         <label for="whatever">
                                                             <span class="custom_check"></span>
                                                             Whatever
@@ -73,16 +71,14 @@
                                                 <!-- <legend>SCREEN SIZE</legend> -->
                                                 <div class="row mb-3">
                                                     <div class="col-6">
-                                                        <input type="checkbox" name="inch_32" id="inch_32"
-                                                            class="check">
+                                                        <input type="checkbox" name="inch_32" id="inch_32" class="check">
                                                         <label for="inch_32">
                                                             <span class="custom_check"></span>
                                                             32"
                                                         </label>
                                                     </div>
                                                     <div class="col-6">
-                                                        <input type="checkbox" name="inch_43" id="inch_43"
-                                                            class="check">
+                                                        <input type="checkbox" name="inch_43" id="inch_43" class="check">
                                                         <label for="inch_43">
                                                             <span class="custom_check"></span>
                                                             43"
@@ -110,32 +106,28 @@
                                                 <!-- <legend>SCREEN SIZE</legend> -->
                                                 <div class="row mb-3">
                                                     <div class="col-6">
-                                                        <input type="checkbox" name="android" id="android"
-                                                            class="check">
+                                                        <input type="checkbox" name="android" id="android" class="check">
                                                         <label for="android">
                                                             <span class="custom_check"></span>
                                                             Android
                                                         </label>
                                                     </div>
                                                     <div class="col-6">
-                                                        <input type="checkbox" name="linux" id="linux"
-                                                            class="check">
+                                                        <input type="checkbox" name="linux" id="linux" class="check">
                                                         <label for="linux">
                                                             <span class="custom_check"></span>
                                                             Linux
                                                         </label>
                                                     </div>
                                                     <div class="col-6">
-                                                        <input type="checkbox" name="other" id="other"
-                                                            class="check">
+                                                        <input type="checkbox" name="other" id="other" class="check">
                                                         <label for="other">
                                                             <span class="custom_check"></span>
                                                             Other
                                                         </label>
                                                     </div>
                                                     <div class="col-6">
-                                                        <input type="checkbox" name="none" id="none"
-                                                            class="check">
+                                                        <input type="checkbox" name="none" id="none" class="check">
                                                         <label for="none">
                                                             <span class="custom_check"></span>
                                                             None
@@ -289,8 +281,8 @@
                         <!-- Sort by recommended -->
                         <span class="py-2">Sort by: &nbsp;</span>
                         <div class="filter_tab">
-                            <div class="filterToggler recommend dropNull py-2 px-2">
-                                Recommended
+                            <div class="filterToggler recommend dropNull py-2 px-2" id="status_filter_selection">
+                                <!-- Recommended -->
                             </div>
                             <style>
                             </style>
@@ -298,23 +290,23 @@
                                 <div class="container-fluid p-2">
                                     <form action="#">
                                         <div class="checkbox_form_grp">
-                                            <input type="checkbox" name="recommend" class="recommend_checkbox"
-                                                id="newArrival">
+                                            <input type="radio" name="lg_screen_sort_products" class="lg_screen_product_sorter" id="recommended">
+                                            <label for="recommended">Recommended</label>
+                                        </div>
+                                        <div class="checkbox_form_grp">
+                                            <input type="radio" name="lg_screen_sort_products" class="lg_screen_product_sorter" id="newArrival">
                                             <label for="newArrival">New Arrival</label>
                                         </div>
                                         <div class="checkbox_form_grp">
-                                            <input type="checkbox" name="recommend" class="recommend_checkbox"
-                                                id="lowToHigh">
+                                            <input type="radio" name="lg_screen_sort_products" class="lg_screen_product_sorter" id="lowToHigh">
                                             <label for="lowToHigh">Price: Low to High</label>
                                         </div>
                                         <div class="checkbox_form_grp">
-                                            <input type="checkbox" name="recommend" class="recommend_checkbox"
-                                                id="highToLow">
+                                            <input type="radio" name="lg_screen_sort_products" class="lg_screen_product_sorter" id="highToLow">
                                             <label for="highToLow">Price: High to Low</label>
                                         </div>
                                         <div class="checkbox_form_grp">
-                                            <input type="checkbox" name="recommend" class="recommend_checkbox"
-                                                id="bestSelling">
+                                            <input type="radio" name="lg_screen_sort_products" class="lg_screen_product_sorter" id="bestSelling">
                                             <label for="bestSelling">Best Sellings</label>
                                         </div>
                                     </form>
@@ -323,6 +315,29 @@
                         </div>
                     </div>
                 </div>
+
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+                <script>
+
+                    /* Custom radio selections */
+                    function radioSelect(arg1, arg2) {
+                        if (arg1.is(':checked')) {
+                            arg2.html(arg1.siblings("label").html());
+                        } else {
+                            arg2.html("Status");
+                        }
+                        arg1.on("click", function() {
+                            arg2.html($(this).siblings("label").html());
+                        });
+                    }
+                    // PRV form status
+                    var status_filter_selection = $("#status_filter_selection");
+                    var selected_lg_screen_sort_products = $("input[type='radio'][name='lg_screen_sort_products']");
+                    var selected_lg_screen_sort_products_checked = $("input[type='radio'][name='lg_screen_sort_products']:checked");
+                    radioSelect(selected_lg_screen_sort_products, status_filter_selection)
+                    status_filter_selection.html(selected_lg_screen_sort_products_checked.siblings("label").html());
+                </script>
             </div>
         </form>
 
@@ -330,8 +345,7 @@
         <!-- MOBILE VIEW CONTENTS FILTER -->
         <div class="d-block d-md-none">
             <div class="text-center mb-5">
-                <button type="button" class="btn btn-lg btn_white border px-5" id="mobileFilterFormTriggerToShow"><span
-                        data-feather="filter"></span>Filter</button>
+                <button type="button" class="btn btn-lg btn_white border px-5" id="mobileFilterFormTriggerToShow"><span data-feather="filter"></span>Filter</button>
                 <!-- <button class="btn btn-lg border px-5"><span data-feather="chevron-down"></span>Sort</button> -->
                 <button class="btn btn-lg btn_white border px-5" id="mobileSortFormTriggerToShow">
                     <i class="fas fa-sort"></i>
@@ -344,8 +358,7 @@
                         <div class="my-3 d-flex justify-content-between align-items-center">
 
                             <span class="display_1">
-                                <button type="button" class="btn" id="mobileFilterFormTriggerToHide"><span
-                                        data-feather="arrow-left"></span>&nbsp; Filter</button>
+                                <button type="button" class="btn" id="mobileFilterFormTriggerToHide"><span data-feather="arrow-left"></span>&nbsp; Filter</button>
                             </span>
                             <span>
                                 <button type="button" class="btn text_light">CLEAR ALL</button>
@@ -491,46 +504,46 @@
 
                                     <div class="row mb-3">
                                         <div class="col">
-                                            <input type="checkbox" name="recommended" id="recommended" class="check">
-                                            <label for="recommended" class="justify-content-between">
+                                            <input type="radio" name="mobile_sort_products" id="recommended_sm" class="radio_rej">
+                                            <label for="recommended_sm" class="justify-content-between">
                                                 Recommended
-                                                <span class="custom_check"></span>
+                                                <span class="custom_radio"></span>
                                             </label>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col">
-                                            <input type="checkbox" name="newArrival" id="newArrival" class="check">
-                                            <label for="newArrival" class="justify-content-between">
+                                            <input type="radio" name="mobile_sort_products" id="newArrival_mobile" class="radio_rej">
+                                            <label for="newArrival_mobile" class="justify-content-between">
                                                 New arrival
-                                                <span class="custom_check"></span>
+                                                <span class="custom_radio"></span>
                                             </label>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col">
-                                            <input type="checkbox" name="lowToHigh" id="lowToHigh" class="check">
-                                            <label for="lowToHigh" class="justify-content-between">
+                                            <input type="radio" name="mobile_sort_products" id="lowToHigh_mobile" class="radio_rej">
+                                            <label for="lowToHigh_mobile" class="justify-content-between">
                                                 Price: Low to High
-                                                <span class="custom_check"></span>
+                                                <span class="custom_radio"></span>
                                             </label>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col">
-                                            <input type="checkbox" name="highToLow" id="highToLow" class="check">
-                                            <label for="highToLow" class="justify-content-between">
+                                            <input type="radio" name="mobile_sort_products" id="highToLow_mobile" class="radio_rej">
+                                            <label for="highToLow_mobile" class="justify-content-between">
                                                 Price: High to Low
-                                                <span class="custom_check"></span>
+                                                <span class="custom_radio"></span>
                                             </label>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col">
-                                            <input type="checkbox" name="bestSellings" id="bestSellings" class="check">
+                                            <input type="radio" name="mobile_sort_products" id="bestSellings" class="radio_rej">
                                             <label for="bestSellings" class="justify-content-between">
                                                 Best sellings
-                                                <span class="custom_check"></span>
+                                                <span class="custom_radio"></span>
                                             </label>
                                         </div>
                                     </div>
@@ -680,8 +693,7 @@
                         <nav aria-label="Page navigation example">
                             <ul class="pagination justify-content-center">
                                 <li class="page-item disabled">
-                                    <a class="page-link rounded-0" href="#" tabindex="-1"
-                                        aria-disabled="true">Previous</a>
+                                    <a class="page-link rounded-0" href="#" tabindex="-1" aria-disabled="true">Previous</a>
                                 </li>
                                 <li class="page-item"><a class="page-link" href="#">1</a></li>
                                 <li class="page-item"><a class="page-link" href="#">2</a></li>

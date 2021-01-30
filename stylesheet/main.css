@@ -451,7 +451,8 @@ ul.breadcrumb li a:hover {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   z-index: 10001;
   transition: all 300ms ease-in-out;
 }
@@ -540,6 +541,10 @@ ul.breadcrumb li a:hover {
 .btn_primary:hover, .btn_primary:focus {
   background-color: #ffbf43;
   color: #ffffff;
+}
+
+.primary_border {
+  border: 1px solid #bcae00;
 }
 
 .accordion,
@@ -854,12 +859,12 @@ form .form_wrapper.sit .form-control {
   color: #202020;
   transition: all 300ms ease-in-out;
 }
-#verified_products_page #filter_nav .checkbox_form_grp > .recommend_checkbox {
+#verified_products_page #filter_nav .checkbox_form_grp > .lg_screen_product_sorter {
   position: absolute;
   margin-left: -1000000px;
   opacity: 0;
 }
-#verified_products_page #filter_nav .checkbox_form_grp > .recommend_checkbox:checked + label {
+#verified_products_page #filter_nav .checkbox_form_grp > .lg_screen_product_sorter:checked + label {
   color: #bcae00;
   font-weight: 600;
 }

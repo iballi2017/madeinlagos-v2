@@ -20,8 +20,7 @@
     <!-- <link rel="stylesheet" href="css/aos.css"> -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/plugins/bootstrap-4.2.1/css/bootstrap.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../stylesheet/main.css">
@@ -48,8 +47,7 @@
 
                 <div>
                     <div class="dropdown">
-                        <button class="btn btn-sm text-white dropdown-toggle" type="button" id="dropdownMenuButton"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn btn-sm text-white dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Help
                         </button>
                         <div class="dropdown-menu" id="HelpDropDown" aria-labelledby="dropdownMenuButton">
@@ -62,8 +60,7 @@
                     <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
 
                     <div class="input-group">
-                        <input type="text" class="form-control" aria-label="Search items"
-                            aria-describedby="search-button">
+                        <input type="text" class="form-control" aria-label="Search items" aria-describedby="search-button">
                         <div class="input-group-append">
                             <button class="btn text-white bg_orange" type="button" id="search-button">SEARCH</button>
                         </div>
@@ -71,8 +68,7 @@
                 </div>
                 <div class="nav-item text-nowrap d-flex align-items-center">
                     <div class="dropdown">
-                        <button class="btn btn-sm text-white dropdown-toggle" type="button" id="dropdownMenuButton"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn btn-sm text-white dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             My Account
                         </button>
                         <div class="dropdown-menu text-center" id="loginDropDown" aria-labelledby="dropdownMenuButton">
@@ -86,8 +82,7 @@
                         </div>
                     </div>
                     <!-- cart link -->
-                    <a class="nav-link text-white" href="./user-cart.php"><span
-                            data-feather="shopping-cart"></span><span class="badge badge-light">4</span></a>
+                    <a class="nav-link text-white" href="./user-cart.php"><span data-feather="shopping-cart"></span><span class="badge badge-light">4</span></a>
                 </div>
             </nav>
         </div>
@@ -115,14 +110,11 @@
             <div class="inner">
                 <form action="#" class='container'>
                     <div class="input-group border rounded">
-                        <input type="text" class="form-control border-0" aria-label="Search items"
-                            aria-describedby="search-button" placeholder="SEARCH">
+                        <input type="text" class="form-control border-0" aria-label="Search items" aria-describedby="search-button" placeholder="SEARCH">
                         <div class="input-group-append">
                             <button class="btn bg-white border-0" type="button" id="search-button">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-search" viewBox="0 0 16 16">
-                                    <path
-                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                                 </svg>
                             </button>
                         </div>
@@ -315,11 +307,19 @@
         <section id="sidenav_main_container" class="d-block d-md-none">
             <div id="overlay" class="hide"></div>
             <div id="inner" class="hide">
+                <button class="btn float-right" id="close_sidenav_btn">
+                    <span data-feather="plus" class="rotate_45 mt-2 mr-2"></span>
+                </button>
                 <nav>
 
                     <div class="card border-0 mt-5">
                         <div class="card-header">
-                            <a href="../views/user-account.php" class="link_primary">AKINOLA OLUWATOBI</a>
+                            <button class="btn text-danger p-0 mb-4">Logout</button>
+                            <div class="d-flex flex-wrap">
+                                <a href="#" class="btn w-50 btn_white primary_border rounded-0">Login</a>
+                                <a href="#" class="btn w-50 btn_white primary_border rounded-0">Sign up</a>
+                            </div>
+                            <a href="../views/user-account.php" class="link_primary d-block">AKINOLA OLUWATOBI</a>
                         </div>
                         <div class="card-body">
                             <h3>All Categories</h3>
@@ -330,17 +330,17 @@
                                     <div>
                                         <!-- A -->
                                         <ul class="nav_tab list_style_0" id="main_category_list">
-                                            <li id="category_electronics" class="category_list">Electronics</li>
-                                            <li id="category_groceries" class="category_list">Groceries</li>
-                                            <li id="category_homeKitchenOffice" class="category_list">Home, Kitchen and
+                                            <li class="category_list category_title">Electronics</li>
+                                            <li class="category_list category_title">Groceries</li>
+                                            <li class="category_list category_title">Home, Kitchen and
                                                 Office</li>
-                                            <li id="category_books" class="category_list">Books</li>
-                                            <li id="category_beauty" class="category_list">Beauty</li>
+                                            <li class="category_list category_title">Books</li>
+                                            <li class="category_list category_title">Beauty</li>
                                         </ul>
                                     </div>
                                     <div>
                                         <!-- B -->
-                                        <button class="btn p-0 mb-4" id="category_electronics_back_btn">
+                                        <button class="btn p-0 mb-4 btn_reset_category">
                                             <span data-feather="arrow-left"></span>Electronics
                                         </button>
                                         <ul class="list_style_0 category_scroll_y">
@@ -382,7 +382,7 @@
                                     </div>
                                     <div>
                                         <!-- C -->
-                                        <button class="btn p-0 mb-4" id="category_groceries_back_btn">
+                                        <button class="btn p-0 mb-4 btn_reset_category">
                                             <span data-feather="arrow-left"></span>Groceries
                                         </button>
                                         <div class="text-center">
@@ -401,7 +401,7 @@
                                     </div>
                                     <div>
                                         <!-- D -->
-                                        <button class="btn p-0 mb-4" id="category_homeKitchenOffice_back_btn">
+                                        <button class="btn p-0 mb-4 btn_reset_category">
                                             <span data-feather="arrow-left"></span>Home, Kitchen and Office
                                         </button>
 
@@ -421,7 +421,7 @@
                                     </div>
                                     <div>
                                         <!-- E -->
-                                        <button class="btn p-0 mb-4" id="category_books_back_btn">
+                                        <button class="btn p-0 mb-4 btn_reset_category">
                                             <span data-feather="arrow-left"></span>Books
                                         </button>
 
@@ -441,7 +441,7 @@
                                     </div>
                                     <div>
                                         <!-- F -->
-                                        <button class="btn p-0 mb-4" id="category_beauty_back_btn">
+                                        <button class="btn p-0 mb-4 btn_reset_category">
                                             <span data-feather="arrow-left"></span>Beauty
                                         </button>
 

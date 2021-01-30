@@ -480,7 +480,8 @@ ul.breadcrumb li a:hover {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     z-index: 10001;
     transition: all 300ms ease-in-out;
     .sidenav_content {
@@ -536,7 +537,6 @@ ul.breadcrumb li a:hover {
     }
 }
 
-
 /*.hero_slider{
    .item{
 
@@ -576,6 +576,10 @@ ul.breadcrumb li a:hover {
         background-color: $orangeColor;
         color: $white;
     }
+}
+
+.primary_border{
+    border: 1px solid $primaryColor;
 }
 
 .accordion,
@@ -922,7 +926,7 @@ form {
                 color: $blackColor;
                 transition: all 300ms ease-in-out;
             }
-            >.recommend_checkbox {
+            >.lg_screen_product_sorter {
                 position: absolute;
                 margin-left: -1000000px;
                 opacity: 0;

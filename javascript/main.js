@@ -130,7 +130,6 @@ $(document).ready(function() {
         //     hidePopup($("#mobile_filter_form"))
         // })
     $("button.close").click(function() {
-        console.log("hi!")
         hidePopup($("#mobile_sort_form_wrapper"))
     })
 
@@ -161,79 +160,44 @@ $(document).ready(function() {
             backToCategories($("#category_electronics")); //reset the category search to the main categories menu list
         }
     })
+    $("#close_sidenav_btn").click(function() {
+        console.log("hkvdkhghbi");
+        if (!($("#sidenav_main_container #overlay") && $("#sidenav_main_container #inner")).hasClass("hide")) {
+            $("#sidenav_main_container #overlay").addClass("hide");
+            $("#sidenav_main_container #inner").addClass("hide");
+            backToCategories($("#category_electronics")); //reset the category search to the main categories menu list
+        }
+    })
 
     /* back to category menu function */
     function backToCategories(arg) {
         $(arg)
             .parent()
             .parent()
-            // .parent()
             .parent()
             .css({ "margin-left": "0" });
     }
-    /* electronics */
-    $("#category_electronics").click(function() {
-        $(this)
-            .parent()
-            .parent()
-            .parent()
-            .css({ "margin-left": "calc(-100% / 1)" });
-    })
-    $("#category_electronics_back_btn").click(function() {
-            backToCategories($("#category_electronics"));
-        })
-        /* groceries */
 
-    $("#category_groceries").click(function() {
-        $(this)
-            .parent()
-            .parent()
-            .parent()
-            .css({ "margin-left": "calc(-100% / 1 * 2)" });
-        $("#category_groceries_back_btn").click(function() {
-            backToCategories($("#category_electronics"));
+    // console.log($(".category_title"));
+    $(".category_title").each(function(e){
+        $(this).click(function(){
+            let i = e+1
+            $(this)
+                .parent()
+                .parent()
+                .parent()
+                .css({ "margin-left": "calc(-100% * "+i+")" });
+            })
         })
-
     })
 
-    /* Home, Kitchen and Office */
-    $("#category_homeKitchenOffice").click(function() {
-        $(this)
-            .parent()
-            .parent()
-            .parent()
-            .css({ "margin-left": "calc(-100% / 1 * 3)" });
-        $("#category_homeKitchenOffice_back_btn").click(function() {
-            backToCategories($("#category_electronics"));
-        })
-
-    })
-
-    /* books */
-    $("#category_books").click(function() {
-        $(this)
-            .parent()
-            .parent()
-            .parent()
-            .css({ "margin-left": "calc(-100% / 1 * 4)" });
-        $("#category_books_back_btn").click(function() {
-            backToCategories($("#category_electronics"));
-        })
-
-    })
-
-    /* beauty */
-    $("#category_beauty").click(function() {
-        $(this)
-            .parent()
-            .parent()
-            .parent()
-            .css({ "margin-left": "calc(-100% / 1 * 5)" });
-        $("#category_beauty_back_btn").click(function() {
-            backToCategories($("#category_electronics"));
-        })
-
-    })
+    // return the category list to default
+    $(".btn_reset_category").each(function(){
+            $(this).click(function() {
+                // console.log($(this).parent().parent());
+                $(this).parent().parent()
+                    .css({ "margin-left": "0" })
+        });
 
 
     /* product_details_image_slider */
@@ -368,6 +332,27 @@ $(document).ready(function() {
             $("#sidebar").addClass("hide");
         }
     })
+
+
+
+    /* verified product status sorter */
+    /* Custom radio selections */
+    function radioSelect(arg1, arg2) {
+        if (arg1.is(':checked')) {
+            arg2.html(arg1.siblings("label").html());
+        } else {
+            arg2.html("Status");
+        }
+        arg1.on("click", function() {
+            arg2.html($(this).siblings("label").html());
+        });
+    }
+    // PRV form status
+    var status_filter_selection = $("#status_filter_selection");
+    var selected_lg_screen_sort_products = $("input[type='radio'][name='lg_screen_sort_products']");
+    var selected_lg_screen_sort_products_checked = $("input[type='radio'][name='lg_screen_sort_products']:checked");
+    radioSelect(selected_lg_screen_sort_products, status_filter_selection)
+    status_filter_selection.html(selected_lg_screen_sort_products_checked.siblings("label").html());
 
 
 })

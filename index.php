@@ -323,9 +323,15 @@
             <div id="overlay" class="hide"></div>
             <div id="inner" class="hide">
                 <nav>
+
                     <div class="card border-0 mt-5">
                         <div class="card-header">
-                            <a href="./views/user-account.php" class="link_primary">AKINOLA OLUWATOBI</a>
+                            <button class="btn text-danger p-0 mb-4">Logout</button>
+                            <div class="d-flex flex-wrap">
+                                <a href="#" class="btn w-50 btn_white primary_border rounded-0">Login</a>
+                                <a href="#" class="btn w-50 btn_white primary_border rounded-0">Sign up</a>
+                            </div>
+                            <a href="../views/user-account.php" class="link_primary">AKINOLA OLUWATOBI</a>
                         </div>
                         <div class="card-body">
                             <h3>All Categories</h3>
@@ -336,17 +342,17 @@
                                     <div>
                                         <!-- A -->
                                         <ul class="nav_tab list_style_0" id="main_category_list">
-                                            <li id="category_electronics" class="category_list">Electronics</li>
-                                            <li id="category_groceries" class="category_list">Groceries</li>
-                                            <li id="category_homeKitchenOffice" class="category_list">Home, Kitchen and
+                                            <li class="category_list category_title">Electronics</li>
+                                            <li class="category_list category_title">Groceries</li>
+                                            <li class="category_list category_title">Home, Kitchen and
                                                 Office</li>
-                                            <li id="category_books" class="category_list">Books</li>
-                                            <li id="category_beauty" class="category_list">Beauty</li>
+                                            <li class="category_list category_title">Books</li>
+                                            <li class="category_list category_title">Beauty</li>
                                         </ul>
                                     </div>
                                     <div>
                                         <!-- B -->
-                                        <button class="btn p-0 mb-4" id="category_electronics_back_btn">
+                                        <button class="btn p-0 mb-4 btn_reset_category">
                                             <span data-feather="arrow-left"></span>Electronics
                                         </button>
                                         <ul class="list_style_0 category_scroll_y">
@@ -388,7 +394,7 @@
                                     </div>
                                     <div>
                                         <!-- C -->
-                                        <button class="btn p-0 mb-4" id="category_groceries_back_btn">
+                                        <button class="btn p-0 mb-4 btn_reset_category">
                                             <span data-feather="arrow-left"></span>Groceries
                                         </button>
                                         <div class="text-center">
@@ -407,7 +413,7 @@
                                     </div>
                                     <div>
                                         <!-- D -->
-                                        <button class="btn p-0 mb-4" id="category_homeKitchenOffice_back_btn">
+                                        <button class="btn p-0 mb-4 btn_reset_category">
                                             <span data-feather="arrow-left"></span>Home, Kitchen and Office
                                         </button>
 
@@ -427,7 +433,7 @@
                                     </div>
                                     <div>
                                         <!-- E -->
-                                        <button class="btn p-0 mb-4" id="category_books_back_btn">
+                                        <button class="btn p-0 mb-4 btn_reset_category">
                                             <span data-feather="arrow-left"></span>Books
                                         </button>
 
@@ -447,7 +453,7 @@
                                     </div>
                                     <div>
                                         <!-- F -->
-                                        <button class="btn p-0 mb-4" id="category_beauty_back_btn">
+                                        <button class="btn p-0 mb-4 btn_reset_category">
                                             <span data-feather="arrow-left"></span>Beauty
                                         </button>
 
