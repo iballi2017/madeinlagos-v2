@@ -485,7 +485,7 @@ ul.breadcrumb li a:hover {
     z-index: 10001;
     transition: all 300ms ease-in-out;
     .sidenav_content {
-        // width: 900%;
+        // width: 600%; width now set with javascript to make it dynamic
         display: flex;
         margin-left: 0;
         transition: all 300ms ease-in-out;
