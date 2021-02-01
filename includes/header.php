@@ -328,7 +328,7 @@
                             <div style="overflow-x: hidden">
                                 <div class="sidenav_content">
                                     <div>
-                                        <!-- A -->
+                                        <!-- category menu list -->
                                         <ul class="nav_tab list_style_0" id="main_category_list">
                                             <li class="category_list category_title">Electronics</li>
                                             <li class="category_list category_title">Groceries</li>
@@ -336,10 +336,14 @@
                                                 Office</li>
                                             <li class="category_list category_title">Books</li>
                                             <li class="category_list category_title">Beauty</li>
+                                            <li class="category_list category_title">TEST1</li>
+                                            <li class="category_list category_title">TEST2</li>
+                                            <li class="category_list category_title">TEST3</li>
+                                            <li class="category_list category_title">TEST4</li>
                                         </ul>
                                     </div>
                                     <div>
-                                        <!-- B -->
+                                        <!-- A -->
                                         <button class="btn p-0 mb-4 btn_reset_category">
                                             <span data-feather="arrow-left"></span>Electronics
                                         </button>
@@ -381,7 +385,7 @@
                                         </ul>
                                     </div>
                                     <div>
-                                        <!-- C -->
+                                        <!-- B -->
                                         <button class="btn p-0 mb-4 btn_reset_category">
                                             <span data-feather="arrow-left"></span>Groceries
                                         </button>
@@ -400,7 +404,7 @@
                                         </ul> -->
                                     </div>
                                     <div>
-                                        <!-- D -->
+                                        <!-- C -->
                                         <button class="btn p-0 mb-4 btn_reset_category">
                                             <span data-feather="arrow-left"></span>Home, Kitchen and Office
                                         </button>
@@ -420,7 +424,7 @@
                                         </ul> -->
                                     </div>
                                     <div>
-                                        <!-- E -->
+                                        <!-- D -->
                                         <button class="btn p-0 mb-4 btn_reset_category">
                                             <span data-feather="arrow-left"></span>Books
                                         </button>
@@ -440,7 +444,7 @@
                                         </ul> -->
                                     </div>
                                     <div>
-                                        <!-- F -->
+                                        <!-- E -->
                                         <button class="btn p-0 mb-4 btn_reset_category">
                                             <span data-feather="arrow-left"></span>Beauty
                                         </button>
@@ -458,6 +462,54 @@
                                             <li><a href="#">Beauty Item 5</a></li>
                                             <li><a href="#">Beauty Item 6</a></li>
                                         </ul> -->
+                                    </div>
+                                    <div>
+                                        <!-- TEST 1 -->
+                                        <button class="btn p-0 mb-4 btn_reset_category">
+                                            <span data-feather="arrow-left"></span>TEST ONE
+                                        </button>
+
+                                        <div class="text-center">
+                                            <h3>Coming soon</h3>
+                                            <h6>Make a list of TEST ONE you want</h6>
+                                            <p><a href="#" class="text_primary">CLICK HERE</a></p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- TEST 2 -->
+                                        <button class="btn p-0 mb-4 btn_reset_category">
+                                            <span data-feather="arrow-left"></span>TEST TWO
+                                        </button>
+
+                                        <div class="text-center">
+                                            <h3>Coming soon</h3>
+                                            <h6>Make a list of TEST TWO you want</h6>
+                                            <p><a href="#" class="text_primary">CLICK HERE</a></p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- TEST 3 -->
+                                        <button class="btn p-0 mb-4 btn_reset_category">
+                                            <span data-feather="arrow-left"></span>TEST THREE
+                                        </button>
+
+                                        <div class="text-center">
+                                            <h3>Coming soon</h3>
+                                            <h6>Make a list of TEST THREE you want</h6>
+                                            <p><a href="#" class="text_primary">CLICK HERE</a></p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- TEST 4 -->
+                                        <button class="btn p-0 mb-4 btn_reset_category">
+                                            <span data-feather="arrow-left"></span>TEST FOUR
+                                        </button>
+
+                                        <div class="text-center">
+                                            <h3>Coming soon</h3>
+                                            <h6>Make a list of TEST FOUR you want</h6>
+                                            <p><a href="#" class="text_primary">CLICK HERE</a></p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

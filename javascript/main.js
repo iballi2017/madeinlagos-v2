@@ -186,10 +186,19 @@ $(document).ready(function() {
                 .parent()
                 .parent()
                 .parent()
-                .css({ "margin-left": "calc(-100% * "+i+")" });
+                .css({ "margin-left": "calc(-100% * "+i+")", "width": "calc(100% * "+i.length+")"});
             })
+            console.log($(this)
+            .parent()
+            .parent()
+            .parent())
         })
     })
+
+    /* dynamic length for category sidenav */
+    // console.log($(".sidenav_content > div :first-child").children("li"));
+    // console.log($(".sidenav_content > div :first-child").children("li").length);
+    $(".sidenav_content").css({"width": "calc(100% *"+parseInt($(".sidenav_content > div :first-child").children("li").length+1)+")"});
 
     // return the category list to default
     $(".btn_reset_category").each(function(){
