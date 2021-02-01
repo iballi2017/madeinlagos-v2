@@ -348,6 +348,7 @@
                                                 Office</li>
                                             <li class="category_list category_title">Books</li>
                                             <li class="category_list category_title">Beauty</li>
+                                            <li class="category_list category_title">TEST1</li>
                                         </ul>
                                     </div>
                                     <div>
@@ -470,6 +471,18 @@
                                             <li><a href="#">Beauty Item 5</a></li>
                                             <li><a href="#">Beauty Item 6</a></li>
                                         </ul> -->
+                                    </div>
+                                    <div>
+                                        <!-- TEST 1 -->
+                                        <button class="btn p-0 mb-4 btn_reset_category">
+                                            <span data-feather="arrow-left"></span>TEST ONE
+                                        </button>
+
+                                        <div class="text-center">
+                                            <h3>Coming soon</h3>
+                                            <h6>Make a list of TEST ONE you want</h6>
+                                            <p><a href="#" class="text_primary">CLICK HERE</a></p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

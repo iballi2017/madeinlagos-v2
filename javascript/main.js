@@ -161,7 +161,6 @@ $(document).ready(function() {
         }
     })
     $("#close_sidenav_btn").click(function() {
-        console.log("hkvdkhghbi");
         if (!($("#sidenav_main_container #overlay") && $("#sidenav_main_container #inner")).hasClass("hide")) {
             $("#sidenav_main_container #overlay").addClass("hide");
             $("#sidenav_main_container #inner").addClass("hide");
@@ -188,10 +187,6 @@ $(document).ready(function() {
                 .parent()
                 .css({ "margin-left": "calc(-100% * "+i+")", "width": "calc(100% * "+i.length+")"});
             })
-            console.log($(this)
-            .parent()
-            .parent()
-            .parent())
         })
     })
 
