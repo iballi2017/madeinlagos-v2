@@ -932,8 +932,8 @@
     </section>
 
     <section class="mb-4">
-        <article class="container display_1 text-center">
-            <p>
+        <article class="container text-center">
+            <p style="font-size: 18px; line-height: 32px">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae commodi quam ea odit ab. Deleniti
                 blanditiis est neque dicta tempore iusto cumque minima. Vitae quo sequi consequatur blanditiis, id cum.
             </p>
