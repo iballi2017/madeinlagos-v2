@@ -34,7 +34,8 @@
             <nav class="navbar navbar-dark flex-md-nowrap py-2">
                 <!-- <div class="container"> -->
                 <a class="navbar-brand col-sm-3 col-md-1 p-0 mr-4" href="../">
-                    <img src="../assets/images/madeinlagos_brand_logo.png" class="img-fluid" alt="">
+                    <!-- <img src="../assets/images/madeinlagos_brand_logo.png" class="img-fluid" alt=""> -->
+                    <img src="../assets/images/new-logo.png" class="img-fluid" alt="brand logo">
                 </a>
                 <div>
                     <!-- <button class="btn text_primary d-block d-md-none" id="categories_tab_toggler">
@@ -96,7 +97,8 @@
                     <span data-feather="menu"></span>
                 </button>
                 <a class="navbar-brand p-0" href="../">
-                    <img src="../assets/images/madeinlagos_brand_logo.png" class="img-fluid" alt="">
+                    <!-- <img src="../assets/images/madeinlagos_brand_logo.png" class="img-fluid" alt=""> -->
+                    <img src="../assets/images/new-logo.png" class="img-fluid" alt="brand logo">
                 </a>
             </div>
             <div class="d-flex align-items-center">
