@@ -1,13 +1,3 @@
-<?php 
-if(isset($_GET["subj"]) && isset($_GET["id"])){
-    $subj = $_GET["subj"];
-    $id = $_GET["id"];
-}else{
-    header("Location: ../index.php");
-    exit();
-}
-
-?>
 <!-- Header -->
 <?php include_once '../includes/header.php'; ?>
 <!-- <div class="d-flex align-items-start container mt-md-5 w-100 user_account" id=""> -->

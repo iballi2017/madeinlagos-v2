@@ -34,8 +34,6 @@ $light_pink_color: rgb(255,
     padding: 0;
 }
 
-html {}
-
 body {
     font-size: 0.875rem;
 }
@@ -382,7 +380,9 @@ ul.breadcrumb li a:hover {
 
 ::-webkit-scrollbar-thumb:hover {
     background: $secondaryColor;
-} // ########### custom scrollbar ends
+}
+
+// ########### custom scrollbar ends
 
 /* mobile mavigation  */
 
@@ -537,6 +537,7 @@ ul.breadcrumb li a:hover {
     }
 }
 
+
 /*.hero_slider{
    .item{
 
@@ -578,7 +579,7 @@ ul.breadcrumb li a:hover {
     }
 }
 
-.primary_border{
+.primary_border {
     border: 1px solid $primaryColor;
 }
 
@@ -1405,7 +1406,6 @@ footer {
             font-weight: 600;
         }
     }
-    .media_link {}
     .copyright {
         /*width: 100%;*/
         text-align: center;

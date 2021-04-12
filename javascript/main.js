@@ -25,8 +25,8 @@ $(document).ready(function() {
         loop: true,
         margin: 20,
         nav: false,
-        autoplaySpeed: 2500,
-        autoplay: true,
+        autoplaySpeed: 2000,
+        // autoplay: true,
         smartSpeed: 1000,
         fluidSpeed: 1000,
         dots: false,
@@ -61,7 +61,7 @@ $(document).ready(function() {
         margin: 20,
         nav: false,
         autoplaySpeed: 7000,
-        autoplay: true,
+        // autoplay: true,
         fluidSpeed: 5000,
         dots: false,
         responsive: {
@@ -178,30 +178,30 @@ $(document).ready(function() {
     }
 
     // console.log($(".category_title"));
-    $(".category_title").each(function(e){
-        $(this).click(function(){
-            let i = e+1
+    $(".category_title").each(function(e) {
+        $(this).click(function() {
+            let i = e + 1
             $(this)
                 .parent()
                 .parent()
                 .parent()
-                .css({ "margin-left": "calc(-100% * "+i+")", "width": "calc(100% * "+i.length+")"});
-            })
+                .css({ "margin-left": "calc(-100% * " + i + ")", "width": "calc(100% * " + i.length + ")" });
         })
     })
+})
 
-    /* dynamic length for category sidenav */
-    // console.log($(".sidenav_content > div :first-child").children("li"));
-    // console.log($(".sidenav_content > div :first-child").children("li").length);
-    $(".sidenav_content").css({"width": "calc(100% *"+parseInt($(".sidenav_content > div :first-child").children("li").length+1)+")"});
+/* dynamic length for category sidenav */
+// console.log($(".sidenav_content > div :first-child").children("li"));
+// console.log($(".sidenav_content > div :first-child").children("li").length);
+$(".sidenav_content").css({ "width": "calc(100% *" + parseInt($(".sidenav_content > div :first-child").children("li").length + 1) + ")" });
 
-    // return the category list to default
-    $(".btn_reset_category").each(function(){
-            $(this).click(function() {
-                // console.log($(this).parent().parent());
-                $(this).parent().parent()
-                    .css({ "margin-left": "0" })
-        });
+// return the category list to default
+$(".btn_reset_category").each(function() {
+    $(this).click(function() {
+        // console.log($(this).parent().parent());
+        $(this).parent().parent()
+            .css({ "margin-left": "0" })
+    });
 
 
     /* product_details_image_slider */
@@ -289,7 +289,7 @@ $(document).ready(function() {
 
     /* Form control label effects */
     function textFocus() {
-        $(".form-control").each(function () {
+        $(".form-control").each(function() {
             if ($(this).val()) {
                 if ($(this).parent().hasClass("sit")) {
                     $(this).parent().removeClass("sit");
@@ -301,7 +301,7 @@ $(document).ready(function() {
         })
     }
     // fires when page refreshes
-    (function () {
+    (function() {
         textFocus();
     })(jQuery);
     window.addEventListener('load', () => {
@@ -311,12 +311,12 @@ $(document).ready(function() {
             $(".form-control").parent().addClass("sit");
         }
     });
-    $(".form-control").focus(function () {
+    $(".form-control").focus(function() {
         if ($(this).parent().hasClass("sit")) {
             $(this).parent().removeClass("sit");
         }
     })
-    $(".form-control").focusout(function () {
+    $(".form-control").focusout(function() {
         if (!$(this).parent().hasClass("sit")) {
             if ($(this).val()) {
                 return;

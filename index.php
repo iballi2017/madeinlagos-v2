@@ -709,131 +709,131 @@
     </section>
 
 
-<section class="mb-4">
-    <div class="container prod_listing">
-        <div class="head bg_primary py-2 px-3 mb-2">
-            <!-- Best sellings starts -->
-            <h5 class="title text-white" data-aos="fade-up" data-aos-delay="700">Best Selling</h5>
-        </div>
-        <div class="prod_list_slider_wrapper">
-            <div class="owl-carousel owl-theme best_sellings">
-                <div class="item product_card">
-                    <a href="#">
-                        <div class="card border-bottom-0 rounded-0">
-                            <img src="./assets/images/sample-prod.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
-                            </div>
-                        </div>
-                        <div class="price_rating_tag border px-3 py-2 rounded-0">
-                            <span class="price">₦ 3,200</span>
-                            <span class="rating poor"><i class="fas fa-star"></i>&nbsp;&nbsp;<span
-                                    class="rating_fig">2.5</span>&nbsp;ratings</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="item product_card">
-                    <a href="#">
-                        <div class="card border-bottom-0 rounded-0">
-                            <img src="./assets/images/sample-prod.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
-                            </div>
-                        </div>
-                        <div class="price_rating_tag border px-3 py-2 rounded-0">
-                            <span class="price">₦ 3,200</span>
-                            <span class="rating fair"><i class="fas fa-star"></i>&nbsp;&nbsp;<span
-                                    class="rating_fig">2.5</span>&nbsp;ratings</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="item product_card">
-                    <a href="#">
-                        <div class="card border-bottom-0 rounded-0">
-                            <img src="./assets/images/sample-prod.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
-                            </div>
-                        </div>
-                        <div class="price_rating_tag border px-3 py-2 rounded-0">
-                            <span class="price">₦ 3,200</span>
-                            <span class="rating good"><i class="fas fa-star"></i>&nbsp;&nbsp;<span
-                                    class="rating_fig">2.5</span>&nbsp;ratings</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="item product_card">
-                    <a href="#">
-                        <div class="card border-bottom-0 rounded-0">
-                            <img src="./assets/images/sample-prod.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
-                            </div>
-                        </div>
-                        <div class="price_rating_tag border px-3 py-2 rounded-0">
-                            <span class="price">₦ 3,200</span>
-                            <span class="rating good"><i class="fas fa-star"></i>&nbsp;&nbsp;<span
-                                    class="rating_fig">2.5</span>&nbsp;ratings</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="item product_card">
-                    <a href="#">
-                        <div class="card border-bottom-0 rounded-0">
-                            <img src="./assets/images/sample-prod.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
-                            </div>
-                        </div>
-                        <div class="price_rating_tag border px-3 py-2 rounded-0">
-                            <span class="price">₦ 3,200</span>
-                            <span class="rating fair"><i class="fas fa-star"></i>&nbsp;&nbsp;<span
-                                    class="rating_fig">2.5</span>&nbsp;ratings</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="item product_card">
-                    <a href="#">
-                        <div class="card border-bottom-0 rounded-0">
-                            <img src="./assets/images/sample-prod.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
-                            </div>
-                        </div>
-                        <div class="price_rating_tag border px-3 py-2 rounded-0">
-                            <span class="price">₦ 3,200</span>
-                            <span class="rating good"><i class="fas fa-star"></i>&nbsp;&nbsp;<span
-                                    class="rating_fig">2.5</span>&nbsp;ratings</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="item product_card">
-                    <a href="#">
-                        <div class="card border-bottom-0 rounded-0">
-                            <img src="./assets/images/sample-prod.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
-                            </div>
-                        </div>
-                        <div class="price_rating_tag border px-3 py-2 rounded-0">
-                            <span class="price">₦ 3,200</span>
-                            <span class="rating poor"><i class="fas fa-star"></i>&nbsp;&nbsp;<span
-                                    class="rating_fig">2.5</span>&nbsp;ratings</span>
-                        </div>
-                    </a>
-                </div>
+    <section class="mb-4">
+        <div class="container prod_listing">
+            <div class="head bg_primary py-2 px-3 mb-2">
+                <!-- Best sellings starts -->
+                <h5 class="title text-white" data-aos="fade-up" data-aos-delay="700">Best Selling</h5>
             </div>
+            <div class="prod_list_slider_wrapper">
+                <div class="owl-carousel owl-theme best_sellings">
+                    <div class="item product_card">
+                        <a href="#">
+                            <div class="card border-bottom-0 rounded-0">
+                                <img src="./assets/images/sample-prod.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
+                                </div>
+                            </div>
+                            <div class="price_rating_tag border px-3 py-2 rounded-0">
+                                <span class="price">₦ 3,200</span>
+                                <span class="rating poor"><i class="fas fa-star"></i>&nbsp;&nbsp;<span
+                                        class="rating_fig">2.5</span>&nbsp;ratings</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item product_card">
+                        <a href="#">
+                            <div class="card border-bottom-0 rounded-0">
+                                <img src="./assets/images/sample-prod.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
+                                </div>
+                            </div>
+                            <div class="price_rating_tag border px-3 py-2 rounded-0">
+                                <span class="price">₦ 3,200</span>
+                                <span class="rating fair"><i class="fas fa-star"></i>&nbsp;&nbsp;<span
+                                        class="rating_fig">2.5</span>&nbsp;ratings</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item product_card">
+                        <a href="#">
+                            <div class="card border-bottom-0 rounded-0">
+                                <img src="./assets/images/sample-prod.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
+                                </div>
+                            </div>
+                            <div class="price_rating_tag border px-3 py-2 rounded-0">
+                                <span class="price">₦ 3,200</span>
+                                <span class="rating good"><i class="fas fa-star"></i>&nbsp;&nbsp;<span
+                                        class="rating_fig">2.5</span>&nbsp;ratings</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item product_card">
+                        <a href="#">
+                            <div class="card border-bottom-0 rounded-0">
+                                <img src="./assets/images/sample-prod.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
+                                </div>
+                            </div>
+                            <div class="price_rating_tag border px-3 py-2 rounded-0">
+                                <span class="price">₦ 3,200</span>
+                                <span class="rating good"><i class="fas fa-star"></i>&nbsp;&nbsp;<span
+                                        class="rating_fig">2.5</span>&nbsp;ratings</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item product_card">
+                        <a href="#">
+                            <div class="card border-bottom-0 rounded-0">
+                                <img src="./assets/images/sample-prod.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
+                                </div>
+                            </div>
+                            <div class="price_rating_tag border px-3 py-2 rounded-0">
+                                <span class="price">₦ 3,200</span>
+                                <span class="rating fair"><i class="fas fa-star"></i>&nbsp;&nbsp;<span
+                                        class="rating_fig">2.5</span>&nbsp;ratings</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item product_card">
+                        <a href="#">
+                            <div class="card border-bottom-0 rounded-0">
+                                <img src="./assets/images/sample-prod.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
+                                </div>
+                            </div>
+                            <div class="price_rating_tag border px-3 py-2 rounded-0">
+                                <span class="price">₦ 3,200</span>
+                                <span class="rating good"><i class="fas fa-star"></i>&nbsp;&nbsp;<span
+                                        class="rating_fig">2.5</span>&nbsp;ratings</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item product_card">
+                        <a href="#">
+                            <div class="card border-bottom-0 rounded-0">
+                                <img src="./assets/images/sample-prod.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Mama'S Pride Premium Nigeria Parboiled Rice 5kg</p>
+                                </div>
+                            </div>
+                            <div class="price_rating_tag border px-3 py-2 rounded-0">
+                                <span class="price">₦ 3,200</span>
+                                <span class="rating poor"><i class="fas fa-star"></i>&nbsp;&nbsp;<span
+                                        class="rating_fig">2.5</span>&nbsp;ratings</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
 
-            <div class="best_sellings_nav custom_nav_wrapper">
-                <button type="button" name="button" class="btn customNextBtn">
-                    <span data-feather="chevron-left"></span></button>
-                <button type="button" name="button" class="btn customPrevBtn">
-                    <span data-feather="chevron-right"></span></button>
+                <div class="best_sellings_nav custom_nav_wrapper">
+                    <button type="button" name="button" class="btn customNextBtn">
+                        <span data-feather="chevron-left"></span></button>
+                    <button type="button" name="button" class="btn customPrevBtn">
+                        <span data-feather="chevron-right"></span></button>
+                </div>
             </div>
+            <!-- Best sellings ends here -->
         </div>
-        <!-- Best sellings ends here -->
-    </div>
-</section>
+    </section>
 
     <section class="mb-4 add_cards_wrapper">
         <div class="container">
@@ -856,8 +856,8 @@
 
             <div class="row">
                 <div class="col">
-                <img src="./assets/images/cross-banner-lg.png" class="img-fluid d-none d-md-block w-100">
-                <img src="./assets/images/cross-banner-sm.png" class="img-fluid d-block d-md-none w-100">
+                    <img src="./assets/images/cross-banner-lg.png" class="img-fluid d-none d-md-block w-100">
+                    <img src="./assets/images/cross-banner-sm.png" class="img-fluid d-block d-md-none w-100">
                 </div>
             </div>
         </div>
@@ -982,18 +982,19 @@
     <section class="" style="background-color: #3AB795">
         <div class="container py-4">
             <div class="row">
-                <div class="col-12 col-md-1 my-1 text-center text-md-left d-md-flex align-items-center" data-aos="zoom-in-right"
-                    data-aos-delay="700">
+                <div class="col-12 col-md-1 my-1 text-center text-md-left d-md-flex align-items-center"
+                    data-aos="zoom-in-right" data-aos-delay="700">
                     <!-- <img src="./assets/images/madeinlagos_brand_logo.png" alt=""> -->
                     <img src="./assets/images/new-logo-alt.png" class="img-fluid" alt="brand logo">
                 </div>
-                <div class="col-12 col-sm-5 col-md-5 my-1 text-white text-center text-md-left d-md-flex align-items-center" data-aos="zoom-in"
-                    data-aos-delay="700">
+                <div class="col-12 col-sm-5 col-md-5 my-1 text-white text-center text-md-left d-md-flex align-items-center"
+                    data-aos="zoom-in" data-aos-delay="700">
                     <!-- <div> -->
                     <strong>SUBSCRIBE TO RECIEVE NEW UPDATE ABOUT OUR PRODUCT</strong>
                     <!-- </div> -->
                 </div>
-                <div class="col-12 col-sm-7 col-md-6 my-1 d-md-flex align-items-center" data-aos="zoom-in-left" data-aos-delay="1000">
+                <div class="col-12 col-sm-7 col-md-6 my-1 d-md-flex align-items-center" data-aos="zoom-in-left"
+                    data-aos-delay="1000">
                     <form class="input-group">
                         <input type="text" class="form-control" aria-label="Recipient's username"
                             aria-describedby="button-addon2">
@@ -1093,10 +1094,10 @@
     $(document).ready(function() {
         feather.replace();
 
-        $('button').click(function() {
-            $('.alert').html('<i data-feather="activity"></i>');
-            feather.replace();
-        });
+        // $('button').click(function() {
+        //     $('.alert').html('<i data-feather="activity"></i>');
+        //     feather.replace();
+        // });
 
     });
     </script>

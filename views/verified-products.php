@@ -284,8 +284,6 @@
                             <div class="filterToggler recommend dropNull py-2 px-2" id="status_filter_selection">
                                 <!-- Recommended -->
                             </div>
-                            <style>
-                            </style>
                             <div class="filter_dropdown w-100">
                                 <div class="container-fluid p-2">
                                     <form action="#">
